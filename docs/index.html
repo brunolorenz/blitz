@@ -30,17 +30,9 @@
   }
   .subtitle { font-size: 15px; color: #5A5647; max-width: 520px; line-height: 1.5; margin: 0 0 20px; }
   .meta-bar {
-    display: flex; flex-wrap: wrap; gap: 16px; align-items: center;
     padding: 14px 16px; background: #F1ECDF; border: 1px solid #DDD5C0;
     border-radius: 8px; margin-bottom: 24px; font-size: 13px; color: #5A5647;
   }
-  .tz-toggle { display: flex; gap: 4px; margin-left: auto; flex-wrap: wrap; }
-  .tz-btn {
-    font-family: 'IBM Plex Sans', sans-serif; font-size: 12px; padding: 6px 10px;
-    border: 1px solid #C8C0AC; background: #FBF8F1; color: #1C1B18; border-radius: 5px; cursor: pointer;
-  }
-  .tz-btn.active { background: #35462F; color: #EDE6D6; border-color: #35462F; }
-  .tz-btn.brt.active { background: #C1443C; border-color: #C1443C; }
   .hero {
     display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-bottom: 32px;
   }
@@ -54,17 +46,20 @@
   .section-hint { font-size: 12.5px; color: #5A5647; margin: 0 0 12px; }
   .barchart {
     display: flex; align-items: flex-end; gap: 3px; height: 220px;
-    border-bottom: 1px solid #C8C0AC; padding-top: 8px; overflow-x: auto;
+    border-bottom: 1px solid #C8C0AC; padding-top: 8px;
   }
-  .barchart.small { height: 120px; }
-  .bar-col { flex: 1; min-width: 14px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
+  .bar-col { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
   .bar { width: 100%; background: #35462F; border-radius: 3px 3px 0 0; }
   .bar-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #8A8368; margin-top: 4px; }
+  /* Heatmap agregado (seção própria): pode rolar horizontalmente com folga */
   .heatmap-wrap { overflow-x: auto; }
-  .heatmap-grid { display: grid; grid-template-columns: 40px repeat(24, 1fr); gap: 2px; min-width: 640px; }
+  .heatmap-grid { display: grid; grid-template-columns: 34px repeat(24, 1fr); gap: 2px; min-width: 640px; }
+  /* Heatmap por jogador (dentro do detalhe): sempre cabe na largura, sem scroll */
+  .heatmap-grid.fit { min-width: 0; grid-template-columns: 26px repeat(24, minmax(0, 1fr)); gap: 1px; }
   .heatmap-hour-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #8A8368; text-align: center; }
-  .heatmap-day-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5A5647; display: flex; align-items: center; }
+  .heatmap-day-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #5A5647; display: flex; align-items: center; }
   .heatmap-cell { height: 16px; border-radius: 2px; }
+  .heatmap-grid.fit .heatmap-cell { height: 13px; border-radius: 1px; }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   th {
     text-align: left; padding: 8px 10px; border-bottom: 2px solid #C8C0AC;
@@ -81,12 +76,17 @@
   .player-row { cursor: pointer; }
   .player-row:hover { background: #F1ECDF; }
   .expand-hint { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A9A82; }
-  .detail-row td { background: #F8F4E9; padding: 16px 10px; }
-  .detail-grid { display: flex; flex-wrap: wrap; gap: 24px; }
-  .detail-block { flex: 1; min-width: 260px; }
+  .detail-row td { background: #F8F4E9; padding: 16px 14px; }
+  .detail-block + .detail-block { margin-top: 20px; }
   .detail-block h4 {
     font-family: 'Fraunces', serif; font-size: 14px; font-weight: 600; margin: 0 0 8px;
   }
+  .windows-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .window-chip {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #EDE6D6;
+    border: 1px solid #C8C0AC; border-radius: 6px; padding: 5px 10px;
+  }
+  .window-chip b { color: #C1443C; }
   .opening-list { list-style: none; margin: 0; padding: 0; font-size: 12.5px; }
   .opening-list li {
     display: flex; justify-content: space-between; gap: 8px; padding: 4px 0;
@@ -110,7 +110,7 @@
 <div class="page">
   <div class="eyebrow">PADRÕES DE JOGO · CHESS.COM</div>
   <h1>O relógio dos top blitz</h1>
-  <p class="subtitle">Quando os melhores jogadores de blitz do mundo realmente jogam — hora a hora, dia a dia.</p>
+  <p class="subtitle">Quando os melhores jogadores de blitz do mundo realmente jogam — hora a hora, dia a dia, no horário de Brasília.</p>
 
   <div class="meta-bar" id="metaBar">Carregando dados…</div>
 
@@ -118,22 +118,18 @@
 
   <footer>
     Dados via API pública do Chess.com (leaderboards + arquivos de partidas),
-    atualizados periodicamente por uma GitHub Action. Horários de encerramento
-    de partida. "Estimado por país" e "Horário de Brasília" são conversões
-    aproximadas (fuso da capital do país, sem ajuste de horário de verão —
-    exceto o Brasil, que não observa mais horário de verão desde 2019, então
-    esse offset é exato). Aberturas são derivadas do slug de abertura do
-    Chess.com por uma heurística; nomes podem ocasionalmente vir truncados.
+    atualizados periodicamente por uma GitHub Action. Horários convertidos
+    para Horário de Brasília (UTC-3, fixo — o Brasil não observa mais
+    horário de verão desde 2019, então essa conversão é exata). Aberturas
+    são derivadas do slug de abertura do Chess.com por uma heurística;
+    nomes podem ocasionalmente vir truncados. As "melhores janelas" e
+    percentuais são baseados no histórico de partidas do período, não em
+    presença ao vivo.
   </footer>
 </div>
 
 <script>
 const DIAS = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
-const TZ_LABELS = {
-  utc: "horário UTC",
-  local: "fuso horário estimado por país (aproximado, sem horário de verão)",
-  brt: "horário de Brasília (UTC-3, fixo)",
-};
 
 function pad2(n) { return String(n).padStart(2, "0"); }
 
@@ -157,16 +153,6 @@ function heatColor(t) {
   const localT = (t - a.p) / span;
   const rgb = a.c.map((v, i) => Math.round(v + (b.c[i] - v) * localT));
   return `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
-}
-
-function hourlyKey(tzMode) {
-  return tzMode === "utc" ? "hourlyUtc" : tzMode === "brt" ? "hourlyBrt" : "hourlyLocal";
-}
-function dayHourKey(tzMode) {
-  return tzMode === "utc" ? "dayHourUtc" : tzMode === "brt" ? "dayHourBrt" : "dayHourLocal";
-}
-function peakKey(tzMode) {
-  return tzMode === "utc" ? "peakHourUtc" : tzMode === "brt" ? "peakHourBrt" : "peakHourLocal";
 }
 
 function buildClockFaceSVG(hourly, totalGames) {
@@ -206,9 +192,9 @@ function buildClockFaceSVG(hourly, totalGames) {
     </svg>`;
 }
 
-function buildBarChart(hourly, small) {
+function buildBarChart(hourly) {
   const max = Math.max(1, ...hourly);
-  let html = `<div class="barchart${small ? " small" : ""}">`;
+  let html = '<div class="barchart">';
   hourly.forEach((count, hour) => {
     const heightPct = (count / max) * 100;
     html += `
@@ -221,9 +207,13 @@ function buildBarChart(hourly, small) {
   return html;
 }
 
-function buildHeatmap(dayHourMatrix) {
+function buildHeatmap(dayHourMatrix, opts) {
+  opts = opts || {};
+  const fit = !!opts.fit;
+  const total = opts.total || Math.max(1, ...dayHourMatrix.flat());
   const maxCell = Math.max(1, ...dayHourMatrix.flat());
-  let html = '<div class="heatmap-wrap"><div class="heatmap-grid">';
+  const wrapOpen = fit ? '<div>' : '<div class="heatmap-wrap">';
+  let html = wrapOpen + `<div class="heatmap-grid${fit ? " fit" : ""}">`;
   html += "<div></div>";
   for (let h = 0; h < 24; h++) {
     html += `<div class="heatmap-hour-label">${h % 3 === 0 ? pad2(h) : ""}</div>`;
@@ -232,7 +222,8 @@ function buildHeatmap(dayHourMatrix) {
     html += `<div class="heatmap-day-label">${dia}</div>`;
     dayHourMatrix[dayIdx].forEach((val, hourIdx) => {
       const color = heatColor(val / maxCell);
-      html += `<div class="heatmap-cell" style="background:${color}" title="${dia} ${pad2(hourIdx)}h — ${val} partidas"></div>`;
+      const pct = opts.showPct ? ` (${(100 * val / total).toFixed(1)}%)` : "";
+      html += `<div class="heatmap-cell" style="background:${color}" title="${dia} ${pad2(hourIdx)}h — ${val} partidas${pct}"></div>`;
     });
   });
   html += "</div></div>";
@@ -270,13 +261,24 @@ function buildOpeningsList(openings) {
   return html;
 }
 
-function buildTable(players, tzMode) {
-  const pk = peakKey(tzMode);
+function buildWindows(bestWindows) {
+  if (!bestWindows || bestWindows.length === 0) {
+    return '<p class="section-hint">Sem dados suficientes para estimar janelas.</p>';
+  }
+  let html = '<div class="windows-list">';
+  bestWindows.forEach((w) => {
+    html += `<div class="window-chip">${DIAS[w.day]} ${pad2(w.hour)}h · <b>${w.pct}%</b> das partidas dele</div>`;
+  });
+  html += "</div>";
+  return html;
+}
+
+function buildTable(players) {
   const rows = players
     .slice()
     .sort((a, b) => a.rank - b.rank)
     .map((p) => {
-      const peak = p[pk];
+      const peak = p.peakHourBrt;
       return `
         <tr class="player-row" data-username="${p.username}">
           <td>${p.rank}</td>
@@ -295,33 +297,29 @@ function buildTable(players, tzMode) {
     <div class="table-wrap">
       <table>
         <thead>
-          <tr><th>#</th><th>Jogador</th><th>Rating</th><th>Partidas</th><th>Horário de pico</th></tr>
+          <tr><th>#</th><th>Jogador</th><th>Rating</th><th>Partidas</th><th>Pico (BRT)</th></tr>
         </thead>
         <tbody>${rows}</tbody>
       </table>
     </div>`;
 }
 
-function renderPlayerDetail(player, tzMode) {
-  const dhk = dayHourKey(tzMode);
+function renderPlayerDetail(player) {
   return `
-    <div class="detail-grid">
-      <div class="detail-block">
-        <h4>Dia da semana × hora — ${player.username}</h4>
-        ${buildHeatmap(player[dhk])}
-      </div>
-      <div class="detail-block">
-        <h4>Aberturas mais jogadas — ${player.username}</h4>
-        ${buildOpeningsList(player.openings)}
-      </div>
+    <div class="detail-block">
+      <h4>Chances de encontrar ${player.username} — melhores janelas (horário de Brasília)</h4>
+      ${buildWindows(player.bestWindows)}
+      ${buildHeatmap(player.dayHourBrt, { fit: true, total: player.total, showPct: true })}
+    </div>
+    <div class="detail-block">
+      <h4>Aberturas mais jogadas por ${player.username}</h4>
+      ${buildOpeningsList(player.openings)}
     </div>`;
 }
 
-function render(data, tzMode) {
-  const hk = hourlyKey(tzMode);
-  const dhk = dayHourKey(tzMode);
-  const hourly = data[hk];
-  const dayHour = data[dhk];
+function render(data) {
+  const hourly = data.hourlyBrt;
+  const dayHour = data.dayHourBrt;
 
   const content = document.getElementById("content");
   content.innerHTML = `
@@ -330,8 +328,7 @@ function render(data, tzMode) {
       <div class="hero-caption">
         <div class="hero-caption-title">${data.totalGames.toLocaleString("pt-BR")} partidas de blitz analisadas</div>
         <div class="hero-caption-text">
-          ${data.playerCount} jogadores · últimos ${data.monthsBack} ${data.monthsBack === 1 ? "mês" : "meses"} de arquivo ·
-          ${TZ_LABELS[tzMode]}
+          ${data.playerCount} jogadores · últimos ${data.monthsBack} ${data.monthsBack === 1 ? "mês" : "meses"} de arquivo · horário de Brasília (UTC-3)
         </div>
         ${data.skipped > 0 ? `<div class="hero-caption-note">${data.skipped} jogador(es) sem partidas de blitz no período.</div>` : ""}
       </div>
@@ -339,7 +336,7 @@ function render(data, tzMode) {
 
     <section>
       <h2 class="section-title">Distribuição por hora</h2>
-      ${buildBarChart(hourly, false)}
+      ${buildBarChart(hourly)}
     </section>
 
     <section>
@@ -356,8 +353,8 @@ function render(data, tzMode) {
 
     <section>
       <h2 class="section-title">Ranking, horário de pico e aberturas por jogador</h2>
-      <p class="section-hint">Clique num jogador para ver o mapa de dia×hora e as aberturas dele especificamente.</p>
-      ${buildTable(data.players, tzMode)}
+      <p class="section-hint">Clique num jogador para ver as melhores janelas para encontrá-lo e as aberturas dele.</p>
+      ${buildTable(data.players)}
     </section>
   `;
 
@@ -369,7 +366,7 @@ function render(data, tzMode) {
       const isOpen = detail.style.display !== "none";
       content.querySelectorAll(".detail-row").forEach((d) => (d.style.display = "none"));
       if (!isOpen) {
-        detail.querySelector("td").innerHTML = renderPlayerDetail(playersByUsername[uname], tzMode);
+        detail.querySelector("td").innerHTML = renderPlayerDetail(playersByUsername[uname]);
         detail.style.display = "table-row";
       }
     });
@@ -387,26 +384,10 @@ async function main() {
       return;
     }
 
-    let tzMode = "utc";
     const generated = new Date(data.generatedAt).toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" });
-    metaBar.innerHTML = `
-      Atualizado em ${generated}
-      <div class="tz-toggle">
-        <button class="tz-btn active" data-tz="utc">UTC</button>
-        <button class="tz-btn" data-tz="local">Estimado por país</button>
-        <button class="tz-btn brt" data-tz="brt">Horário de Brasília</button>
-      </div>`;
+    metaBar.innerHTML = `Atualizado em ${generated} · horário de Brasília (UTC-3)`;
 
-    render(data, tzMode);
-
-    metaBar.querySelectorAll(".tz-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        tzMode = btn.getAttribute("data-tz");
-        metaBar.querySelectorAll(".tz-btn").forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-        render(data, tzMode);
-      });
-    });
+    render(data);
   } catch (e) {
     metaBar.innerHTML = `<div class="empty-state">Não foi possível carregar data.json: ${e.message}</div>`;
   }

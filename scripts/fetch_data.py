@@ -4,6 +4,10 @@ dos jogadores no topo, e gera docs/data.json para a página estática consumir.
 
 Roda server-side (via GitHub Actions ou localmente) - aqui não existe CORS,
 então as chamadas à API do Chess.com funcionam de forma direta e confiável.
+
+Horários são convertidos direto para Horário de Brasília (UTC-3, fixo - o
+Brasil não observa mais horário de verão desde 2019, então essa conversão
+é exata, sem aproximação).
 """
 
 import json
@@ -25,30 +29,14 @@ OUTPUT_PATH = Path(__file__).resolve().parent.parent / "docs" / "data.json"
 # A API do Chess.com pede um User-Agent identificável nas requisições.
 # Troque o e-mail abaixo pelo seu.
 HEADERS = {
-    "User-Agent": "blitz-patterns-dashboard/1.0 (contato: lorenz.bruno@gmail.com)"
+    "User-Agent": "blitz-patterns-dashboard/1.0 (contato: seu-email@exemplo.com)"
 }
 
-# Aproximação de fuso horário por país (offset UTC, sem horário de verão).
-# Países ausentes caem em 0 (UTC). É uma estimativa, não um valor exato.
-COUNTRY_OFFSET = {
-    "US": -5, "CA": -5, "MX": -6, "BR": -3, "AR": -3, "CO": -5, "PE": -5, "CL": -4, "VE": -4,
-    "EC": -5, "CU": -5, "DO": -4, "PR": -4,
-    "GB": 0, "IE": 0, "PT": 0, "GH": 0,
-    "DE": 1, "FR": 1, "ES": 1, "IT": 1, "NL": 1, "BE": 1, "CH": 1, "AT": 1, "DK": 1, "NO": 1,
-    "SE": 1, "PL": 1, "RS": 1, "HU": 1, "CZ": 1, "SK": 1, "SI": 1, "HR": 1, "MA": 1, "DZ": 1, "TN": 1, "NG": 1,
-    "UA": 2, "RO": 2, "GR": 2, "EG": 2, "ZA": 2, "FI": 2, "BG": 2, "LT": 2, "LV": 2, "EE": 2, "MD": 2, "IL": 2,
-    "TR": 3, "RU": 3, "IR": 3.5, "SA": 3, "KE": 3, "BY": 3,
-    "AE": 4, "AZ": 4, "AM": 4, "GE": 4,
-    "IN": 5.5, "PK": 5, "KZ": 5, "UZ": 5,
-    "BD": 6,
-    "TH": 7, "VN": 7, "ID": 7,
-    "CN": 8, "MY": 8, "SG": 8, "TW": 8, "HK": 8, "PH": 8,
-    "JP": 9, "KR": 9,
-    "AU": 10,
-    "NZ": 12,
-}
+# Time control alvo: "180" = 3 minutos sem incremento (3+0).
+# Troque para None se quiser voltar a pegar todo tipo de blitz (3 a 10 min, com ou sem incremento).
+TIME_CONTROL_FILTER = "180"
 
-BRT_OFFSET = -3  # Horário de Brasília, fixo (Brasil não observa horário de verão desde 2019)
+BRT_OFFSET = -3  # Horário de Brasília, fixo
 
 
 def get_json(url, attempts=3):
@@ -103,13 +91,17 @@ def fetch_player_games(username, months_back):
         except RuntimeError:
             continue
         for g in data.get("games", []):
-            if g.get("time_class") == "blitz" and g.get("end_time"):
+            if (
+                g.get("time_class") == "blitz"
+                and g.get("end_time")
+                and (TIME_CONTROL_FILTER is None or g.get("time_control") == TIME_CONTROL_FILTER)
+            ):
                 collected.append(g)
     return collected
 
 
-def local_hour(utc_hour, offset):
-    return int((utc_hour + offset) % 24)
+def brt_hour(utc_hour):
+    return int((utc_hour + BRT_OFFSET) % 24)
 
 
 def top_counter(counter, n):
@@ -118,6 +110,26 @@ def top_counter(counter, n):
 
 def empty_day_hour():
     return [[0] * 24 for _ in range(7)]
+
+
+def best_windows(day_hour_matrix, total, n=3):
+    """Retorna os N melhores blocos dia+hora (maior % do total de partidas do jogador)."""
+    cells = []
+    for day in range(7):
+        for hour in range(24):
+            count = day_hour_matrix[day][hour]
+            if count > 0:
+                cells.append((day, hour, count))
+    cells.sort(key=lambda c: c[2], reverse=True)
+    out = []
+    for day, hour, count in cells[:n]:
+        out.append({
+            "day": day,
+            "hour": hour,
+            "count": count,
+            "pct": round(100 * count / total, 1) if total else 0,
+        })
+    return out
 
 
 def main():
@@ -134,11 +146,7 @@ def main():
             "countryCode": country_code_from_url(e.get("country")),
         })
 
-    hourly_utc = [0] * 24
-    hourly_local = [0] * 24
     hourly_brt = [0] * 24
-    day_hour_utc = empty_day_hour()
-    day_hour_local = empty_day_hour()
     day_hour_brt = empty_day_hour()
     openings_overall = Counter()
     total_games = 0
@@ -163,33 +171,18 @@ def main():
                 skipped += 1
 
             uname_lower = p["username"].lower()
-            hours_utc = [0] * 24
-            hours_local = [0] * 24
             hours_brt = [0] * 24
-            p_day_hour_utc = empty_day_hour()
-            p_day_hour_local = empty_day_hour()
             p_day_hour_brt = empty_day_hour()
             openings = Counter()
 
             for g in games:
                 dt = datetime.fromtimestamp(g["end_time"], tz=timezone.utc)
-                h_utc = dt.hour
-                h_local = local_hour(h_utc, COUNTRY_OFFSET.get(p["countryCode"], 0))
-                h_brt = local_hour(h_utc, BRT_OFFSET)
+                h_brt = brt_hour(dt.hour)
                 day = (dt.weekday() + 1) % 7  # 0 = domingo
 
-                hourly_utc[h_utc] += 1
-                hourly_local[h_local] += 1
                 hourly_brt[h_brt] += 1
-                day_hour_utc[day][h_utc] += 1
-                day_hour_local[day][h_local] += 1
                 day_hour_brt[day][h_brt] += 1
-
-                hours_utc[h_utc] += 1
-                hours_local[h_local] += 1
                 hours_brt[h_brt] += 1
-                p_day_hour_utc[day][h_utc] += 1
-                p_day_hour_local[day][h_local] += 1
                 p_day_hour_brt[day][h_brt] += 1
                 total_games += 1
 
@@ -202,11 +195,7 @@ def main():
                         openings[opening] += 1
 
             per_player_data[p["username"]] = {
-                "hoursUtc": hours_utc,
-                "hoursLocal": hours_local,
                 "hoursBrt": hours_brt,
-                "dayHourUtc": p_day_hour_utc,
-                "dayHourLocal": p_day_hour_local,
                 "dayHourBrt": p_day_hour_brt,
                 "openings": openings,
             }
@@ -218,27 +207,21 @@ def main():
         d = per_player_data.get(p["username"])
         if not d:
             player_rows.append({
-                **p, "total": 0, "peakHourUtc": None, "peakHourLocal": None, "peakHourBrt": None,
-                "dayHourUtc": empty_day_hour(), "dayHourLocal": empty_day_hour(), "dayHourBrt": empty_day_hour(),
-                "openings": [],
+                **p, "total": 0, "peakHourBrt": None,
+                "dayHourBrt": empty_day_hour(), "openings": [], "bestWindows": [],
             })
             continue
 
-        total = sum(d["hoursUtc"])
-        peak_utc = max(range(24), key=lambda h: d["hoursUtc"][h]) if total else None
-        peak_local = max(range(24), key=lambda h: d["hoursLocal"][h]) if total else None
+        total = sum(d["hoursBrt"])
         peak_brt = max(range(24), key=lambda h: d["hoursBrt"][h]) if total else None
 
         player_rows.append({
             **p,
             "total": total,
-            "peakHourUtc": peak_utc,
-            "peakHourLocal": peak_local,
             "peakHourBrt": peak_brt,
-            "dayHourUtc": d["dayHourUtc"],
-            "dayHourLocal": d["dayHourLocal"],
             "dayHourBrt": d["dayHourBrt"],
             "openings": top_counter(d["openings"], TOP_OPENINGS),
+            "bestWindows": best_windows(d["dayHourBrt"], total, n=3),
         })
 
     output = {
@@ -248,11 +231,7 @@ def main():
         "totalGames": total_games,
         "skipped": skipped,
         "players": player_rows,
-        "hourlyUtc": hourly_utc,
-        "hourlyLocal": hourly_local,
         "hourlyBrt": hourly_brt,
-        "dayHourUtc": day_hour_utc,
-        "dayHourLocal": day_hour_local,
         "dayHourBrt": day_hour_brt,
         "openingsOverall": top_counter(openings_overall, TOP_OPENINGS * 2),
     }
