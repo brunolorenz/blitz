@@ -286,9 +286,10 @@ function buildTable(players) {
           <td class="mono">${p.rating}</td>
           <td class="mono">${p.total}</td>
           <td>${peak !== null && peak !== undefined ? `<span class="peak-badge">${pad2(peak)}h</span>` : "—"}</td>
+          <td class="mono">${p.overlapScore ?? 0}%</td>
         </tr>
         <tr class="detail-row" id="detail-${p.username}" style="display:none">
-          <td colspan="5"></td>
+          <td colspan="6"></td>
         </tr>`;
     })
     .join("");
@@ -297,11 +298,39 @@ function buildTable(players) {
     <div class="table-wrap">
       <table>
         <thead>
-          <tr><th>#</th><th>Jogador</th><th>Rating</th><th>Partidas</th><th>Pico (BRT)</th></tr>
+          <tr><th>#</th><th>Jogador</th><th>Rating</th><th>Partidas</th><th>Pico (BRT)</th><th>Sobreposição</th></tr>
         </thead>
         <tbody>${rows}</tbody>
       </table>
     </div>`;
+}
+
+function buildOverlapRanking(players, targetUsername) {
+  const ranked = players
+    .filter((p) => p.total > 0)
+    .slice()
+    .sort((a, b) => b.overlapScore - a.overlapScore)
+    .slice(0, 15);
+
+  if (ranked.length === 0) {
+    return '<p class="section-hint">Sem dados suficientes para calcular sobreposição ainda.</p>';
+  }
+
+  const max = Math.max(...ranked.map((p) => p.overlapScore), 0.01);
+  let html = '<ul class="opening-overall-list">';
+  ranked.forEach((p) => {
+    const pct = (p.overlapScore / max) * 100;
+    const peak = p.peakHourBrt !== null && p.peakHourBrt !== undefined ? `${pad2(p.peakHourBrt)}h` : "—";
+    html += `
+      <li>
+        <span style="min-width:150px">${flagFromCode(p.countryCode)} ${p.username}</span>
+        <span class="opening-bar-track"><span class="opening-bar-fill" style="width:${pct}%; background:#C1443C"></span></span>
+        <span class="mono">${p.overlapScore}%</span>
+        <span class="peak-badge" style="margin-left:6px">pico ${peak}</span>
+      </li>`;
+  });
+  html += "</ul>";
+  return html;
 }
 
 function renderPlayerDetail(player) {
@@ -320,13 +349,32 @@ function renderPlayerDetail(player) {
 function render(data) {
   const hourly = data.hourlyBrt;
   const dayHour = data.dayHourBrt;
+  const target = data.targetPlayer;
 
   const content = document.getElementById("content");
   content.innerHTML = `
+    ${target && target.total > 0 ? `
+    <section class="hero">
+      ${buildClockFaceSVG(target.hoursBrt, target.total)}
+      <div class="hero-caption">
+        <div class="hero-caption-title">Rotina de ${target.username}</div>
+        <div class="hero-caption-text">
+          ${target.total.toLocaleString("pt-BR")} partidas de blitz 3+0 nos últimos ${target.monthsBack} meses · horário de Brasília
+        </div>
+        ${buildWindows(target.bestWindows)}
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Maior chance de encontro para ${target.username}</h2>
+      <p class="section-hint">Compara a rotina de ${target.username} com a de cada jogador do ranking — quanto mais os horários coincidem, maior o score. Ordenado do maior para o menor.</p>
+      ${buildOverlapRanking(data.players, target.username)}
+    </section>` : ""}
+
     <section class="hero">
       ${buildClockFaceSVG(hourly, data.totalGames)}
       <div class="hero-caption">
-        <div class="hero-caption-title">${data.totalGames.toLocaleString("pt-BR")} partidas de blitz analisadas</div>
+        <div class="hero-caption-title">${data.totalGames.toLocaleString("pt-BR")} partidas de blitz analisadas (top ${data.playerCount})</div>
         <div class="hero-caption-text">
           ${data.playerCount} jogadores · últimos ${data.monthsBack} ${data.monthsBack === 1 ? "mês" : "meses"} de arquivo · horário de Brasília (UTC-3)
         </div>
@@ -352,7 +400,7 @@ function render(data) {
     </section>
 
     <section>
-      <h2 class="section-title">Ranking, horário de pico e aberturas por jogador</h2>
+      <h2 class="section-title">Ranking, horário de pico, sobreposição e aberturas por jogador</h2>
       <p class="section-hint">Clique num jogador para ver as melhores janelas para encontrá-lo e as aberturas dele.</p>
       ${buildTable(data.players)}
     </section>

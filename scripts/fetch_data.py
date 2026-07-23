@@ -1,6 +1,12 @@
 """
-Busca o leaderboard de blitz do Chess.com e o histórico recente de partidas
-dos jogadores no topo, e gera docs/data.json para a página estática consumir.
+Busca o leaderboard de blitz do Chess.com, o histórico recente de partidas
+dos jogadores no topo, e também do jogador-alvo (TARGET_USERNAME) — e gera
+docs/data.json para a página estática consumir.
+
+Além dos padrões de horário e aberturas, calcula um "score de sobreposição"
+entre a rotina do jogador-alvo e a de cada um dos top jogadores: o quanto os
+horários em que cada um costuma jogar coincidem com os horários em que o
+jogador-alvo costuma jogar.
 
 Roda server-side (via GitHub Actions ou localmente) - aqui não existe CORS,
 então as chamadas à API do Chess.com funcionam de forma direta e confiável.
@@ -20,16 +26,18 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import requests
 
 # --- Configuração -----------------------------------------------------------
-PLAYER_COUNT = 50          # quantos jogadores do topo do ranking analisar (máx. 50)
-MONTHS_BACK = 1            # quantos meses de arquivo de partidas buscar por jogador
-MAX_WORKERS = 6            # requisições em paralelo
-TOP_OPENINGS = 8           # quantas aberturas guardar em cada ranking
+PLAYER_COUNT = 50            # quantos jogadores do topo do ranking analisar (máx. 50)
+MONTHS_BACK = 1               # quantos meses de arquivo de partidas buscar por jogador
+TARGET_USERNAME = "LPSupi"    # jogador para o qual calculamos a sobreposição de rotina
+TARGET_MONTHS_BACK = 3         # meses de histórico do jogador-alvo (mais meses = rotina mais confiável)
+MAX_WORKERS = 6                # requisições em paralelo
+TOP_OPENINGS = 8               # quantas aberturas guardar em cada ranking
 OUTPUT_PATH = Path(__file__).resolve().parent.parent / "docs" / "data.json"
 
 # A API do Chess.com pede um User-Agent identificável nas requisições.
 # Troque o e-mail abaixo pelo seu.
 HEADERS = {
-    "User-Agent": "blitz-patterns-dashboard/1.0 (contato: lorenz.bruno@gmail.com)"
+    "User-Agent": "blitz-patterns-dashboard/1.0 (contato: seu-email@exemplo.com)"
 }
 
 # Time control alvo: "180" = 3 minutos sem incremento (3+0).
@@ -132,6 +140,56 @@ def best_windows(day_hour_matrix, total, n=3):
     return out
 
 
+def analyze_games(username, games):
+    """Processa a lista de partidas de um jogador e retorna suas métricas
+    (distribuição por hora/dia, aberturas, janelas de pico)."""
+    uname_lower = username.lower()
+    hours_brt = [0] * 24
+    day_hour_brt = empty_day_hour()
+    openings = Counter()
+
+    for g in games:
+        dt = datetime.fromtimestamp(g["end_time"], tz=timezone.utc)
+        h_brt = brt_hour(dt.hour)
+        day = (dt.weekday() + 1) % 7  # 0 = domingo
+
+        hours_brt[h_brt] += 1
+        day_hour_brt[day][h_brt] += 1
+
+        white_user = (g.get("white", {}).get("username") or "").lower()
+        black_user = (g.get("black", {}).get("username") or "").lower()
+        if uname_lower in (white_user, black_user):
+            opening = opening_name_from_eco(g.get("eco"))
+            if opening:
+                openings[opening] += 1
+
+    total = sum(hours_brt)
+    peak_brt = max(range(24), key=lambda h: hours_brt[h]) if total else None
+
+    return {
+        "hoursBrt": hours_brt,
+        "dayHourBrt": day_hour_brt,
+        "openings": openings,
+        "total": total,
+        "peakHourBrt": peak_brt,
+        "bestWindows": best_windows(day_hour_brt, total, n=3),
+    }
+
+
+def overlap_score(day_hour_a, total_a, day_hour_b, total_b):
+    """Produto escalar entre as duas distribuições normalizadas (dia×hora).
+    Vai de 0 (nenhuma sobreposição) a 1 (rotinas idênticas)."""
+    if not total_a or not total_b:
+        return 0.0
+    score = 0.0
+    for day in range(7):
+        for hour in range(24):
+            wa = day_hour_a[day][hour] / total_a
+            wb = day_hour_b[day][hour] / total_b
+            score += wa * wb
+    return score
+
+
 def main():
     print("Buscando leaderboard de blitz...")
     lb = get_json("https://api.chess.com/pub/leaderboards")
@@ -152,6 +210,11 @@ def main():
     total_games = 0
     skipped = 0
 
+    print(f"Buscando rotina do jogador-alvo ({TARGET_USERNAME})...")
+    target_games = fetch_player_games(TARGET_USERNAME, TARGET_MONTHS_BACK)
+    target_analysis = analyze_games(TARGET_USERNAME, target_games)
+    print(f"  {TARGET_USERNAME}: {target_analysis['total']} partidas de blitz 3+0 encontradas")
+
     print(f"Buscando partidas de {len(players)} jogadores ({MONTHS_BACK} mes(es))...")
     per_player_data = {}
 
@@ -170,58 +233,44 @@ def main():
             if not games:
                 skipped += 1
 
-            uname_lower = p["username"].lower()
-            hours_brt = [0] * 24
-            p_day_hour_brt = empty_day_hour()
-            openings = Counter()
+            analysis = analyze_games(p["username"], games)
+            per_player_data[p["username"]] = analysis
 
-            for g in games:
-                dt = datetime.fromtimestamp(g["end_time"], tz=timezone.utc)
-                h_brt = brt_hour(dt.hour)
-                day = (dt.weekday() + 1) % 7  # 0 = domingo
-
-                hourly_brt[h_brt] += 1
-                day_hour_brt[day][h_brt] += 1
-                hours_brt[h_brt] += 1
-                p_day_hour_brt[day][h_brt] += 1
-                total_games += 1
-
-                white_user = (g.get("white", {}).get("username") or "").lower()
-                black_user = (g.get("black", {}).get("username") or "").lower()
-                if uname_lower in (white_user, black_user):
-                    opening = opening_name_from_eco(g.get("eco"))
-                    if opening:
-                        openings_overall[opening] += 1
-                        openings[opening] += 1
-
-            per_player_data[p["username"]] = {
-                "hoursBrt": hours_brt,
-                "dayHourBrt": p_day_hour_brt,
-                "openings": openings,
-            }
+            for hour in range(24):
+                hourly_brt[hour] += analysis["hoursBrt"][hour]
+            for day in range(7):
+                for hour in range(24):
+                    day_hour_brt[day][hour] += analysis["dayHourBrt"][day][hour]
+            for name, count in analysis["openings"].items():
+                openings_overall[name] += count
+            total_games += analysis["total"]
 
             print(f"  [{i}/{len(players)}] {p['username']}: {len(games)} partidas de blitz")
 
     player_rows = []
     for p in players:
         d = per_player_data.get(p["username"])
-        if not d:
+        if not d or not d["total"]:
             player_rows.append({
                 **p, "total": 0, "peakHourBrt": None,
                 "dayHourBrt": empty_day_hour(), "openings": [], "bestWindows": [],
+                "overlapScore": 0.0,
             })
             continue
 
-        total = sum(d["hoursBrt"])
-        peak_brt = max(range(24), key=lambda h: d["hoursBrt"][h]) if total else None
+        score = overlap_score(
+            target_analysis["dayHourBrt"], target_analysis["total"],
+            d["dayHourBrt"], d["total"],
+        )
 
         player_rows.append({
             **p,
-            "total": total,
-            "peakHourBrt": peak_brt,
+            "total": d["total"],
+            "peakHourBrt": d["peakHourBrt"],
             "dayHourBrt": d["dayHourBrt"],
             "openings": top_counter(d["openings"], TOP_OPENINGS),
-            "bestWindows": best_windows(d["dayHourBrt"], total, n=3),
+            "bestWindows": d["bestWindows"],
+            "overlapScore": round(score * 100, 2),  # em % (0-100), mais alto = mais sobreposição
         })
 
     output = {
@@ -234,6 +283,16 @@ def main():
         "hourlyBrt": hourly_brt,
         "dayHourBrt": day_hour_brt,
         "openingsOverall": top_counter(openings_overall, TOP_OPENINGS * 2),
+        "targetPlayer": {
+            "username": TARGET_USERNAME,
+            "monthsBack": TARGET_MONTHS_BACK,
+            "total": target_analysis["total"],
+            "hoursBrt": target_analysis["hoursBrt"],
+            "dayHourBrt": target_analysis["dayHourBrt"],
+            "peakHourBrt": target_analysis["peakHourBrt"],
+            "bestWindows": target_analysis["bestWindows"],
+            "openings": top_counter(target_analysis["openings"], TOP_OPENINGS),
+        },
     }
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
