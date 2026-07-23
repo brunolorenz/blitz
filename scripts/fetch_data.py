@@ -25,7 +25,7 @@ OUTPUT_PATH = Path(__file__).resolve().parent.parent / "docs" / "data.json"
 # A API do Chess.com pede um User-Agent identificável nas requisições.
 # Troque o e-mail abaixo pelo seu.
 HEADERS = {
-    "User-Agent": "blitz-patterns-dashboard/1.0 (contato: seu-email@exemplo.com)"
+    "User-Agent": "blitz-patterns-dashboard/1.0 (contato: lorenz.bruno@gmail.com)"
 }
 
 # Aproximação de fuso horário por país (offset UTC, sem horário de verão).
