@@ -1,0 +1,33 @@
+name: Atualizar dados de blitz
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # todo dia às 06:00 UTC
+  workflow_dispatch: {}    # permite rodar manualmente pela aba Actions
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install requests
+
+      - name: Buscar dados do Chess.com
+        run: python scripts/fetch_data.py
+
+      - name: Commitar dados atualizados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data.json
+          git diff --staged --quiet || git commit -m "Atualiza dados de blitz"
+          git push
