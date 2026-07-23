@@ -273,20 +273,22 @@ function buildWindows(bestWindows) {
   return html;
 }
 
-function buildTable(players) {
+function buildTable(players, targetUsername) {
+  const targetLower = (targetUsername || "").toLowerCase();
   const rows = players
     .slice()
     .sort((a, b) => a.rank - b.rank)
     .map((p) => {
       const peak = p.peakHourBrt;
+      const isTarget = p.username.toLowerCase() === targetLower;
       return `
         <tr class="player-row" data-username="${p.username}">
           <td>${p.rank}</td>
-          <td>${flagFromCode(p.countryCode)} ${p.username} <span class="expand-hint">▾ detalhes</span></td>
+          <td>${flagFromCode(p.countryCode)} ${p.username} ${isTarget ? "⭐" : ""} <span class="expand-hint">▾ detalhes</span></td>
           <td class="mono">${p.rating}</td>
           <td class="mono">${p.total}</td>
           <td>${peak !== null && peak !== undefined ? `<span class="peak-badge">${pad2(peak)}h</span>` : "—"}</td>
-          <td class="mono">${p.overlapScore ?? 0}%</td>
+          <td class="mono">${isTarget ? "—" : `${p.overlapScore ?? 0}%`}</td>
         </tr>
         <tr class="detail-row" id="detail-${p.username}" style="display:none">
           <td colspan="6"></td>
@@ -306,8 +308,9 @@ function buildTable(players) {
 }
 
 function buildOverlapRanking(players, targetUsername) {
+  const targetLower = (targetUsername || "").toLowerCase();
   const ranked = players
-    .filter((p) => p.total > 0)
+    .filter((p) => p.total > 0 && p.username.toLowerCase() !== targetLower)
     .slice()
     .sort((a, b) => b.overlapScore - a.overlapScore)
     .slice(0, 15);
@@ -367,7 +370,7 @@ function render(data) {
 
     <section>
       <h2 class="section-title">Maior chance de encontro para ${target.username}</h2>
-      <p class="section-hint">Compara a rotina de ${target.username} com a de cada jogador do ranking — quanto mais os horários coincidem, maior o score. Ordenado do maior para o menor.</p>
+      <p class="section-hint">Para cada jogador, mostra a % das partidas dele que aconteceram em algum bloco de dia+hora onde ${target.username} já jogou pelo menos uma vez no período. Quanto maior, mais esse jogador costuma estar ativo nos mesmos horários que ${target.username}.</p>
       ${buildOverlapRanking(data.players, target.username)}
     </section>` : ""}
 
@@ -402,7 +405,7 @@ function render(data) {
     <section>
       <h2 class="section-title">Ranking, horário de pico, sobreposição e aberturas por jogador</h2>
       <p class="section-hint">Clique num jogador para ver as melhores janelas para encontrá-lo e as aberturas dele.</p>
-      ${buildTable(data.players)}
+      ${buildTable(data.players, target ? target.username : null)}
     </section>
   `;
 

@@ -37,7 +37,7 @@ OUTPUT_PATH = Path(__file__).resolve().parent.parent / "docs" / "data.json"
 # A API do Chess.com pede um User-Agent identificável nas requisições.
 # Troque o e-mail abaixo pelo seu.
 HEADERS = {
-    "User-Agent": "blitz-patterns-dashboard/1.0 (contato: lorenz.bruno@gmail.com)"
+    "User-Agent": "blitz-patterns-dashboard/1.0 (contato: seu-email@exemplo.com)"
 }
 
 # Time control alvo: "180" = 3 minutos sem incremento (3+0).
@@ -176,18 +176,20 @@ def analyze_games(username, games):
     }
 
 
-def overlap_score(day_hour_a, total_a, day_hour_b, total_b):
-    """Produto escalar entre as duas distribuições normalizadas (dia×hora).
-    Vai de 0 (nenhuma sobreposição) a 1 (rotinas idênticas)."""
-    if not total_a or not total_b:
+def overlap_score(target_day_hour, target_total, player_day_hour, player_total):
+    """% das partidas do jogador que aconteceram em algum bloco dia+hora em que
+    o jogador-alvo já registrou pelo menos uma partida no período analisado.
+    Ex.: 40% significa que 40% das partidas desse jogador caem em horários
+    onde o alvo historicamente também costuma estar jogando."""
+    if not target_total or not player_total:
         return 0.0
-    score = 0.0
-    for day in range(7):
-        for hour in range(24):
-            wa = day_hour_a[day][hour] / total_a
-            wb = day_hour_b[day][hour] / total_b
-            score += wa * wb
-    return score
+    active_cells = sum(
+        player_day_hour[day][hour]
+        for day in range(7)
+        for hour in range(24)
+        if target_day_hour[day][hour] > 0
+    )
+    return 100 * active_cells / player_total
 
 
 def main():
@@ -270,7 +272,7 @@ def main():
             "dayHourBrt": d["dayHourBrt"],
             "openings": top_counter(d["openings"], TOP_OPENINGS),
             "bestWindows": d["bestWindows"],
-            "overlapScore": round(score * 100, 2),  # em % (0-100), mais alto = mais sobreposição
+            "overlapScore": round(score, 2),  # % das partidas do jogador em janelas ativas do alvo
         })
 
     output = {
