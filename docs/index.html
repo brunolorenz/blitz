@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>O relógio dos top blitz — Chess.com</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap');
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: #FBF8F1;
+    color: #1C1B18;
+    margin: 0;
+    padding: 28px 20px 48px;
+  }
+  .page { max-width: 880px; margin: 0 auto; }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: #8A9A82;
+    font-weight: 600;
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(28px, 6vw, 40px);
+    margin: 6px 0 8px;
+  }
+  .subtitle { font-size: 15px; color: #5A5647; max-width: 520px; line-height: 1.5; margin: 0 0 20px; }
+  .meta-bar {
+    display: flex; flex-wrap: wrap; gap: 16px; align-items: center;
+    padding: 14px 16px; background: #F1ECDF; border: 1px solid #DDD5C0;
+    border-radius: 8px; margin-bottom: 24px; font-size: 13px; color: #5A5647;
+  }
+  .tz-toggle { display: flex; gap: 4px; margin-left: auto; }
+  .tz-btn {
+    font-family: 'IBM Plex Sans', sans-serif; font-size: 12px; padding: 6px 10px;
+    border: 1px solid #C8C0AC; background: #FBF8F1; color: #1C1B18; border-radius: 5px; cursor: pointer;
+  }
+  .tz-btn.active { background: #35462F; color: #EDE6D6; border-color: #35462F; }
+  .hero {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-bottom: 32px;
+  }
+  .hero svg { width: 280px; height: 280px; flex-shrink: 0; }
+  .hero-caption { flex: 1; min-width: 220px; }
+  .hero-caption-title { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 600; margin-bottom: 6px; }
+  .hero-caption-text { font-size: 13px; color: #5A5647; line-height: 1.5; }
+  .hero-caption-note { font-size: 12px; color: #8A6A3E; margin-top: 8px; }
+  section { margin-bottom: 32px; }
+  .section-title { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 600; margin-bottom: 4px; }
+  .section-hint { font-size: 12.5px; color: #5A5647; margin: 0 0 12px; }
+  .barchart {
+    display: flex; align-items: flex-end; gap: 3px; height: 220px;
+    border-bottom: 1px solid #C8C0AC; padding-top: 8px; overflow-x: auto;
+  }
+  .bar-col { flex: 1; min-width: 14px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
+  .bar { width: 100%; background: #35462F; border-radius: 3px 3px 0 0; }
+  .bar-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #8A8368; margin-top: 4px; }
+  .heatmap-wrap { overflow-x: auto; }
+  .heatmap-grid { display: grid; grid-template-columns: 40px repeat(24, 1fr); gap: 2px; min-width: 640px; }
+  .heatmap-hour-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #8A8368; text-align: center; }
+  .heatmap-day-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5A5647; display: flex; align-items: center; }
+  .heatmap-cell { height: 16px; border-radius: 2px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th {
+    text-align: left; padding: 8px 10px; border-bottom: 2px solid #C8C0AC;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em;
+    color: #5A5647; text-transform: uppercase;
+  }
+  td { padding: 8px 10px; border-bottom: 1px solid #E4DDCA; }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+  .peak-badge {
+    display: inline-block; font-family: 'IBM Plex Mono', monospace; background: #EDE6D6;
+    border: 1px solid #C8C0AC; border-radius: 4px; padding: 2px 8px;
+  }
+  .table-wrap { overflow-x: auto; }
+  footer { margin-top: 40px; font-size: 11px; color: #8A8368; line-height: 1.5; border-top: 1px solid #E4DDCA; padding-top: 16px; }
+  .empty-state { padding: 24px; background: #F1ECDF; border: 1px dashed #C8C0AC; border-radius: 8px; font-size: 13px; color: #5A5647; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="eyebrow">PADRÕES DE JOGO · CHESS.COM</div>
+  <h1>O relógio dos top blitz</h1>
+  <p class="subtitle">Quando os melhores jogadores de blitz do mundo realmente jogam — hora a hora, dia a dia.</p>
+
+  <div class="meta-bar" id="metaBar">Carregando dados…</div>
+
+  <div id="content"></div>
+
+  <footer>
+    Dados via API pública do Chess.com (leaderboards + arquivos de partidas),
+    atualizados periodicamente por uma GitHub Action. Horários de encerramento
+    de partida; fusos horários por país são estimativas com base na capital,
+    sem ajuste de horário de verão.
+  </footer>
+</div>
+
+<script>
+const DIAS = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+
+function pad2(n) { return String(n).padStart(2, "0"); }
+
+function flagFromCode(code) {
+  if (!code || code.length !== 2) return "🏳️";
+  const upper = code.toUpperCase();
+  return String.fromCodePoint(...[...upper].map((c) => 127397 + c.charCodeAt(0)));
+}
+
+function heatColor(t) {
+  const stops = [
+    { p: 0, c: [237, 230, 214] },
+    { p: 0.5, c: [144, 161, 126] },
+    { p: 1, c: [53, 70, 47] },
+  ];
+  let a = stops[0], b = stops[stops.length - 1];
+  for (let i = 0; i < stops.length - 1; i++) {
+    if (t >= stops[i].p && t <= stops[i + 1].p) { a = stops[i]; b = stops[i + 1]; break; }
+  }
+  const span = b.p - a.p || 1;
+  const localT = (t - a.p) / span;
+  const rgb = a.c.map((v, i) => Math.round(v + (b.c[i] - v) * localT));
+  return `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+}
+
+function buildClockFaceSVG(hourly, totalGames) {
+  const size = 320, center = size / 2, rInner = 62, rOuterMax = 138;
+  const maxHourly = Math.max(1, ...hourly);
+  const labelHours = [0, 3, 6, 9, 12, 15, 18, 21];
+
+  let lines = "";
+  hourly.forEach((count, hour) => {
+    const angle = (hour / 24) * 2 * Math.PI - Math.PI / 2;
+    const len = (count / maxHourly) * (rOuterMax - rInner);
+    const x1 = center + rInner * Math.cos(angle);
+    const y1 = center + rInner * Math.sin(angle);
+    const x2 = center + (rInner + len) * Math.cos(angle);
+    const y2 = center + (rInner + len) * Math.sin(angle);
+    const t = count / maxHourly;
+    const color = t > 0.85 ? "#C1443C" : t > 0.5 ? "#B8935A" : "#35462F";
+    lines += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="5" stroke-linecap="round"><title>${pad2(hour)}h — ${count} partidas</title></line>`;
+  });
+
+  let labels = "";
+  labelHours.forEach((h) => {
+    const angle = (h / 24) * 2 * Math.PI - Math.PI / 2;
+    const x = center + (rOuterMax + 26) * Math.cos(angle);
+    const y = center + (rOuterMax + 26) * Math.sin(angle);
+    labels += `<text x="${x}" y="${y}" font-family="IBM Plex Mono" font-size="11" fill="#5A5647" text-anchor="middle" dominant-baseline="middle">${pad2(h)}</text>`;
+  });
+
+  return `
+    <svg viewBox="0 0 ${size} ${size}" role="img" aria-label="Distribuição de partidas ao longo de 24 horas">
+      <circle cx="${center}" cy="${center}" r="${rOuterMax + 14}" fill="#EDE6D6" stroke="#C8C0AC" stroke-width="1" />
+      <circle cx="${center}" cy="${center}" r="${rInner - 2}" fill="#FBF8F1" stroke="#C8C0AC" stroke-width="1" />
+      ${lines}
+      ${labels}
+      <text x="${center}" y="${center - 8}" font-family="Fraunces" font-size="26" font-weight="600" fill="#1C1B18" text-anchor="middle">${totalGames}</text>
+      <text x="${center}" y="${center + 14}" font-family="IBM Plex Sans" font-size="11" fill="#5A5647" text-anchor="middle">partidas</text>
+    </svg>`;
+}
+
+function buildBarChart(hourly) {
+  const max = Math.max(1, ...hourly);
+  let html = '<div class="barchart">';
+  hourly.forEach((count, hour) => {
+    const heightPct = (count / max) * 100;
+    html += `
+      <div class="bar-col" title="${pad2(hour)}h — ${count} partidas">
+        <div class="bar" style="height:${heightPct}%"></div>
+        <div class="bar-label">${hour % 3 === 0 ? pad2(hour) : ""}</div>
+      </div>`;
+  });
+  html += "</div>";
+  return html;
+}
+
+function buildHeatmap(dayHourMatrix) {
+  const maxCell = Math.max(1, ...dayHourMatrix.flat());
+  let html = '<div class="heatmap-wrap"><div class="heatmap-grid">';
+  html += "<div></div>";
+  for (let h = 0; h < 24; h++) {
+    html += `<div class="heatmap-hour-label">${h % 3 === 0 ? pad2(h) : ""}</div>`;
+  }
+  DIAS.forEach((dia, dayIdx) => {
+    html += `<div class="heatmap-day-label">${dia}</div>`;
+    dayHourMatrix[dayIdx].forEach((val, hourIdx) => {
+      const color = heatColor(val / maxCell);
+      html += `<div class="heatmap-cell" style="background:${color}" title="${dia} ${pad2(hourIdx)}h — ${val} partidas"></div>`;
+    });
+  });
+  html += "</div></div>";
+  return html;
+}
+
+function buildTable(players, tzMode) {
+  const rows = players
+    .slice()
+    .sort((a, b) => a.rank - b.rank)
+    .map((p) => {
+      const peak = tzMode === "utc" ? p.peakHourUtc : p.peakHourLocal;
+      return `
+        <tr>
+          <td>${p.rank}</td>
+          <td>${flagFromCode(p.countryCode)} ${p.username}</td>
+          <td class="mono">${p.rating}</td>
+          <td class="mono">${p.total}</td>
+          <td>${peak !== null && peak !== undefined ? `<span class="peak-badge">${pad2(peak)}h</span>` : "—"}</td>
+        </tr>`;
+    })
+    .join("");
+
+  return `
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>#</th><th>Jogador</th><th>Rating</th><th>Partidas</th><th>Horário de pico</th></tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+}
+
+function render(data, tzMode) {
+  const hourly = tzMode === "utc" ? data.hourlyUtc : data.hourlyLocal;
+  const dayHour = tzMode === "utc" ? data.dayHourUtc : data.dayHourLocal;
+
+  const content = document.getElementById("content");
+  content.innerHTML = `
+    <section class="hero">
+      ${buildClockFaceSVG(hourly, data.totalGames)}
+      <div class="hero-caption">
+        <div class="hero-caption-title">${data.totalGames.toLocaleString("pt-BR")} partidas de blitz analisadas</div>
+        <div class="hero-caption-text">
+          ${data.playerCount} jogadores · últimos ${data.monthsBack} ${data.monthsBack === 1 ? "mês" : "meses"} de arquivo ·
+          ${tzMode === "utc" ? "horário UTC" : "fuso horário estimado por país (aproximado, sem horário de verão)"}
+        </div>
+        ${data.skipped > 0 ? `<div class="hero-caption-note">${data.skipped} jogador(es) sem partidas de blitz no período.</div>` : ""}
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Distribuição por hora</h2>
+      ${buildBarChart(hourly)}
+    </section>
+
+    <section>
+      <h2 class="section-title">Dia da semana × hora</h2>
+      <p class="section-hint">Cada célula combina dia e hora; quanto mais escura, mais partidas foram encerradas naquele intervalo.</p>
+      ${buildHeatmap(dayHour)}
+    </section>
+
+    <section>
+      <h2 class="section-title">Ranking e horário de pico individual</h2>
+      ${buildTable(data.players, tzMode)}
+    </section>
+  `;
+}
+
+async function main() {
+  const metaBar = document.getElementById("metaBar");
+  try {
+    const res = await fetch("./data.json", { cache: "no-store" });
+    const data = await res.json();
+
+    if (!data.generatedAt || data.players.length === 0) {
+      metaBar.innerHTML = "Ainda sem dados — rode a GitHub Action pela primeira vez (aba Actions → Atualizar dados de blitz → Run workflow).";
+      return;
+    }
+
+    let tzMode = "utc";
+    const generated = new Date(data.generatedAt).toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" });
+    metaBar.innerHTML = `
+      Atualizado em ${generated}
+      <div class="tz-toggle">
+        <button class="tz-btn active" id="btnUtc">UTC</button>
+        <button class="tz-btn" id="btnLocal">Estimado por país</button>
+      </div>`;
+
+    render(data, tzMode);
+
+    document.getElementById("btnUtc").addEventListener("click", () => {
+      tzMode = "utc";
+      document.getElementById("btnUtc").classList.add("active");
+      document.getElementById("btnLocal").classList.remove("active");
+      render(data, tzMode);
+    });
+    document.getElementById("btnLocal").addEventListener("click", () => {
+      tzMode = "local";
+      document.getElementById("btnLocal").classList.add("active");
+      document.getElementById("btnUtc").classList.remove("active");
+      render(data, tzMode);
+    });
+  } catch (e) {
+    metaBar.innerHTML = `<div class="empty-state">Não foi possível carregar data.json: ${e.message}</div>`;
+  }
+}
+
+main();
+</script>
+</body>
+</html>
