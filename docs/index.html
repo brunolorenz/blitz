@@ -33,33 +33,44 @@
     padding: 14px 16px; background: #F1ECDF; border: 1px solid #DDD5C0;
     border-radius: 8px; margin-bottom: 24px; font-size: 13px; color: #5A5647;
   }
-  .hero {
-    display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-bottom: 32px;
-  }
-  .hero svg { width: 280px; height: 280px; flex-shrink: 0; }
-  .hero-caption { flex: 1; min-width: 220px; }
-  .hero-caption-title { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 600; margin-bottom: 6px; }
-  .hero-caption-text { font-size: 13px; color: #5A5647; line-height: 1.5; }
-  .hero-caption-note { font-size: 12px; color: #8A6A3E; margin-top: 8px; }
-  section { margin-bottom: 32px; }
+  section { margin-bottom: 36px; }
   .section-title { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 600; margin-bottom: 4px; }
   .section-hint { font-size: 12.5px; color: #5A5647; margin: 0 0 12px; }
-  .barchart {
-    display: flex; align-items: flex-end; gap: 3px; height: 220px;
-    border-bottom: 1px solid #C8C0AC; padding-top: 8px;
+
+  /* Seção primária (ranking) recebe destaque visual */
+  .primary-section {
+    background: #F8F4E9; border: 1px solid #DDD5C0; border-left: 4px solid #35462F;
+    border-radius: 8px; padding: 20px; margin-bottom: 36px;
   }
+  .primary-eyebrow {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em;
+    color: #35462F; font-weight: 600; margin-bottom: 4px;
+  }
+  .primary-section .section-title { font-size: 22px; }
+
+  /* Bloco de rotina do LPSupi (compacto) */
+  .lpsupi-block { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
+  .lpsupi-block svg { width: 180px; height: 180px; flex-shrink: 0; }
+  .lpsupi-caption { flex: 1; min-width: 220px; }
+  .lpsupi-caption-title { font-family: 'Fraunces', serif; font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+  .lpsupi-caption-text { font-size: 12.5px; color: #5A5647; line-height: 1.5; margin-bottom: 8px; }
+
+  .barchart { display: flex; align-items: flex-end; gap: 3px; height: 180px; border-bottom: 1px solid #C8C0AC; padding-top: 8px; }
   .bar-col { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
   .bar { width: 100%; background: #35462F; border-radius: 3px 3px 0 0; }
   .bar-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #8A8368; margin-top: 4px; }
-  /* Heatmap agregado (seção própria): pode rolar horizontalmente com folga */
+
   .heatmap-wrap { overflow-x: auto; }
   .heatmap-grid { display: grid; grid-template-columns: 34px repeat(24, 1fr); gap: 2px; min-width: 640px; }
-  /* Heatmap por jogador (dentro do detalhe): sempre cabe na largura, sem scroll */
   .heatmap-grid.fit { min-width: 0; grid-template-columns: 26px repeat(24, minmax(0, 1fr)); gap: 1px; }
   .heatmap-hour-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #8A8368; text-align: center; }
   .heatmap-day-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #5A5647; display: flex; align-items: center; }
   .heatmap-cell { height: 16px; border-radius: 2px; }
   .heatmap-grid.fit .heatmap-cell { height: 13px; border-radius: 1px; }
+  .heatmap-cell.clickable { cursor: pointer; border: 1px solid transparent; }
+  .heatmap-cell.clickable:hover { border-color: #35462F; }
+  .heatmap-cell.selected { border: 2px solid #C1443C; }
+
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   th {
     text-align: left; padding: 8px 10px; border-bottom: 2px solid #C8C0AC;
@@ -76,31 +87,51 @@
   .player-row { cursor: pointer; }
   .player-row:hover { background: #F1ECDF; }
   .expand-hint { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8A9A82; }
-  .detail-row td { background: #F8F4E9; padding: 16px 14px; }
-  .detail-block + .detail-block { margin-top: 20px; }
-  .detail-block h4 {
-    font-family: 'Fraunces', serif; font-size: 14px; font-weight: 600; margin: 0 0 8px;
-  }
-  .windows-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .detail-row td { background: #F1ECDF; padding: 16px 14px; }
+  .detail-block + .detail-block { margin-top: 18px; }
+  .detail-block h4 { font-family: 'Fraunces', serif; font-size: 14px; font-weight: 600; margin: 0 0 8px; }
+  .detail-block.minor h4 { font-size: 12.5px; color: #5A5647; }
+
+  .windows-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
   .window-chip {
     font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #EDE6D6;
     border: 1px solid #C8C0AC; border-radius: 6px; padding: 5px 10px;
   }
   .window-chip b { color: #C1443C; }
-  .opening-list { list-style: none; margin: 0; padding: 0; font-size: 12.5px; }
-  .opening-list li {
-    display: flex; justify-content: space-between; gap: 8px; padding: 4px 0;
-    border-bottom: 1px dashed #DDD5C0;
+
+  .opening-list { list-style: none; margin: 0; padding: 0; font-size: 12px; }
+  .opening-list li { display: flex; justify-content: space-between; gap: 8px; padding: 3px 0; border-bottom: 1px dashed #DDD5C0; }
+  .opening-name { color: #5A5647; }
+  .opening-count { font-family: 'IBM Plex Mono', monospace; color: #8A8368; }
+
+  .rank-list { list-style: none; margin: 0; padding: 0; }
+  .rank-list li { display: flex; align-items: center; gap: 10px; padding: 6px 0; border-bottom: 1px dashed #DDD5C0; font-size: 13px; }
+  .rank-bar-track { flex: 1; height: 8px; background: #E4DDCA; border-radius: 4px; overflow: hidden; }
+  .rank-bar-fill { height: 100%; background: #C1443C; }
+  .rank-bar-fill.warm { background: #B8935A; }
+
+  .explorer-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 16px; }
+  .explorer-controls select {
+    font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; padding: 6px 8px;
+    border: 1px solid #C8C0AC; border-radius: 5px; background: #FBF8F1; color: #1C1B18;
   }
-  .opening-name { color: #1C1B18; }
-  .opening-count { font-family: 'IBM Plex Mono', monospace; color: #5A5647; }
-  .opening-overall-list { list-style: none; margin: 0; padding: 0; }
-  .opening-overall-list li {
-    display: flex; align-items: center; gap: 10px; padding: 6px 0;
-    border-bottom: 1px dashed #DDD5C0; font-size: 13px;
+  .explorer-result-title { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 600; margin: 4px 0 10px; }
+
+  details.openings-details {
+    background: #F1ECDF; border: 1px solid #DDD5C0; border-radius: 8px; padding: 12px 16px;
   }
-  .opening-bar-track { flex: 1; height: 8px; background: #E4DDCA; border-radius: 4px; overflow: hidden; }
+  details.openings-details summary {
+    cursor: pointer; font-family: 'Fraunces', serif; font-size: 15px; font-weight: 600;
+    list-style: none;
+  }
+  details.openings-details summary::-webkit-details-marker { display: none; }
+  details.openings-details summary::before { content: "▸ "; color: #8A9A82; }
+  details.openings-details[open] summary::before { content: "▾ "; }
+  .opening-overall-list { list-style: none; margin: 10px 0 0; padding: 0; }
+  .opening-overall-list li { display: flex; align-items: center; gap: 10px; padding: 5px 0; border-bottom: 1px dashed #DDD5C0; font-size: 12.5px; }
+  .opening-bar-track { flex: 1; height: 7px; background: #E4DDCA; border-radius: 4px; overflow: hidden; }
   .opening-bar-fill { height: 100%; background: #B8935A; }
+
   footer { margin-top: 40px; font-size: 11px; color: #8A8368; line-height: 1.5; border-top: 1px solid #E4DDCA; padding-top: 16px; }
   .empty-state { padding: 24px; background: #F1ECDF; border: 1px dashed #C8C0AC; border-radius: 8px; font-size: 13px; color: #5A5647; }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -110,26 +141,25 @@
 <div class="page">
   <div class="eyebrow">PADRÕES DE JOGO · CHESS.COM</div>
   <h1>O relógio dos top blitz</h1>
-  <p class="subtitle">Quando os melhores jogadores de blitz do mundo realmente jogam — hora a hora, dia a dia, no horário de Brasília.</p>
+  <p class="subtitle">Quando os melhores jogadores de blitz do mundo realmente jogam — e quando LPSupi tem mais chance de encontrar cada um deles, em horário de Brasília.</p>
 
   <div class="meta-bar" id="metaBar">Carregando dados…</div>
 
   <div id="content"></div>
 
   <footer>
-    Dados via API pública do Chess.com (leaderboards + arquivos de partidas),
-    atualizados periodicamente por uma GitHub Action. Horários convertidos
-    para Horário de Brasília (UTC-3, fixo — o Brasil não observa mais
-    horário de verão desde 2019, então essa conversão é exata). Aberturas
-    são derivadas do slug de abertura do Chess.com por uma heurística;
-    nomes podem ocasionalmente vir truncados. As "melhores janelas" e
-    percentuais são baseados no histórico de partidas do período, não em
-    presença ao vivo.
+    Dados via API pública do Chess.com (leaderboards + arquivos de partidas, blitz 3+0),
+    atualizados periodicamente por uma GitHub Action. Horários convertidos para
+    Horário de Brasília (UTC-3, fixo). Percentuais de "sobreposição" e do
+    explorador são baseados no histórico de partidas do período, não em
+    presença ao vivo. Aberturas são derivadas do slug de abertura do
+    Chess.com por uma heurística; nomes podem ocasionalmente vir truncados.
   </footer>
 </div>
 
 <script>
 const DIAS = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+const DIAS_LONGO = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
 
 function pad2(n) { return String(n).padStart(2, "0"); }
 
@@ -156,9 +186,9 @@ function heatColor(t) {
 }
 
 function buildClockFaceSVG(hourly, totalGames) {
-  const size = 320, center = size / 2, rInner = 62, rOuterMax = 138;
+  const size = 200, center = size / 2, rInner = 40, rOuterMax = 84;
   const maxHourly = Math.max(1, ...hourly);
-  const labelHours = [0, 3, 6, 9, 12, 15, 18, 21];
+  const labelHours = [0, 6, 12, 18];
 
   let lines = "";
   hourly.forEach((count, hour) => {
@@ -170,47 +200,33 @@ function buildClockFaceSVG(hourly, totalGames) {
     const y2 = center + (rInner + len) * Math.sin(angle);
     const t = count / maxHourly;
     const color = t > 0.85 ? "#C1443C" : t > 0.5 ? "#B8935A" : "#35462F";
-    lines += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="5" stroke-linecap="round"><title>${pad2(hour)}h — ${count} partidas</title></line>`;
+    lines += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="4" stroke-linecap="round"><title>${pad2(hour)}h — ${count} partidas</title></line>`;
   });
 
   let labels = "";
   labelHours.forEach((h) => {
     const angle = (h / 24) * 2 * Math.PI - Math.PI / 2;
-    const x = center + (rOuterMax + 26) * Math.cos(angle);
-    const y = center + (rOuterMax + 26) * Math.sin(angle);
-    labels += `<text x="${x}" y="${y}" font-family="IBM Plex Mono" font-size="11" fill="#5A5647" text-anchor="middle" dominant-baseline="middle">${pad2(h)}</text>`;
+    const x = center + (rOuterMax + 16) * Math.cos(angle);
+    const y = center + (rOuterMax + 16) * Math.sin(angle);
+    labels += `<text x="${x}" y="${y}" font-family="IBM Plex Mono" font-size="10" fill="#5A5647" text-anchor="middle" dominant-baseline="middle">${pad2(h)}</text>`;
   });
 
   return `
     <svg viewBox="0 0 ${size} ${size}" role="img" aria-label="Distribuição de partidas ao longo de 24 horas">
-      <circle cx="${center}" cy="${center}" r="${rOuterMax + 14}" fill="#EDE6D6" stroke="#C8C0AC" stroke-width="1" />
+      <circle cx="${center}" cy="${center}" r="${rOuterMax + 10}" fill="#EDE6D6" stroke="#C8C0AC" stroke-width="1" />
       <circle cx="${center}" cy="${center}" r="${rInner - 2}" fill="#FBF8F1" stroke="#C8C0AC" stroke-width="1" />
       ${lines}
       ${labels}
-      <text x="${center}" y="${center - 8}" font-family="Fraunces" font-size="26" font-weight="600" fill="#1C1B18" text-anchor="middle">${totalGames}</text>
-      <text x="${center}" y="${center + 14}" font-family="IBM Plex Sans" font-size="11" fill="#5A5647" text-anchor="middle">partidas</text>
+      <text x="${center}" y="${center - 4}" font-family="Fraunces" font-size="18" font-weight="600" fill="#1C1B18" text-anchor="middle">${totalGames}</text>
+      <text x="${center}" y="${center + 12}" font-family="IBM Plex Sans" font-size="9" fill="#5A5647" text-anchor="middle">partidas</text>
     </svg>`;
-}
-
-function buildBarChart(hourly) {
-  const max = Math.max(1, ...hourly);
-  let html = '<div class="barchart">';
-  hourly.forEach((count, hour) => {
-    const heightPct = (count / max) * 100;
-    html += `
-      <div class="bar-col" title="${pad2(hour)}h — ${count} partidas">
-        <div class="bar" style="height:${heightPct}%"></div>
-        <div class="bar-label">${hour % 3 === 0 ? pad2(hour) : ""}</div>
-      </div>`;
-  });
-  html += "</div>";
-  return html;
 }
 
 function buildHeatmap(dayHourMatrix, opts) {
   opts = opts || {};
   const fit = !!opts.fit;
-  const total = opts.total || Math.max(1, ...dayHourMatrix.flat());
+  const clickable = !!opts.clickable;
+  const selected = opts.selected || null;
   const maxCell = Math.max(1, ...dayHourMatrix.flat());
   const wrapOpen = fit ? '<div>' : '<div class="heatmap-wrap">';
   let html = wrapOpen + `<div class="heatmap-grid${fit ? " fit" : ""}">`;
@@ -222,8 +238,10 @@ function buildHeatmap(dayHourMatrix, opts) {
     html += `<div class="heatmap-day-label">${dia}</div>`;
     dayHourMatrix[dayIdx].forEach((val, hourIdx) => {
       const color = heatColor(val / maxCell);
-      const pct = opts.showPct ? ` (${(100 * val / total).toFixed(1)}%)` : "";
-      html += `<div class="heatmap-cell" style="background:${color}" title="${dia} ${pad2(hourIdx)}h — ${val} partidas${pct}"></div>`;
+      const isSelected = selected && selected.day === dayIdx && selected.hour === hourIdx;
+      const cls = `heatmap-cell${clickable ? " clickable" : ""}${isSelected ? " selected" : ""}`;
+      const dataAttrs = clickable ? ` data-day="${dayIdx}" data-hour="${hourIdx}"` : "";
+      html += `<div class="${cls}" style="background:${color}" title="${dia} ${pad2(hourIdx)}h — ${val} partidas"${dataAttrs}></div>`;
     });
   });
   html += "</div></div>";
@@ -240,7 +258,7 @@ function buildOpeningsOverall(openings) {
     const pct = (o.count / max) * 100;
     html += `
       <li>
-        <span style="min-width:180px">${o.name}</span>
+        <span style="min-width:170px">${o.name}</span>
         <span class="opening-bar-track"><span class="opening-bar-fill" style="width:${pct}%"></span></span>
         <span class="mono">${o.count}</span>
       </li>`;
@@ -261,13 +279,13 @@ function buildOpeningsList(openings) {
   return html;
 }
 
-function buildWindows(bestWindows) {
+function buildWindows(bestWindows, suffix) {
   if (!bestWindows || bestWindows.length === 0) {
     return '<p class="section-hint">Sem dados suficientes para estimar janelas.</p>';
   }
   let html = '<div class="windows-list">';
   bestWindows.forEach((w) => {
-    html += `<div class="window-chip">${DIAS[w.day]} ${pad2(w.hour)}h · <b>${w.pct}%</b> das partidas dele</div>`;
+    html += `<div class="window-chip">${DIAS[w.day]} ${pad2(w.hour)}h · <b>${w.pct}%</b>${suffix || ""}</div>`;
   });
   html += "</div>";
   return html;
@@ -307,27 +325,40 @@ function buildTable(players, targetUsername) {
     </div>`;
 }
 
+function renderPlayerDetail(player) {
+  return `
+    <div class="detail-block">
+      <h4>Melhores janelas para encontrar ${player.username} (horário de Brasília)</h4>
+      ${buildWindows(player.bestWindows, " das partidas dele")}
+      ${buildHeatmap(player.dayHourBrt, { fit: true })}
+    </div>
+    <div class="detail-block minor">
+      <h4>Aberturas mais jogadas por ${player.username}</h4>
+      ${buildOpeningsList(player.openings)}
+    </div>`;
+}
+
 function buildOverlapRanking(players, targetUsername) {
   const targetLower = (targetUsername || "").toLowerCase();
   const ranked = players
     .filter((p) => p.total > 0 && p.username.toLowerCase() !== targetLower)
     .slice()
     .sort((a, b) => b.overlapScore - a.overlapScore)
-    .slice(0, 15);
+    .slice(0, 10);
 
   if (ranked.length === 0) {
     return '<p class="section-hint">Sem dados suficientes para calcular sobreposição ainda.</p>';
   }
 
   const max = Math.max(...ranked.map((p) => p.overlapScore), 0.01);
-  let html = '<ul class="opening-overall-list">';
+  let html = '<ul class="rank-list">';
   ranked.forEach((p) => {
     const pct = (p.overlapScore / max) * 100;
     const peak = p.peakHourBrt !== null && p.peakHourBrt !== undefined ? `${pad2(p.peakHourBrt)}h` : "—";
     html += `
       <li>
         <span style="min-width:150px">${flagFromCode(p.countryCode)} ${p.username}</span>
-        <span class="opening-bar-track"><span class="opening-bar-fill" style="width:${pct}%; background:#C1443C"></span></span>
+        <span class="rank-bar-track"><span class="rank-bar-fill" style="width:${pct}%"></span></span>
         <span class="mono">${p.overlapScore}%</span>
         <span class="peak-badge" style="margin-left:6px">pico ${peak}</span>
       </li>`;
@@ -336,76 +367,91 @@ function buildOverlapRanking(players, targetUsername) {
   return html;
 }
 
-function renderPlayerDetail(player) {
-  return `
-    <div class="detail-block">
-      <h4>Chances de encontrar ${player.username} — melhores janelas (horário de Brasília)</h4>
-      ${buildWindows(player.bestWindows)}
-      ${buildHeatmap(player.dayHourBrt, { fit: true, total: player.total, showPct: true })}
-    </div>
-    <div class="detail-block">
-      <h4>Aberturas mais jogadas por ${player.username}</h4>
-      ${buildOpeningsList(player.openings)}
-    </div>`;
+function buildHourExplorerList(players, day, hour) {
+  const ranked = players
+    .filter((p) => p.total > 0)
+    .map((p) => ({
+      ...p,
+      slotPct: (100 * p.dayHourBrt[day][hour]) / p.total,
+    }))
+    .filter((p) => p.slotPct > 0)
+    .sort((a, b) => b.slotPct - a.slotPct)
+    .slice(0, 10);
+
+  if (ranked.length === 0) {
+    return '<p class="section-hint">Nenhum jogador com partidas registradas nesse horário ainda.</p>';
+  }
+
+  const max = Math.max(...ranked.map((p) => p.slotPct));
+  let html = '<ul class="rank-list">';
+  ranked.forEach((p) => {
+    const pct = (p.slotPct / max) * 100;
+    html += `
+      <li>
+        <span style="min-width:150px">${flagFromCode(p.countryCode)} ${p.username}</span>
+        <span class="rank-bar-track"><span class="rank-bar-fill warm" style="width:${pct}%"></span></span>
+        <span class="mono">${p.slotPct.toFixed(1)}%</span>
+      </li>`;
+  });
+  html += "</ul>";
+  return html;
 }
 
 function render(data) {
-  const hourly = data.hourlyBrt;
-  const dayHour = data.dayHourBrt;
   const target = data.targetPlayer;
-
   const content = document.getElementById("content");
+
+  const defaultDay = (target && target.bestWindows && target.bestWindows[0]) ? target.bestWindows[0].day : 6;
+  const defaultHour = (target && target.bestWindows && target.bestWindows[0]) ? target.bestWindows[0].hour : 20;
+
+  let daySelectOptions = DIAS_LONGO.map((d, i) => `<option value="${i}" ${i === defaultDay ? "selected" : ""}>${d}</option>`).join("");
+  let hourSelectOptions = Array.from({ length: 24 }, (_, h) => `<option value="${h}" ${h === defaultHour ? "selected" : ""}>${pad2(h)}h</option>`).join("");
+
   content.innerHTML = `
     ${target && target.total > 0 ? `
-    <section class="hero">
-      ${buildClockFaceSVG(target.hoursBrt, target.total)}
-      <div class="hero-caption">
-        <div class="hero-caption-title">Rotina de ${target.username}</div>
-        <div class="hero-caption-text">
-          ${target.total.toLocaleString("pt-BR")} partidas de blitz 3+0 nos últimos ${target.monthsBack} meses · horário de Brasília
+    <section>
+      <div class="lpsupi-block">
+        ${buildClockFaceSVG(target.hoursBrt, target.total)}
+        <div class="lpsupi-caption">
+          <div class="lpsupi-caption-title">Rotina de ${target.username}</div>
+          <div class="lpsupi-caption-text">${target.total.toLocaleString("pt-BR")} partidas de blitz 3+0 nos últimos ${target.monthsBack} meses, em horário de Brasília.</div>
+          ${buildWindows(target.bestWindows, " das partidas dele")}
         </div>
-        ${buildWindows(target.bestWindows)}
       </div>
+    </section>` : ""}
+
+    <section class="primary-section">
+      <div class="primary-eyebrow">★ PAINEL PRINCIPAL</div>
+      <h2 class="section-title">Ranking, horário de pico e sobreposição por jogador</h2>
+      <p class="section-hint">Clique num jogador para ver as melhores janelas para encontrá-lo e as aberturas dele. A coluna "Sobreposição" mostra a % das partidas de cada um que caem em horários que ${target ? target.username : "o jogador-alvo"} já jogou.</p>
+      ${buildTable(data.players, target ? target.username : null)}
     </section>
 
+    ${target && target.total > 0 ? `
     <section>
       <h2 class="section-title">Maior chance de encontro para ${target.username}</h2>
-      <p class="section-hint">Para cada jogador, mostra a % das partidas dele que aconteceram em algum bloco de dia+hora onde ${target.username} já jogou pelo menos uma vez no período. Quanto maior, mais esse jogador costuma estar ativo nos mesmos horários que ${target.username}.</p>
+      <p class="section-hint">Os jogadores cuja rotina mais coincide com a de ${target.username}, resumidos aqui em destaque.</p>
       ${buildOverlapRanking(data.players, target.username)}
     </section>` : ""}
 
-    <section class="hero">
-      ${buildClockFaceSVG(hourly, data.totalGames)}
-      <div class="hero-caption">
-        <div class="hero-caption-title">${data.totalGames.toLocaleString("pt-BR")} partidas de blitz analisadas (top ${data.playerCount})</div>
-        <div class="hero-caption-text">
-          ${data.playerCount} jogadores · últimos ${data.monthsBack} ${data.monthsBack === 1 ? "mês" : "meses"} de arquivo · horário de Brasília (UTC-3)
-        </div>
-        ${data.skipped > 0 ? `<div class="hero-caption-note">${data.skipped} jogador(es) sem partidas de blitz no período.</div>` : ""}
+    <section>
+      <h2 class="section-title">Explorador: quem tem mais chance de estar jogando nesse horário?</h2>
+      <p class="section-hint">Escolha um dia e hora (BRT) — ou clique numa célula do mapa — e veja quais jogadores mais costumam estar ativos nesse exato momento.</p>
+      <div class="explorer-controls">
+        <select id="daySelect">${daySelectOptions}</select>
+        <select id="hourSelect">${hourSelectOptions}</select>
       </div>
+      ${buildHeatmap(data.dayHourBrt, { clickable: true, selected: { day: defaultDay, hour: defaultHour } })}
+      <p class="explorer-result-title" id="explorerTitle"></p>
+      <div id="explorerResult"></div>
     </section>
 
     <section>
-      <h2 class="section-title">Distribuição por hora</h2>
-      ${buildBarChart(hourly)}
-    </section>
-
-    <section>
-      <h2 class="section-title">Dia da semana × hora (agregado)</h2>
-      <p class="section-hint">Cada célula combina dia e hora; quanto mais escura, mais partidas foram encerradas naquele intervalo.</p>
-      ${buildHeatmap(dayHour)}
-    </section>
-
-    <section>
-      <h2 class="section-title">Aberturas mais jogadas (todos os jogadores)</h2>
-      <p class="section-hint">Extraídas automaticamente das partidas do período — nomes podem vir truncados.</p>
-      ${buildOpeningsOverall(data.openingsOverall)}
-    </section>
-
-    <section>
-      <h2 class="section-title">Ranking, horário de pico, sobreposição e aberturas por jogador</h2>
-      <p class="section-hint">Clique num jogador para ver as melhores janelas para encontrá-lo e as aberturas dele.</p>
-      ${buildTable(data.players, target ? target.username : null)}
+      <details class="openings-details">
+        <summary>Aberturas mais jogadas (agregado entre todos os jogadores)</summary>
+        <p class="section-hint" style="margin-top:8px">Extraídas automaticamente das partidas do período — nomes podem vir truncados.</p>
+        ${buildOpeningsOverall(data.openingsOverall)}
+      </details>
     </section>
   `;
 
@@ -422,6 +468,34 @@ function render(data) {
       }
     });
   });
+
+  const daySelect = document.getElementById("daySelect");
+  const hourSelect = document.getElementById("hourSelect");
+  const explorerTitle = document.getElementById("explorerTitle");
+  const explorerResult = document.getElementById("explorerResult");
+
+  function updateExplorer(day, hour) {
+    explorerTitle.textContent = `${DIAS_LONGO[day]}, ${pad2(hour)}h (BRT)`;
+    explorerResult.innerHTML = buildHourExplorerList(data.players, day, hour);
+    content.querySelectorAll(".heatmap-cell.clickable").forEach((cell) => {
+      cell.classList.toggle(
+        "selected",
+        Number(cell.getAttribute("data-day")) === day && Number(cell.getAttribute("data-hour")) === hour
+      );
+    });
+    daySelect.value = String(day);
+    hourSelect.value = String(hour);
+  }
+
+  daySelect.addEventListener("change", () => updateExplorer(Number(daySelect.value), Number(hourSelect.value)));
+  hourSelect.addEventListener("change", () => updateExplorer(Number(daySelect.value), Number(hourSelect.value)));
+  content.querySelectorAll(".heatmap-cell.clickable").forEach((cell) => {
+    cell.addEventListener("click", () => {
+      updateExplorer(Number(cell.getAttribute("data-day")), Number(cell.getAttribute("data-hour")));
+    });
+  });
+
+  updateExplorer(defaultDay, defaultHour);
 }
 
 async function main() {
