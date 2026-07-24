@@ -107,8 +107,17 @@
   .rank-list { list-style: none; margin: 0; padding: 0; }
   .rank-list li { display: flex; align-items: center; gap: 10px; padding: 6px 0; border-bottom: 1px dashed #DDD5C0; font-size: 13px; }
   .rank-bar-track { flex: 1; height: 8px; background: #E4DDCA; border-radius: 4px; overflow: hidden; }
-  .rank-bar-fill { height: 100%; background: #C1443C; }
+  .rank-bar-fill { display: block; height: 100%; background: #C1443C; }
   .rank-bar-fill.warm { background: #B8935A; }
+
+  .form-dots { display: flex; gap: 3px; }
+  .form-dot {
+    width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; display: inline-block;
+  }
+  .form-dot.w { background: #4C7A3D; }
+  .form-dot.d { background: #B8935A; }
+  .form-dot.l { background: #C1443C; }
+  .form-dot.empty { background: #E4DDCA; }
 
   .explorer-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 16px; }
   .explorer-controls select {
@@ -130,7 +139,7 @@
   .opening-overall-list { list-style: none; margin: 10px 0 0; padding: 0; }
   .opening-overall-list li { display: flex; align-items: center; gap: 10px; padding: 5px 0; border-bottom: 1px dashed #DDD5C0; font-size: 12.5px; }
   .opening-bar-track { flex: 1; height: 7px; background: #E4DDCA; border-radius: 4px; overflow: hidden; }
-  .opening-bar-fill { height: 100%; background: #B8935A; }
+  .opening-bar-fill { display: block; height: 100%; background: #B8935A; }
 
   footer { margin-top: 40px; font-size: 11px; color: #8A8368; line-height: 1.5; border-top: 1px solid #E4DDCA; padding-top: 16px; }
   .empty-state { padding: 24px; background: #F1ECDF; border: 1px dashed #C8C0AC; border-radius: 8px; font-size: 13px; color: #5A5647; }
@@ -144,6 +153,19 @@
   <p class="subtitle">Quando os melhores jogadores de blitz do mundo realmente jogam — e quando LPSupi tem mais chance de encontrar cada um deles, em horário de Brasília.</p>
 
   <div class="meta-bar" id="metaBar">Carregando dados…</div>
+
+  <details class="openings-details" style="margin-bottom:24px">
+    <summary>Como esses dados são construídos (leia antes de confiar demais nos números)</summary>
+    <ul style="margin:10px 0 0; padding-left:18px; font-size:12.5px; color:#5A5647; line-height:1.7">
+      <li><b>Só partidas blitz 3+0</b> (3 minutos, sem incremento) contam. Quem joga mais 3+2 ou 5+0 aparece com bem menos partidas aqui do que joga na vida real.</li>
+      <li>Os dados cobrem só o histórico recente (1 mês para o ranking geral, 3 meses para o LPSupi) — não é a carreira toda, é uma amostra.</li>
+      <li>Todo horário já vem convertido para <b>horário de Brasília</b> (UTC-3, fixo, sem horário de verão).</li>
+      <li><b>"Sobreposição"</b>: para cada jogador, é a % das partidas dele que caíram em algum bloco de dia+hora onde o LPSupi já jogou pelo menos uma vez no período. Não é probabilidade de encontro ao vivo — é só um indício baseado em histórico.</li>
+      <li>O <b>explorador de horário</b> usa a mesma lógica, mas para qualquer dia/hora que você escolher, olhando só para a rotina de cada jogador (não a do LPSupi).</li>
+      <li><b>Aberturas</b> são adivinhadas a partir da URL que o Chess.com associa a cada partida — é uma heurística de texto, então o nome pode vir cortado ou impreciso em alguns casos.</li>
+      <li>Amostras pequenas (poucas partidas) deixam qualquer % pouco confiável — desconfie de picos com poucas partidas de base.</li>
+    </ul>
+  </details>
 
   <div id="content"></div>
 
@@ -291,6 +313,20 @@ function buildWindows(bestWindows, suffix) {
   return html;
 }
 
+function buildFormDots(recentForm, size) {
+  size = size || 5;
+  const form = recentForm || [];
+  const padded = Array(Math.max(0, size - form.length)).fill(null).concat(form);
+  const dots = padded
+    .map((r) => {
+      const cls = r === "W" ? "w" : r === "D" ? "d" : r === "L" ? "l" : "empty";
+      const label = r === "W" ? "Vitória" : r === "D" ? "Empate" : r === "L" ? "Derrota" : "Sem dado";
+      return `<span class="form-dot ${cls}" title="${label}"></span>`;
+    })
+    .join("");
+  return `<span class="form-dots">${dots}</span>`;
+}
+
 function buildTable(players, targetUsername) {
   const targetLower = (targetUsername || "").toLowerCase();
   const rows = players
@@ -307,9 +343,10 @@ function buildTable(players, targetUsername) {
           <td class="mono">${p.total}</td>
           <td>${peak !== null && peak !== undefined ? `<span class="peak-badge">${pad2(peak)}h</span>` : "—"}</td>
           <td class="mono">${isTarget ? "—" : `${p.overlapScore ?? 0}%`}</td>
+          <td>${buildFormDots(p.recentForm)}</td>
         </tr>
         <tr class="detail-row" id="detail-${p.username}" style="display:none">
-          <td colspan="6"></td>
+          <td colspan="7"></td>
         </tr>`;
     })
     .join("");
@@ -318,7 +355,7 @@ function buildTable(players, targetUsername) {
     <div class="table-wrap">
       <table>
         <thead>
-          <tr><th>#</th><th>Jogador</th><th>Rating</th><th>Partidas</th><th>Pico (BRT)</th><th>Sobreposição</th></tr>
+          <tr><th>#</th><th>Jogador</th><th>Rating</th><th>Partidas</th><th>Pico (BRT)</th><th title="% das partidas do jogador que caem em horários (dia+hora) onde o jogador-alvo já jogou">Sobreposição ⓘ</th><th title="Últimas 5 partidas: verde=vitória, dourado=empate, vermelho=derrota">Forma ⓘ</th></tr>
         </thead>
         <tbody>${rows}</tbody>
       </table>
@@ -329,6 +366,7 @@ function renderPlayerDetail(player) {
   return `
     <div class="detail-block">
       <h4>Melhores janelas para encontrar ${player.username} (horário de Brasília)</h4>
+      <p class="section-hint" style="margin-bottom:6px">Forma recente: ${buildFormDots(player.recentForm)}</p>
       ${buildWindows(player.bestWindows, " das partidas dele")}
       ${buildHeatmap(player.dayHourBrt, { fit: true })}
     </div>
@@ -415,6 +453,7 @@ function render(data) {
         <div class="lpsupi-caption">
           <div class="lpsupi-caption-title">Rotina de ${target.username}</div>
           <div class="lpsupi-caption-text">${target.total.toLocaleString("pt-BR")} partidas de blitz 3+0 nos últimos ${target.monthsBack} meses, em horário de Brasília.</div>
+          <div class="lpsupi-caption-text">Forma recente: ${buildFormDots(target.recentForm)}</div>
           ${buildWindows(target.bestWindows, " das partidas dele")}
         </div>
       </div>

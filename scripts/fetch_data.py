@@ -37,7 +37,7 @@ OUTPUT_PATH = Path(__file__).resolve().parent.parent / "docs" / "data.json"
 # A API do Chess.com pede um User-Agent identificável nas requisições.
 # Troque o e-mail abaixo pelo seu.
 HEADERS = {
-    "User-Agent": "blitz-patterns-dashboard/1.0 (contato: lorenz.bruno@gmail.com)"
+    "User-Agent": "blitz-patterns-dashboard/1.0 (contato: seu-email@exemplo.com)"
 }
 
 # Time control alvo: "180" = 3 minutos sem incremento (3+0).
@@ -45,6 +45,12 @@ HEADERS = {
 TIME_CONTROL_FILTER = "180"
 
 BRT_OFFSET = -3  # Horário de Brasília, fixo
+
+RECENT_FORM_SIZE = 5  # quantas partidas recentes mostrar como "forma" (W/D/L)
+
+# Resultados do Chess.com que contam como empate; qualquer coisa que não seja
+# "win" nem esteja nessa lista conta como derrota para aquele lado.
+DRAW_RESULTS = {"agreed", "repetition", "stalemate", "insufficient", "50move", "timevsinsufficient"}
 
 
 def get_json(url, attempts=3):
@@ -82,6 +88,14 @@ def opening_name_from_eco(eco_url):
         name_tokens.append(tok)
     name = " ".join(name_tokens) if name_tokens else slug.replace("-", " ")
     return name.strip() or None
+
+
+def outcome_letter(result_raw):
+    if result_raw == "win":
+        return "W"
+    if result_raw in DRAW_RESULTS:
+        return "D"
+    return "L"
 
 
 def fetch_player_games(username, months_back):
@@ -142,11 +156,12 @@ def best_windows(day_hour_matrix, total, n=3):
 
 def analyze_games(username, games):
     """Processa a lista de partidas de um jogador e retorna suas métricas
-    (distribuição por hora/dia, aberturas, janelas de pico)."""
+    (distribuição por hora/dia, aberturas, janelas de pico, forma recente)."""
     uname_lower = username.lower()
     hours_brt = [0] * 24
     day_hour_brt = empty_day_hour()
     openings = Counter()
+    results_log = []  # [(end_time, "W"/"D"/"L"), ...] só das partidas do próprio jogador
 
     for g in games:
         dt = datetime.fromtimestamp(g["end_time"], tz=timezone.utc)
@@ -156,15 +171,29 @@ def analyze_games(username, games):
         hours_brt[h_brt] += 1
         day_hour_brt[day][h_brt] += 1
 
-        white_user = (g.get("white", {}).get("username") or "").lower()
-        black_user = (g.get("black", {}).get("username") or "").lower()
-        if uname_lower in (white_user, black_user):
+        white = g.get("white", {})
+        black = g.get("black", {})
+        white_user = (white.get("username") or "").lower()
+        black_user = (black.get("username") or "").lower()
+
+        if uname_lower == white_user:
+            result_raw = white.get("result")
+        elif uname_lower == black_user:
+            result_raw = black.get("result")
+        else:
+            result_raw = None
+
+        if result_raw is not None:
             opening = opening_name_from_eco(g.get("eco"))
             if opening:
                 openings[opening] += 1
+            results_log.append((g["end_time"], outcome_letter(result_raw)))
 
     total = sum(hours_brt)
     peak_brt = max(range(24), key=lambda h: hours_brt[h]) if total else None
+
+    results_log.sort(key=lambda r: r[0])
+    recent_form = [outcome for _, outcome in results_log[-RECENT_FORM_SIZE:]]
 
     return {
         "hoursBrt": hours_brt,
@@ -173,6 +202,7 @@ def analyze_games(username, games):
         "total": total,
         "peakHourBrt": peak_brt,
         "bestWindows": best_windows(day_hour_brt, total, n=3),
+        "recentForm": recent_form,
     }
 
 
@@ -256,7 +286,7 @@ def main():
             player_rows.append({
                 **p, "total": 0, "peakHourBrt": None,
                 "dayHourBrt": empty_day_hour(), "openings": [], "bestWindows": [],
-                "overlapScore": 0.0,
+                "overlapScore": 0.0, "recentForm": [],
             })
             continue
 
@@ -273,6 +303,7 @@ def main():
             "openings": top_counter(d["openings"], TOP_OPENINGS),
             "bestWindows": d["bestWindows"],
             "overlapScore": round(score, 2),  # % das partidas do jogador em janelas ativas do alvo
+            "recentForm": d["recentForm"],
         })
 
     output = {
@@ -294,6 +325,7 @@ def main():
             "peakHourBrt": target_analysis["peakHourBrt"],
             "bestWindows": target_analysis["bestWindows"],
             "openings": top_counter(target_analysis["openings"], TOP_OPENINGS),
+            "recentForm": target_analysis["recentForm"],
         },
     }
 
