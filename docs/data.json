@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-07-24T11:54:35.573115+00:00",
+  "generatedAt": "2026-07-25T07:59:24.155602+00:00",
   "playerCount": 50,
   "monthsBack": 1,
-  "totalGames": 4277,
+  "totalGames": 4756,
   "skipped": 7,
   "players": [
     {
       "username": "Hikaru",
       "rank": 1,
-      "rating": 3425,
+      "rating": 3427,
       "countryCode": "US",
-      "total": 240,
+      "total": 242,
       "peakHourBrt": 16,
       "dayHourBrt": [
         [
@@ -160,7 +160,7 @@
           3,
           3,
           0,
-          17,
+          19,
           0,
           6,
           0,
@@ -198,11 +198,11 @@
       ],
       "openings": [
         {
-          "name": "Sicilian Defense Open Dragon Yugoslav Attack",
-          "count": 10
+          "name": "Nimzowitsch Larsen Attack Classical Variation",
+          "count": 11
         },
         {
-          "name": "Nimzowitsch Larsen Attack Classical Variation",
+          "name": "Sicilian Defense Open Dragon Yugoslav Attack",
           "count": 10
         },
         {
@@ -235,22 +235,22 @@
           "day": 4,
           "hour": 12,
           "count": 22,
-          "pct": 9.2
+          "pct": 9.1
         },
         {
           "day": 4,
           "hour": 13,
           "count": 21,
-          "pct": 8.8
+          "pct": 8.7
         },
         {
           "day": 4,
           "hour": 16,
           "count": 21,
-          "pct": 8.8
+          "pct": 8.7
         }
       ],
-      "overlapScore": 56.67,
+      "overlapScore": 57.02,
       "recentForm": [
         "W",
         "W",
@@ -262,9 +262,9 @@
     {
       "username": "Philippians46",
       "rank": 2,
-      "rating": 3356,
+      "rating": 3370,
       "countryCode": "US",
-      "total": 129,
+      "total": 139,
       "peakHourBrt": 23,
       "dayHourBrt": [
         [
@@ -408,8 +408,8 @@
           0,
           0,
           0,
-          0,
-          3,
+          6,
+          7,
           0,
           0,
           0,
@@ -460,16 +460,16 @@
           "count": 7
         },
         {
+          "name": "Queens Gambit Declined Catalan",
+          "count": 6
+        },
+        {
           "name": "Nimzowitsch Larsen Attack Modern Variation",
           "count": 6
         },
         {
           "name": "Reti Opening Nimzowitsch Larsen Attack",
           "count": 6
-        },
-        {
-          "name": "Queens Gambit Declined Catalan",
-          "count": 5
         },
         {
           "name": "English Opening Caro Kann Defensive",
@@ -489,36 +489,36 @@
           "day": 1,
           "hour": 15,
           "count": 9,
-          "pct": 7.0
+          "pct": 6.5
         },
         {
           "day": 3,
           "hour": 19,
           "count": 8,
-          "pct": 6.2
+          "pct": 5.8
         },
         {
           "day": 3,
           "hour": 22,
           "count": 8,
-          "pct": 6.2
+          "pct": 5.8
         }
       ],
-      "overlapScore": 20.93,
+      "overlapScore": 19.42,
       "recentForm": [
+        "L",
+        "L",
         "W",
-        "W",
-        "W",
-        "W",
+        "L",
         "W"
       ]
     },
     {
       "username": "MagnusCarlsen",
       "rank": 3,
-      "rating": 3345,
+      "rating": 3341,
       "countryCode": "NO",
-      "total": 58,
+      "total": 64,
       "peakHourBrt": 12,
       "dayHourBrt": [
         [
@@ -669,7 +669,7 @@
           0,
           0,
           0,
-          0,
+          6,
           0,
           0,
           0,
@@ -710,6 +710,10 @@
           "count": 3
         },
         {
+          "name": "Grunfeld Defense Exchange",
+          "count": 3
+        },
+        {
           "name": "French Defense Exchange Variation",
           "count": 2
         },
@@ -730,12 +734,8 @@
           "count": 2
         },
         {
-          "name": "Lion Defense Anti Philidor Lions Cave",
-          "count": 1
-        },
-        {
-          "name": "Queens Gambit Declined Queens Knight Variation",
-          "count": 1
+          "name": "Queens Gambit Declined Austrian Variation",
+          "count": 2
         }
       ],
       "bestWindows": [
@@ -743,28 +743,28 @@
           "day": 4,
           "hour": 12,
           "count": 15,
-          "pct": 25.9
+          "pct": 23.4
         },
         {
           "day": 3,
           "hour": 12,
           "count": 9,
-          "pct": 15.5
+          "pct": 14.1
         },
         {
           "day": 3,
           "hour": 11,
           "count": 7,
-          "pct": 12.1
+          "pct": 10.9
         }
       ],
-      "overlapScore": 27.59,
+      "overlapScore": 34.38,
       "recentForm": [
         "W",
         "W",
-        "L",
         "W",
-        "W"
+        "L",
+        "L"
       ]
     },
     {
@@ -1980,8 +1980,262 @@
       ]
     },
     {
-      "username": "GHANDEEVAM2003",
+      "username": "Polish_fighter3000",
       "rank": 9,
+      "rating": 3272,
+      "countryCode": "PL",
+      "total": 30,
+      "peakHourBrt": 17,
+      "dayHourBrt": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          7,
+          4,
+          0,
+          0,
+          0,
+          14,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "openings": [
+        {
+          "name": "Nimzo Indian Defense Romanishin Kasparov System",
+          "count": 2
+        },
+        {
+          "name": "Bogo Indian Defense Grunfeld Variation",
+          "count": 1
+        },
+        {
+          "name": "Queens Gambit Declined Exchange",
+          "count": 1
+        },
+        {
+          "name": "Queens Gambit Declined Traditional Capablanca Duras Variation",
+          "count": 1
+        },
+        {
+          "name": "English Opening Anglo Dutch",
+          "count": 1
+        },
+        {
+          "name": "Pirc",
+          "count": 1
+        },
+        {
+          "name": "Kings Indian Attack Yugoslav Variation",
+          "count": 1
+        },
+        {
+          "name": "Slav Defense Modern Quiet Schallopp Defense",
+          "count": 1
+        }
+      ],
+      "bestWindows": [
+        {
+          "day": 4,
+          "hour": 17,
+          "count": 14,
+          "pct": 46.7
+        },
+        {
+          "day": 4,
+          "hour": 12,
+          "count": 7,
+          "pct": 23.3
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "count": 4,
+          "pct": 13.3
+        }
+      ],
+      "overlapScore": 13.33,
+      "recentForm": [
+        "W",
+        "D",
+        "L",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "username": "GHANDEEVAM2003",
+      "rank": 10,
       "rating": 3265,
       "countryCode": "IN",
       "total": 44,
@@ -2230,260 +2484,6 @@
         "L",
         "W",
         "W",
-        "L"
-      ]
-    },
-    {
-      "username": "Polish_fighter3000",
-      "rank": 10,
-      "rating": 3262,
-      "countryCode": "PL",
-      "total": 28,
-      "peakHourBrt": 17,
-      "dayHourBrt": [
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          7,
-          4,
-          0,
-          0,
-          0,
-          14,
-          3,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "openings": [
-        {
-          "name": "Nimzo Indian Defense Romanishin Kasparov System",
-          "count": 2
-        },
-        {
-          "name": "Bogo Indian Defense Grunfeld Variation",
-          "count": 1
-        },
-        {
-          "name": "Queens Gambit Declined Exchange",
-          "count": 1
-        },
-        {
-          "name": "Queens Gambit Declined Traditional Capablanca Duras Variation",
-          "count": 1
-        },
-        {
-          "name": "English Opening Anglo Dutch",
-          "count": 1
-        },
-        {
-          "name": "Pirc",
-          "count": 1
-        },
-        {
-          "name": "Kings Indian Attack Yugoslav Variation",
-          "count": 1
-        },
-        {
-          "name": "Slav Defense Modern Quiet Schallopp Defense",
-          "count": 1
-        }
-      ],
-      "bestWindows": [
-        {
-          "day": 4,
-          "hour": 17,
-          "count": 14,
-          "pct": 50.0
-        },
-        {
-          "day": 4,
-          "hour": 12,
-          "count": 7,
-          "pct": 25.0
-        },
-        {
-          "day": 4,
-          "hour": 13,
-          "count": 4,
-          "pct": 14.3
-        }
-      ],
-      "overlapScore": 14.29,
-      "recentForm": [
-        "D",
-        "L",
-        "W",
-        "D",
         "L"
       ]
     },
@@ -3466,8 +3466,262 @@
       ]
     },
     {
-      "username": "LevonAronian",
+      "username": "Sina-Movahed",
       "rank": 15,
+      "rating": 3246,
+      "countryCode": "IR",
+      "total": 726,
+      "peakHourBrt": 4,
+      "dayHourBrt": [
+        [
+          0,
+          0,
+          0,
+          7,
+          16,
+          5,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          19,
+          5,
+          8,
+          10,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          7,
+          8,
+          7,
+          2,
+          6,
+          16,
+          13,
+          0,
+          0,
+          7,
+          1,
+          7,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          4,
+          4,
+          0,
+          6,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          5,
+          15,
+          24,
+          25,
+          8,
+          7,
+          6,
+          10,
+          13,
+          19,
+          9,
+          0,
+          4,
+          1,
+          9,
+          10,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          2,
+          26,
+          14,
+          8,
+          4,
+          0,
+          6,
+          21,
+          15,
+          22,
+          17,
+          6,
+          0,
+          1,
+          14,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          4,
+          4,
+          0,
+          1,
+          3,
+          6,
+          0,
+          8,
+          27,
+          23,
+          12,
+          8,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          4,
+          11,
+          21,
+          17,
+          8,
+          7,
+          7,
+          5,
+          3,
+          1,
+          1,
+          7,
+          6,
+          16,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "openings": [
+        {
+          "name": "Queens Gambit Declined Catalan",
+          "count": 68
+        },
+        {
+          "name": "Catalan Opening",
+          "count": 21
+        },
+        {
+          "name": "Kings Indian Defense Normal",
+          "count": 21
+        },
+        {
+          "name": "Grunfeld Defense Burille Opocensky Variation",
+          "count": 17
+        },
+        {
+          "name": "Sicilian Defense Four Knights",
+          "count": 16
+        },
+        {
+          "name": "Sicilian Defense Open Dragon Variation",
+          "count": 12
+        },
+        {
+          "name": "Sicilian Defense Canal",
+          "count": 12
+        },
+        {
+          "name": "Queens Gambit Declined Charousek",
+          "count": 10
+        }
+      ],
+      "bestWindows": [
+        {
+          "day": 5,
+          "hour": 12,
+          "count": 27,
+          "pct": 3.7
+        },
+        {
+          "day": 4,
+          "hour": 4,
+          "count": 26,
+          "pct": 3.6
+        },
+        {
+          "day": 3,
+          "hour": 7,
+          "count": 25,
+          "pct": 3.4
+        }
+      ],
+      "overlapScore": 15.98,
+      "recentForm": [
+        "D",
+        "W",
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "username": "LevonAronian",
+      "rank": 16,
       "rating": 3246,
       "countryCode": "US",
       "total": 14,
@@ -3715,7 +3969,7 @@
     },
     {
       "username": "Zhuu96",
-      "rank": 16,
+      "rank": 17,
       "rating": 3245,
       "countryCode": "RU",
       "total": 14,
@@ -3969,7 +4223,7 @@
     },
     {
       "username": "GMWSO",
-      "rank": 17,
+      "rank": 18,
       "rating": 3243,
       "countryCode": "US",
       "total": 0,
@@ -4165,7 +4419,7 @@
     },
     {
       "username": "DenLaz",
-      "rank": 18,
+      "rank": 19,
       "rating": 3240,
       "countryCode": "BY",
       "total": 77,
@@ -4419,7 +4673,7 @@
     },
     {
       "username": "Volodar_Murzin",
-      "rank": 19,
+      "rank": 20,
       "rating": 3236,
       "countryCode": "XX",
       "total": 96,
@@ -4673,7 +4927,7 @@
     },
     {
       "username": "HansOnTwitch",
-      "rank": 20,
+      "rank": 21,
       "rating": 3235,
       "countryCode": "US",
       "total": 41,
@@ -4927,7 +5181,7 @@
     },
     {
       "username": "FairChess_on_YouTube",
-      "rank": 21,
+      "rank": 22,
       "rating": 3232,
       "countryCode": "GE",
       "total": 33,
@@ -5175,7 +5429,7 @@
     },
     {
       "username": "Mykola-Bortnyk",
-      "rank": 22,
+      "rank": 23,
       "rating": 3226,
       "countryCode": "US",
       "total": 0,
@@ -5371,7 +5625,7 @@
     },
     {
       "username": "MITerryble",
-      "rank": 23,
+      "rank": 24,
       "rating": 3226,
       "countryCode": "PE",
       "total": 158,
@@ -5625,7 +5879,7 @@
     },
     {
       "username": "Sibelephant",
-      "rank": 24,
+      "rank": 25,
       "rating": 3224,
       "countryCode": "RU",
       "total": 0,
@@ -5821,7 +6075,7 @@
     },
     {
       "username": "artooon",
-      "rank": 25,
+      "rank": 26,
       "rating": 3222,
       "countryCode": "XX",
       "total": 45,
@@ -6074,112 +6328,34 @@
       ]
     },
     {
-      "username": "Sina-Movahed",
-      "rank": 26,
-      "rating": 3222,
-      "countryCode": "IR",
-      "total": 705,
-      "peakHourBrt": 4,
+      "username": "mishanick",
+      "rank": 27,
+      "rating": 3220,
+      "countryCode": "RS",
+      "total": 173,
+      "peakHourBrt": 12,
       "dayHourBrt": [
         [
           0,
           0,
           0,
-          7,
-          16,
-          5,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1,
-          19,
-          5,
-          8,
-          10,
-          6,
           0,
           0,
           0,
           0,
           0,
           0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          1,
-          7,
-          8,
-          7,
-          2,
-          6,
-          16,
-          13,
-          0,
-          0,
-          7,
-          1,
-          7,
-          0,
-          4,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          8,
-          0,
-          4,
-          4,
-          0,
-          6,
-          0,
-          5,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          5,
-          15,
-          24,
-          25,
-          8,
-          7,
-          6,
-          10,
-          13,
-          19,
           9,
-          0,
-          4,
           1,
-          9,
-          10,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0,
           0,
@@ -6188,73 +6364,151 @@
         [
           0,
           0,
-          1,
+          0,
+          0,
           2,
-          26,
+          3,
+          0,
+          0,
+          9,
+          1,
           14,
-          8,
+          7,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           4,
           0,
-          6,
-          21,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          29,
           15,
+          0,
+          0,
+          0,
           22,
-          17,
-          6,
-          0,
-          1,
-          14,
-          4,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          4,
-          4,
-          0,
-          1,
-          3,
-          6,
-          0,
-          8,
-          21,
-          19,
-          12,
-          8,
-          3,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          2,
-          4,
           11,
-          10,
-          17,
-          8,
-          7,
-          7,
-          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          12,
           3,
-          1,
-          1,
-          7,
           6,
-          16,
-          1,
+          0,
+          3,
+          0,
+          0,
+          8,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0,
           0,
@@ -6266,70 +6520,70 @@
       ],
       "openings": [
         {
-          "name": "Queens Gambit Declined Catalan",
-          "count": 68
+          "name": "Queens Gambit Declined Exchange Positional Line",
+          "count": 4
         },
         {
-          "name": "Catalan Opening",
-          "count": 21
+          "name": "Queens Gambit Declined Tartakower Defense",
+          "count": 4
         },
         {
-          "name": "Kings Indian Defense Normal",
-          "count": 21
+          "name": "Sicilian Defense Open Accelerated Dragon Modern",
+          "count": 4
         },
         {
-          "name": "Grunfeld Defense Burille Opocensky Variation",
-          "count": 17
+          "name": "Queens Gambit Declined Modern Variation",
+          "count": 3
         },
         {
-          "name": "Sicilian Defense Four Knights",
-          "count": 15
+          "name": "Queens Gambit Declined Ragozin",
+          "count": 3
         },
         {
-          "name": "Sicilian Defense Open Dragon Variation",
-          "count": 12
+          "name": "Queens Gambit Declined Ragozin Alekhine Variation",
+          "count": 3
         },
         {
-          "name": "Sicilian Defense Canal",
-          "count": 12
+          "name": "Sicilian Defense Open Najdorf English",
+          "count": 3
         },
         {
-          "name": "Queens Gambit Declined Charousek",
-          "count": 10
+          "name": "Sicilian",
+          "count": 3
         }
       ],
       "bestWindows": [
         {
           "day": 4,
-          "hour": 4,
-          "count": 26,
-          "pct": 3.7
+          "hour": 12,
+          "count": 29,
+          "pct": 16.8
         },
         {
-          "day": 3,
-          "hour": 7,
-          "count": 25,
-          "pct": 3.5
+          "day": 4,
+          "hour": 17,
+          "count": 22,
+          "pct": 12.7
         },
         {
-          "day": 3,
-          "hour": 6,
-          "count": 24,
-          "pct": 3.4
+          "day": 4,
+          "hour": 13,
+          "count": 15,
+          "pct": 8.7
         }
       ],
-      "overlapScore": 16.45,
+      "overlapScore": 13.87,
       "recentForm": [
-        "D",
-        "L",
         "W",
         "W",
-        "W"
+        "W",
+        "W",
+        "D"
       ]
     },
     {
       "username": "Grischuk",
-      "rank": 27,
+      "rank": 28,
       "rating": 3219,
       "countryCode": "RU",
       "total": 66,
@@ -6577,260 +6831,6 @@
         "L",
         "D",
         "D",
-        "W",
-        "W"
-      ]
-    },
-    {
-      "username": "mishanick",
-      "rank": 28,
-      "rating": 3214,
-      "countryCode": "RS",
-      "total": 151,
-      "peakHourBrt": 12,
-      "dayHourBrt": [
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          9,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          2,
-          3,
-          0,
-          0,
-          9,
-          1,
-          14,
-          7,
-          7,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          4,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          29,
-          15,
-          0,
-          0,
-          0,
-          22,
-          11,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          3,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          8,
-          3
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          3,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "openings": [
-        {
-          "name": "Queens Gambit Declined Tartakower Defense",
-          "count": 4
-        },
-        {
-          "name": "Queens Gambit Declined Modern Variation",
-          "count": 3
-        },
-        {
-          "name": "Queens Gambit Declined Ragozin",
-          "count": 3
-        },
-        {
-          "name": "Queens Gambit Declined Ragozin Alekhine Variation",
-          "count": 3
-        },
-        {
-          "name": "Sicilian Defense Open Najdorf English",
-          "count": 3
-        },
-        {
-          "name": "Sicilian",
-          "count": 3
-        },
-        {
-          "name": "Semi Slav Defense Anti Meran Anti Moscow Gambit",
-          "count": 3
-        },
-        {
-          "name": "Queens Gambit Declined Exchange Positional Line",
-          "count": 3
-        }
-      ],
-      "bestWindows": [
-        {
-          "day": 4,
-          "hour": 12,
-          "count": 29,
-          "pct": 19.2
-        },
-        {
-          "day": 4,
-          "hour": 17,
-          "count": 22,
-          "pct": 14.6
-        },
-        {
-          "day": 4,
-          "hour": 13,
-          "count": 15,
-          "pct": 9.9
-        }
-      ],
-      "overlapScore": 9.93,
-      "recentForm": [
-        "L",
-        "W",
-        "W",
         "W",
         "W"
       ]
@@ -8486,9 +8486,9 @@
     {
       "username": "TRadjabov",
       "rank": 36,
-      "rating": 3201,
+      "rating": 3204,
       "countryCode": "AZ",
-      "total": 38,
+      "total": 39,
       "peakHourBrt": 10,
       "dayHourBrt": [
         [
@@ -8633,7 +8633,7 @@
           2,
           1,
           0,
-          4,
+          5,
           0,
           0,
           0,
@@ -8713,27 +8713,27 @@
           "day": 6,
           "hour": 10,
           "count": 7,
-          "pct": 18.4
+          "pct": 17.9
         },
         {
           "day": 1,
           "hour": 4,
           "count": 6,
-          "pct": 15.8
+          "pct": 15.4
         },
         {
-          "day": 0,
-          "hour": 10,
-          "count": 4,
-          "pct": 10.5
+          "day": 5,
+          "hour": 11,
+          "count": 5,
+          "pct": 12.8
         }
       ],
-      "overlapScore": 5.26,
+      "overlapScore": 5.13,
       "recentForm": [
         "W",
         "W",
-        "W",
         "D",
+        "W",
         "W"
       ]
     },
@@ -9698,9 +9698,9 @@
     {
       "username": "ChristopherYoo",
       "rank": 41,
-      "rating": 3191,
+      "rating": 3195,
       "countryCode": "TV",
-      "total": 449,
+      "total": 450,
       "peakHourBrt": 0,
       "dayHourBrt": [
         [
@@ -9883,7 +9883,7 @@
           3,
           12,
           4,
-          46
+          47
         ]
       ],
       "openings": [
@@ -9924,14 +9924,14 @@
         {
           "day": 6,
           "hour": 23,
-          "count": 46,
-          "pct": 10.2
+          "count": 47,
+          "pct": 10.4
         },
         {
           "day": 2,
           "hour": 0,
           "count": 38,
-          "pct": 8.5
+          "pct": 8.4
         },
         {
           "day": 1,
@@ -9940,13 +9940,13 @@
           "pct": 5.1
         }
       ],
-      "overlapScore": 25.84,
+      "overlapScore": 25.78,
       "recentForm": [
         "D",
         "D",
-        "D",
         "L",
-        "D"
+        "D",
+        "W"
       ]
     },
     {
@@ -10204,8 +10204,262 @@
       ]
     },
     {
-      "username": "joppie2",
+      "username": "MichaelRoiz",
       "rank": 43,
+      "rating": 3185,
+      "countryCode": "IL",
+      "total": 430,
+      "peakHourBrt": 16,
+      "dayHourBrt": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          1,
+          2,
+          3,
+          5,
+          3,
+          1,
+          5,
+          0,
+          8,
+          6,
+          1,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          2,
+          1,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          4,
+          14,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          1,
+          3,
+          2,
+          2,
+          9,
+          5,
+          3,
+          7,
+          2,
+          2,
+          6,
+          11,
+          9,
+          8,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          0,
+          2,
+          3,
+          12,
+          10,
+          4,
+          0,
+          4,
+          9,
+          7,
+          2,
+          5,
+          5,
+          13,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          2,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          9,
+          7,
+          5,
+          8,
+          8,
+          5,
+          13,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          5,
+          0,
+          1,
+          6,
+          5,
+          0,
+          0,
+          1,
+          6,
+          3,
+          13,
+          7,
+          9,
+          6,
+          10,
+          11,
+          4,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          2,
+          5,
+          5,
+          10,
+          5,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "openings": [
+        {
+          "name": "French Defense Rubinstein Blackburne Defense",
+          "count": 10
+        },
+        {
+          "name": "Caro Kann Defense",
+          "count": 10
+        },
+        {
+          "name": "Sicilian Defense Nyezhmetdinov Rossolimo",
+          "count": 9
+        },
+        {
+          "name": "Indian Game Knights",
+          "count": 7
+        },
+        {
+          "name": "Kings Indian Defense Fianchetto Karlsbad",
+          "count": 6
+        },
+        {
+          "name": "French Defense Rubinstein Blackburne",
+          "count": 6
+        },
+        {
+          "name": "Kings Indian",
+          "count": 6
+        },
+        {
+          "name": "English Opening Symmetrical",
+          "count": 6
+        }
+      ],
+      "bestWindows": [
+        {
+          "day": 1,
+          "hour": 16,
+          "count": 14,
+          "pct": 3.3
+        },
+        {
+          "day": 3,
+          "hour": 17,
+          "count": 13,
+          "pct": 3.0
+        },
+        {
+          "day": 4,
+          "hour": 16,
+          "count": 13,
+          "pct": 3.0
+        }
+      ],
+      "overlapScore": 30.23,
+      "recentForm": [
+        "W",
+        "D",
+        "W",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "username": "joppie2",
+      "rank": 44,
       "rating": 3182,
       "countryCode": "NL",
       "total": 170,
@@ -10459,7 +10713,7 @@
     },
     {
       "username": "Oleksandr_Bortnyk",
-      "rank": 44,
+      "rank": 45,
       "rating": 3181,
       "countryCode": "US",
       "total": 190,
@@ -10713,7 +10967,7 @@
     },
     {
       "username": "Vladimir_Zakhartsov",
-      "rank": 45,
+      "rank": 46,
       "rating": 3177,
       "countryCode": "RU",
       "total": 54,
@@ -10967,7 +11221,7 @@
     },
     {
       "username": "Shield12",
-      "rank": 46,
+      "rank": 47,
       "rating": 3176,
       "countryCode": "UZ",
       "total": 76,
@@ -11221,7 +11475,7 @@
     },
     {
       "username": "jefferyx",
-      "rank": 47,
+      "rank": 48,
       "rating": 3174,
       "countryCode": "US",
       "total": 63,
@@ -11475,7 +11729,7 @@
     },
     {
       "username": "Jospem",
-      "rank": 48,
+      "rank": 49,
       "rating": 3168,
       "countryCode": "MX",
       "total": 79,
@@ -11729,7 +11983,7 @@
     },
     {
       "username": "VincentKeymer",
-      "rank": 49,
+      "rank": 50,
       "rating": 3167,
       "countryCode": "DE",
       "total": 22,
@@ -11980,287 +12234,33 @@
         "L",
         "L"
       ]
-    },
-    {
-      "username": "lachesisQ",
-      "rank": 50,
-      "rating": 3167,
-      "countryCode": "RU",
-      "total": 16,
-      "peakHourBrt": 15,
-      "dayHourBrt": [
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          4,
-          1,
-          0,
-          0,
-          2,
-          2,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          1,
-          2,
-          0,
-          0,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          1,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "openings": [
-        {
-          "name": "Reti Opening Queenside Fianchetto Variation",
-          "count": 2
-        },
-        {
-          "name": "Caro Kann Defense Tartakower Variation",
-          "count": 1
-        },
-        {
-          "name": "Kings Pawn Opening St George Defense",
-          "count": 1
-        },
-        {
-          "name": "Queens Pawn Opening Chigorin Variation",
-          "count": 1
-        },
-        {
-          "name": "Caro Kann Defense Panov Fianchetto Defense",
-          "count": 1
-        },
-        {
-          "name": "French Defense Classical Steinitz Boleslavsky",
-          "count": 1
-        },
-        {
-          "name": "French Defense Tarrasch",
-          "count": 1
-        },
-        {
-          "name": "Sicilian Defense Smith Morra Accepted Scheveningen Formation",
-          "count": 1
-        }
-      ],
-      "bestWindows": [
-        {
-          "day": 3,
-          "hour": 15,
-          "count": 4,
-          "pct": 25.0
-        },
-        {
-          "day": 3,
-          "hour": 19,
-          "count": 2,
-          "pct": 12.5
-        },
-        {
-          "day": 3,
-          "hour": 20,
-          "count": 2,
-          "pct": 12.5
-        }
-      ],
-      "overlapScore": 68.75,
-      "recentForm": [
-        "W",
-        "W",
-        "W",
-        "W",
-        "W"
-      ]
     }
   ],
   "hourlyBrt": [
     95,
-    10,
-    28,
+    16,
+    41,
     49,
-    229,
-    238,
-    199,
-    200,
-    148,
-    114,
-    172,
-    152,
-    568,
-    396,
-    165,
-    113,
+    250,
+    253,
+    215,
+    216,
+    173,
     127,
-    332,
-    267,
-    98,
+    201,
+    181,
+    605,
+    430,
+    197,
+    160,
+    198,
+    387,
+    286,
+    101,
+    71,
     73,
-    74,
     242,
-    188
+    189
   ],
   "dayHourBrt": [
     [
@@ -12270,19 +12270,19 @@
       8,
       32,
       7,
-      1,
+      3,
+      18,
       17,
+      30,
+      13,
       15,
       27,
-      8,
-      12,
       26,
-      21,
       23,
+      28,
       20,
-      14,
-      14,
-      9,
+      15,
+      12,
       6,
       3,
       9,
@@ -12295,20 +12295,20 @@
       0,
       5,
       46,
-      52,
-      26,
-      15,
-      27,
+      56,
+      28,
+      16,
+      31,
       18,
       47,
       20,
       9,
       32,
-      28,
-      38,
-      17,
-      21,
-      5,
+      30,
+      42,
+      31,
+      24,
+      6,
       4,
       29,
       7,
@@ -12318,23 +12318,23 @@
     [
       39,
       5,
-      1,
-      5,
-      24,
-      34,
-      33,
-      20,
-      13,
-      10,
-      11,
-      13,
-      6,
       3,
-      4,
-      1,
-      0,
-      2,
-      49,
+      5,
+      25,
+      37,
+      35,
+      22,
+      22,
+      15,
+      14,
+      20,
+      7,
+      5,
+      10,
+      12,
+      9,
+      10,
+      52,
       18,
       20,
       11,
@@ -12344,76 +12344,76 @@
     [
       7,
       2,
-      0,
+      4,
       3,
       39,
-      36,
-      45,
-      50,
-      28,
-      20,
-      27,
-      37,
+      38,
       48,
-      71,
-      55,
-      18,
-      29,
-      11,
+      62,
+      38,
+      24,
+      27,
+      41,
+      57,
+      78,
+      57,
+      19,
+      33,
+      24,
       35,
-      55,
-      13,
+      53,
+      11,
       11,
       11,
       3
     ],
     [
       0,
-      1,
-      1,
+      3,
+      3,
       5,
-      57,
+      61,
       43,
       36,
       32,
       25,
       24,
-      43,
-      25,
-      424,
-      223,
-      16,
-      3,
-      44,
-      269,
-      137,
+      52,
+      32,
+      429,
+      231,
+      23,
+      6,
+      57,
+      271,
+      138,
       8,
       3,
-      9,
+      8,
       8,
       17
     ],
     [
       9,
-      0,
-      15,
+      4,
+      20,
       12,
-      16,
-      48,
-      37,
+      17,
+      54,
+      42,
       30,
       12,
-      7,
-      4,
-      31,
-      52,
-      34,
-      33,
-      11,
-      20,
-      13,
-      31,
-      5,
+      8,
+      16,
+      39,
+      70,
+      44,
+      43,
+      26,
+      35,
+      36,
+      37,
+      10,
       1,
       15,
       201,
@@ -12424,60 +12424,60 @@
       2,
       4,
       11,
-      15,
+      30,
       18,
-      21,
+      23,
       36,
       28,
       8,
       32,
       14,
-      3,
-      12,
       6,
-      22,
-      3,
-      2,
-      1,
+      14,
+      11,
+      27,
+      13,
+      7,
+      6,
       2,
       4,
       12,
       4,
-      52
+      53
     ]
   ],
   "openingsOverall": [
     {
       "name": "Queens Gambit Declined Catalan",
-      "count": 100
+      "count": 105
     },
     {
       "name": "Queens Pawn Opening Chigorin Variation",
-      "count": 53
-    },
-    {
-      "name": "Catalan Opening",
-      "count": 45
-    },
-    {
-      "name": "Indian Game Knights",
-      "count": 40
-    },
-    {
-      "name": "Alapin Sicilian",
-      "count": 39
+      "count": 54
     },
     {
       "name": "Caro Kann Defense",
-      "count": 38
+      "count": 48
     },
     {
-      "name": "Kings Indian Defense Normal",
-      "count": 33
+      "name": "Indian Game Knights",
+      "count": 47
+    },
+    {
+      "name": "Catalan Opening",
+      "count": 46
+    },
+    {
+      "name": "Alapin Sicilian",
+      "count": 42
     },
     {
       "name": "Kings Indian Attack Yugoslav",
-      "count": 33
+      "count": 35
+    },
+    {
+      "name": "Kings Indian Defense Normal",
+      "count": 34
     },
     {
       "name": "Sicilian",
@@ -12488,28 +12488,28 @@
       "count": 32
     },
     {
+      "name": "Indian Game East Indian Przepiorka",
+      "count": 30
+    },
+    {
+      "name": "Sicilian Defense Canal",
+      "count": 30
+    },
+    {
+      "name": "Kings Indian",
+      "count": 30
+    },
+    {
       "name": "Queens Pawn Opening Chigorin",
       "count": 29
     },
     {
       "name": "English Opening Agincourt",
-      "count": 28
+      "count": 29
     },
     {
       "name": "Reti Opening Kings Indian",
-      "count": 27
-    },
-    {
-      "name": "Indian Game East Indian Przepiorka",
-      "count": 26
-    },
-    {
-      "name": "Sicilian Defense Canal",
-      "count": 26
-    },
-    {
-      "name": "Kings Indian Defense Orthodox Variation",
-      "count": 25
+      "count": 28
     }
   ],
   "targetPlayer": {
