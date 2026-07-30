@@ -1,9 +1,25 @@
 # O relógio dos top blitz
 
-Dashboard estático que mostra padrões de horário dos top jogadores de blitz
-do Chess.com. Os dados são buscados **server-side** (sem problema de CORS)
+Dashboard estático que mostra padrões de horário e aberturas mais jogadas
+dos top 50 jogadores de blitz do Chess.com, sempre em Horário de Brasília
+(UTC-3, fixo). Os dados são buscados **server-side** (sem problema de CORS)
 por uma GitHub Action agendada, salvos em `docs/data.json`, e a página em
 `docs/index.html` só lê esse arquivo (mesma origem, sempre funciona).
+
+**Recursos:**
+- Todos os horários já convertidos para o horário de Brasília
+- Filtra só partidas blitz **3+0** (configurável em `TIME_CONTROL_FILTER`)
+- Rotina do jogador-alvo (`TARGET_USERNAME`, hoje configurado para `LPSupi`)
+  e um **ranking de sobreposição**: para cada jogador, calcula a % das
+  partidas dele que caem em algum horário (dia+hora) em que o jogador-alvo
+  já jogou pelo menos uma vez no período — quanto maior, mais esse jogador
+  costuma estar ativo nos mesmos horários
+- Clique num jogador na tabela para ver: as **melhores janelas para
+  encontrá-lo** (dia + hora com maior % histórico de partidas dele) e as
+  **últimas partidas** dele
+- **Forma recente** (últimas 5 partidas) de cada jogador, em bolinhas
+  verde/dourado/vermelho (vitória/empate/derrota) — passe o mouse ou clique
+  no jogador pra ver adversário, data e horário de cada uma
 
 ## Estrutura
 
