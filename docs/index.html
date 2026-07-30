@@ -55,11 +55,6 @@
   .lpsupi-caption-title { font-family: 'Fraunces', serif; font-size: 17px; font-weight: 600; margin-bottom: 6px; }
   .lpsupi-caption-text { font-size: 12.5px; color: #5A5647; line-height: 1.5; margin-bottom: 8px; }
 
-  .barchart { display: flex; align-items: flex-end; gap: 3px; height: 180px; border-bottom: 1px solid #C8C0AC; padding-top: 8px; }
-  .bar-col { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
-  .bar { width: 100%; background: #35462F; border-radius: 3px 3px 0 0; }
-  .bar-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #8A8368; margin-top: 4px; }
-
   .heatmap-wrap { overflow-x: auto; }
   .heatmap-grid { display: grid; grid-template-columns: 34px repeat(24, 1fr); gap: 2px; min-width: 640px; }
   .heatmap-grid.fit { min-width: 0; grid-template-columns: 26px repeat(24, minmax(0, 1fr)); gap: 1px; }
@@ -90,7 +85,6 @@
   .detail-row td { background: #F1ECDF; padding: 16px 14px; }
   .detail-block + .detail-block { margin-top: 18px; }
   .detail-block h4 { font-family: 'Fraunces', serif; font-size: 14px; font-weight: 600; margin: 0 0 8px; }
-  .detail-block.minor h4 { font-size: 12.5px; color: #5A5647; }
 
   .windows-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
   .window-chip {
@@ -99,25 +93,28 @@
   }
   .window-chip b { color: #C1443C; }
 
-  .opening-list { list-style: none; margin: 0; padding: 0; font-size: 12px; }
-  .opening-list li { display: flex; justify-content: space-between; gap: 8px; padding: 3px 0; border-bottom: 1px dashed #DDD5C0; }
-  .opening-name { color: #5A5647; }
-  .opening-count { font-family: 'IBM Plex Mono', monospace; color: #8A8368; }
-
   .rank-list { list-style: none; margin: 0; padding: 0; }
   .rank-list li { display: flex; align-items: center; gap: 10px; padding: 6px 0; border-bottom: 1px dashed #DDD5C0; font-size: 13px; }
   .rank-bar-track { flex: 1; height: 8px; background: #E4DDCA; border-radius: 4px; overflow: hidden; }
   .rank-bar-fill { display: block; height: 100%; background: #C1443C; }
   .rank-bar-fill.warm { background: #B8935A; }
 
-  .form-dots { display: flex; gap: 3px; }
+  .form-dots { display: inline-flex; gap: 4px; }
   .form-dot {
-    width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; display: inline-block;
+    width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; display: inline-block; cursor: default;
   }
   .form-dot.w { background: #4C7A3D; }
   .form-dot.d { background: #B8935A; }
   .form-dot.l { background: #C1443C; }
   .form-dot.empty { background: #E4DDCA; }
+
+  .recent-games-list { list-style: none; margin: 0; padding: 0; font-size: 12.5px; }
+  .recent-games-list li {
+    display: flex; align-items: center; gap: 10px; padding: 5px 0;
+    border-bottom: 1px dashed #DDD5C0;
+  }
+  .recent-games-opponent { flex: 1; color: #1C1B18; }
+  .recent-games-when { font-family: 'IBM Plex Mono', monospace; color: #8A8368; font-size: 11.5px; }
 
   .explorer-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 16px; }
   .explorer-controls select {
@@ -126,20 +123,16 @@
   }
   .explorer-result-title { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 600; margin: 4px 0 10px; }
 
-  details.openings-details {
+  details.info-details {
     background: #F1ECDF; border: 1px solid #DDD5C0; border-radius: 8px; padding: 12px 16px;
   }
-  details.openings-details summary {
+  details.info-details summary {
     cursor: pointer; font-family: 'Fraunces', serif; font-size: 15px; font-weight: 600;
     list-style: none;
   }
-  details.openings-details summary::-webkit-details-marker { display: none; }
-  details.openings-details summary::before { content: "▸ "; color: #8A9A82; }
-  details.openings-details[open] summary::before { content: "▾ "; }
-  .opening-overall-list { list-style: none; margin: 10px 0 0; padding: 0; }
-  .opening-overall-list li { display: flex; align-items: center; gap: 10px; padding: 5px 0; border-bottom: 1px dashed #DDD5C0; font-size: 12.5px; }
-  .opening-bar-track { flex: 1; height: 7px; background: #E4DDCA; border-radius: 4px; overflow: hidden; }
-  .opening-bar-fill { display: block; height: 100%; background: #B8935A; }
+  details.info-details summary::-webkit-details-marker { display: none; }
+  details.info-details summary::before { content: "▸ "; color: #8A9A82; }
+  details.info-details[open] summary::before { content: "▾ "; }
 
   footer { margin-top: 40px; font-size: 11px; color: #8A8368; line-height: 1.5; border-top: 1px solid #E4DDCA; padding-top: 16px; }
   .empty-state { padding: 24px; background: #F1ECDF; border: 1px dashed #C8C0AC; border-radius: 8px; font-size: 13px; color: #5A5647; }
@@ -154,7 +147,7 @@
 
   <div class="meta-bar" id="metaBar">Carregando dados…</div>
 
-  <details class="openings-details" style="margin-bottom:24px">
+  <details class="info-details" style="margin-bottom:24px">
     <summary>Como esses dados são construídos (leia antes de confiar demais nos números)</summary>
     <ul style="margin:10px 0 0; padding-left:18px; font-size:12.5px; color:#5A5647; line-height:1.7">
       <li><b>Só partidas blitz 3+0</b> (3 minutos, sem incremento) contam. Quem joga mais 3+2 ou 5+0 aparece com bem menos partidas aqui do que joga na vida real.</li>
@@ -162,7 +155,7 @@
       <li>Todo horário já vem convertido para <b>horário de Brasília</b> (UTC-3, fixo, sem horário de verão).</li>
       <li><b>"Sobreposição"</b>: para cada jogador, é a % das partidas dele que caíram em algum bloco de dia+hora onde o LPSupi já jogou pelo menos uma vez no período. Não é probabilidade de encontro ao vivo — é só um indício baseado em histórico.</li>
       <li>O <b>explorador de horário</b> usa a mesma lógica, mas para qualquer dia/hora que você escolher, olhando só para a rotina de cada jogador (não a do LPSupi).</li>
-      <li><b>Aberturas</b> são adivinhadas a partir da URL que o Chess.com associa a cada partida — é uma heurística de texto, então o nome pode vir cortado ou impreciso em alguns casos.</li>
+      <li>A <b>forma recente</b> mostra as últimas 5 partidas de cada um, com adversário, data e horário (BRT) ao passar o mouse.</li>
       <li>Amostras pequenas (poucas partidas) deixam qualquer % pouco confiável — desconfie de picos com poucas partidas de base.</li>
     </ul>
   </details>
@@ -174,8 +167,7 @@
     atualizados periodicamente por uma GitHub Action. Horários convertidos para
     Horário de Brasília (UTC-3, fixo). Percentuais de "sobreposição" e do
     explorador são baseados no histórico de partidas do período, não em
-    presença ao vivo. Aberturas são derivadas do slug de abertura do
-    Chess.com por uma heurística; nomes podem ocasionalmente vir truncados.
+    presença ao vivo.
   </footer>
 </div>
 
@@ -270,37 +262,6 @@ function buildHeatmap(dayHourMatrix, opts) {
   return html;
 }
 
-function buildOpeningsOverall(openings) {
-  if (!openings || openings.length === 0) {
-    return '<p class="section-hint">Nenhuma abertura identificada no período.</p>';
-  }
-  const max = Math.max(...openings.map((o) => o.count));
-  let html = '<ul class="opening-overall-list">';
-  openings.forEach((o) => {
-    const pct = (o.count / max) * 100;
-    html += `
-      <li>
-        <span style="min-width:170px">${o.name}</span>
-        <span class="opening-bar-track"><span class="opening-bar-fill" style="width:${pct}%"></span></span>
-        <span class="mono">${o.count}</span>
-      </li>`;
-  });
-  html += "</ul>";
-  return html;
-}
-
-function buildOpeningsList(openings) {
-  if (!openings || openings.length === 0) {
-    return '<p class="section-hint">Sem aberturas suficientes no período.</p>';
-  }
-  let html = '<ul class="opening-list">';
-  openings.forEach((o) => {
-    html += `<li><span class="opening-name">${o.name}</span><span class="opening-count">${o.count}</span></li>`;
-  });
-  html += "</ul>";
-  return html;
-}
-
 function buildWindows(bestWindows, suffix) {
   if (!bestWindows || bestWindows.length === 0) {
     return '<p class="section-hint">Sem dados suficientes para estimar janelas.</p>';
@@ -313,18 +274,43 @@ function buildWindows(bestWindows, suffix) {
   return html;
 }
 
+function resultLabel(r) {
+  return r === "W" ? "Vitória" : r === "D" ? "Empate" : r === "L" ? "Derrota" : "Sem dado";
+}
+
 function buildFormDots(recentForm, size) {
   size = size || 5;
   const form = recentForm || [];
   const padded = Array(Math.max(0, size - form.length)).fill(null).concat(form);
   const dots = padded
-    .map((r) => {
+    .map((g) => {
+      const r = g ? g.result : null;
       const cls = r === "W" ? "w" : r === "D" ? "d" : r === "L" ? "l" : "empty";
-      const label = r === "W" ? "Vitória" : r === "D" ? "Empate" : r === "L" ? "Derrota" : "Sem dado";
-      return `<span class="form-dot ${cls}" title="${label}"></span>`;
+      const title = g ? `${resultLabel(r)} vs ${g.opponent} — ${DIAS[g.day]} ${g.date} ${pad2(g.hour)}h (BRT)` : "Sem dado";
+      return `<span class="form-dot ${cls}" title="${title}"></span>`;
     })
     .join("");
   return `<span class="form-dots">${dots}</span>`;
+}
+
+function buildRecentGamesList(recentForm) {
+  if (!recentForm || recentForm.length === 0) {
+    return '<p class="section-hint">Sem partidas recentes suficientes.</p>';
+  }
+  const rows = recentForm
+    .slice()
+    .reverse()
+    .map((g) => {
+      const cls = g.result === "W" ? "w" : g.result === "D" ? "d" : "l";
+      return `
+        <li>
+          <span class="form-dot ${cls}"></span>
+          <span class="recent-games-opponent">vs ${g.opponent}</span>
+          <span class="recent-games-when">${DIAS[g.day]} ${g.date} · ${pad2(g.hour)}h</span>
+        </li>`;
+    })
+    .join("");
+  return `<ul class="recent-games-list">${rows}</ul>`;
 }
 
 function buildTable(players, targetUsername) {
@@ -355,7 +341,7 @@ function buildTable(players, targetUsername) {
     <div class="table-wrap">
       <table>
         <thead>
-          <tr><th>#</th><th>Jogador</th><th>Rating</th><th>Partidas</th><th>Pico (BRT)</th><th title="% das partidas do jogador que caem em horários (dia+hora) onde o jogador-alvo já jogou">Sobreposição ⓘ</th><th title="Últimas 5 partidas: verde=vitória, dourado=empate, vermelho=derrota">Forma ⓘ</th></tr>
+          <tr><th>#</th><th>Jogador</th><th>Rating</th><th>Partidas</th><th>Pico (BRT)</th><th title="% das partidas do jogador que caem em horários (dia+hora) onde o jogador-alvo já jogou">Sobreposição ⓘ</th><th title="Últimas 5 partidas — passe o mouse em cada bolinha para ver adversário, data e horário">Forma ⓘ</th></tr>
         </thead>
         <tbody>${rows}</tbody>
       </table>
@@ -366,13 +352,12 @@ function renderPlayerDetail(player) {
   return `
     <div class="detail-block">
       <h4>Melhores janelas para encontrar ${player.username} (horário de Brasília)</h4>
-      <p class="section-hint" style="margin-bottom:6px">Forma recente: ${buildFormDots(player.recentForm)}</p>
       ${buildWindows(player.bestWindows, " das partidas dele")}
       ${buildHeatmap(player.dayHourBrt, { fit: true })}
     </div>
-    <div class="detail-block minor">
-      <h4>Aberturas mais jogadas por ${player.username}</h4>
-      ${buildOpeningsList(player.openings)}
+    <div class="detail-block">
+      <h4>Últimas partidas de ${player.username}</h4>
+      ${buildRecentGamesList(player.recentForm)}
     </div>`;
 }
 
@@ -462,7 +447,7 @@ function render(data) {
     <section class="primary-section">
       <div class="primary-eyebrow">★ PAINEL PRINCIPAL</div>
       <h2 class="section-title">Ranking, horário de pico e sobreposição por jogador</h2>
-      <p class="section-hint">Clique num jogador para ver as melhores janelas para encontrá-lo e as aberturas dele. A coluna "Sobreposição" mostra a % das partidas de cada um que caem em horários que ${target ? target.username : "o jogador-alvo"} já jogou.</p>
+      <p class="section-hint">Clique num jogador para ver as melhores janelas para encontrá-lo e as últimas partidas dele. A coluna "Sobreposição" mostra a % das partidas de cada um que caem em horários que ${target ? target.username : "o jogador-alvo"} já jogou.</p>
       ${buildTable(data.players, target ? target.username : null)}
     </section>
 
@@ -483,14 +468,6 @@ function render(data) {
       ${buildHeatmap(data.dayHourBrt, { clickable: true, selected: { day: defaultDay, hour: defaultHour } })}
       <p class="explorer-result-title" id="explorerTitle"></p>
       <div id="explorerResult"></div>
-    </section>
-
-    <section>
-      <details class="openings-details">
-        <summary>Aberturas mais jogadas (agregado entre todos os jogadores)</summary>
-        <p class="section-hint" style="margin-top:8px">Extraídas automaticamente das partidas do período — nomes podem vir truncados.</p>
-        ${buildOpeningsOverall(data.openingsOverall)}
-      </details>
     </section>
   `;
 
