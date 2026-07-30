@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T22:05:08.803623+00:00",
+  "generatedAt": "2026-07-30T22:11:23.852394+00:00",
   "playerCount": 50,
   "monthsBack": 1,
   "totalGames": 5898,
@@ -37,7 +37,7 @@
           0,
           0,
           0,
-          1
+          0
         ],
         [
           0,
@@ -61,8 +61,8 @@
           0,
           4,
           2,
-          0,
-          0,
+          1,
+          1,
           0
         ],
         [
@@ -87,8 +87,8 @@
           9,
           11,
           7,
-          1,
-          1,
+          0,
+          0,
           0
         ],
         [
@@ -113,9 +113,9 @@
           7,
           14,
           8,
-          0,
-          0,
-          0
+          1,
+          7,
+          14
         ],
         [
           0,
@@ -140,8 +140,8 @@
           0,
           3,
           1,
-          7,
-          14
+          3,
+          0
         ],
         [
           0,
@@ -165,8 +165,8 @@
           6,
           0,
           0,
-          1,
-          3,
+          0,
+          0,
           0
         ],
         [
@@ -193,42 +193,8 @@
           1,
           0,
           0,
-          0
+          1
         ]
-      ],
-      "openings": [
-        {
-          "name": "Nimzowitsch Larsen Attack Classical Variation",
-          "count": 12
-        },
-        {
-          "name": "Sicilian Defense Open Dragon Yugoslav Attack",
-          "count": 10
-        },
-        {
-          "name": "Nimzowitsch Larsen Attack Modern Variation",
-          "count": 8
-        },
-        {
-          "name": "Reti Opening Kingside Fianchetto Variation",
-          "count": 8
-        },
-        {
-          "name": "Caro Kann Defense",
-          "count": 8
-        },
-        {
-          "name": "Modern Defense Standard",
-          "count": 7
-        },
-        {
-          "name": "Alapin Sicilian Defense",
-          "count": 6
-        },
-        {
-          "name": "Modern Defense Standard Pterodactyl Eastern Variation Rhamphorhynchus Variation",
-          "count": 6
-        }
       ],
       "bestWindows": [
         {
@@ -252,11 +218,41 @@
       ],
       "overlapScore": 55.88,
       "recentForm": [
-        "W",
-        "W",
-        "W",
-        "W",
-        "W"
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "Nitzan_Steinberg",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "Suyarov1",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 14,
+          "date": "30/07",
+          "opponent": "Marat_Gilfanov",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 15,
+          "date": "30/07",
+          "opponent": "Njal28",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 15,
+          "date": "30/07",
+          "opponent": "Njal28",
+          "result": "W"
+        }
       ]
     },
     {
@@ -289,9 +285,9 @@
           3,
           3,
           1,
-          10,
-          10,
-          1
+          0,
+          1,
+          3
         ],
         [
           0,
@@ -316,8 +312,8 @@
           0,
           1,
           0,
-          1,
-          3
+          5,
+          10
         ],
         [
           0,
@@ -341,9 +337,9 @@
           0,
           1,
           0,
-          0,
-          5,
-          10
+          7,
+          8,
+          0
         ],
         [
           7,
@@ -367,9 +363,9 @@
           0,
           8,
           3,
-          7,
-          8,
-          0
+          1,
+          0,
+          3
         ],
         [
           0,
@@ -393,9 +389,9 @@
           0,
           0,
           0,
-          1,
           0,
-          3
+          0,
+          8
         ],
         [
           2,
@@ -421,7 +417,7 @@
           0,
           0,
           0,
-          8
+          6
         ],
         [
           0,
@@ -445,44 +441,10 @@
           13,
           14,
           18,
-          0,
-          0,
-          6
+          10,
+          10,
+          1
         ]
-      ],
-      "openings": [
-        {
-          "name": "Sicilian Defense Open Classical Richter Rauzer Dragon Variation",
-          "count": 17
-        },
-        {
-          "name": "French Defense Normal",
-          "count": 17
-        },
-        {
-          "name": "Nimzowitsch Larsen Attack Modern Variation",
-          "count": 15
-        },
-        {
-          "name": "Queens Gambit Declined Three Knights Barmen Variation",
-          "count": 13
-        },
-        {
-          "name": "Indian Game Accelerated Variation",
-          "count": 11
-        },
-        {
-          "name": "London System",
-          "count": 9
-        },
-        {
-          "name": "Reti Opening Nimzowitsch Larsen Attack",
-          "count": 9
-        },
-        {
-          "name": "Undefined",
-          "count": 9
-        }
       ],
       "bestWindows": [
         {
@@ -506,11 +468,41 @@
       ],
       "overlapScore": 32.02,
       "recentForm": [
-        "W",
-        "L",
-        "L",
-        "L",
-        "W"
+        {
+          "day": 4,
+          "hour": 2,
+          "date": "30/07",
+          "opponent": "drktmplar",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 2,
+          "date": "30/07",
+          "opponent": "drktmplar",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 2,
+          "date": "30/07",
+          "opponent": "Dragon_2022",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 2,
+          "date": "30/07",
+          "opponent": "Dragon_2022",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 14,
+          "date": "30/07",
+          "opponent": "TimGrutter03",
+          "result": "W"
+        }
       ]
     },
     {
@@ -704,7 +696,6 @@
           0
         ]
       ],
-      "openings": [],
       "bestWindows": [],
       "overlapScore": 0.0,
       "recentForm": []
@@ -900,40 +891,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Owens",
-          "count": 3
-        },
-        {
-          "name": "Sicilian Defense",
-          "count": 3
-        },
-        {
-          "name": "Grunfeld Defense Exchange",
-          "count": 3
-        },
-        {
-          "name": "Closed Sicilian Defense Traditional Line",
-          "count": 3
-        },
-        {
-          "name": "Closed Sicilian Defense",
-          "count": 2
-        },
-        {
-          "name": "French Defense Exchange Variation",
-          "count": 2
-        },
-        {
-          "name": "Sicilian Defense McDonnell Attack",
-          "count": 2
-        },
-        {
-          "name": "English Opening Symmetrical Variation",
-          "count": 2
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -956,11 +913,41 @@
       ],
       "overlapScore": 35.8,
       "recentForm": [
-        "W",
-        "W",
-        "W",
-        "L",
-        "W"
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "Aspirant-Bitume",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "bulgakdamir",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "Igor_Lysyj",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "Suyarov1",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "Lady_Nika",
+          "result": "W"
+        }
       ]
     },
     {
@@ -1154,40 +1141,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Queens Pawn Opening Torre Attack",
-          "count": 5
-        },
-        {
-          "name": "Queens Pawn Opening Levitsky Attack",
-          "count": 4
-        },
-        {
-          "name": "Petrovs Defense Classical Variation",
-          "count": 4
-        },
-        {
-          "name": "Sicilian Defense Nyezhmetdinov Rossolimo Fianchetto Variation",
-          "count": 4
-        },
-        {
-          "name": "Queens Pawn Opening Torre Gossip Variation",
-          "count": 3
-        },
-        {
-          "name": "Torre Attack",
-          "count": 3
-        },
-        {
-          "name": "Indian Game Knights",
-          "count": 2
-        },
-        {
-          "name": "Sicilian Defense Delayed Alapin",
-          "count": 2
-        }
-      ],
       "bestWindows": [
         {
           "day": 0,
@@ -1210,11 +1163,41 @@
       ],
       "overlapScore": 16.0,
       "recentForm": [
-        "L",
-        "W",
-        "W",
-        "W",
-        "W"
+        {
+          "day": 0,
+          "hour": 6,
+          "date": "26/07",
+          "opponent": "bubeliang",
+          "result": "L"
+        },
+        {
+          "day": 0,
+          "hour": 7,
+          "date": "26/07",
+          "opponent": "HansOnTwitch",
+          "result": "W"
+        },
+        {
+          "day": 0,
+          "hour": 7,
+          "date": "26/07",
+          "opponent": "HansOnTwitch",
+          "result": "W"
+        },
+        {
+          "day": 0,
+          "hour": 7,
+          "date": "26/07",
+          "opponent": "HansOnTwitch",
+          "result": "W"
+        },
+        {
+          "day": 0,
+          "hour": 7,
+          "date": "26/07",
+          "opponent": "HansOnTwitch",
+          "result": "W"
+        }
       ]
     },
     {
@@ -1408,40 +1391,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Queens Pawn Opening Chigorin Variation",
-          "count": 2
-        },
-        {
-          "name": "Caro Kann Defense Advance Tal Variation",
-          "count": 2
-        },
-        {
-          "name": "Benoni Defense Modern Classical Czerniak Tal Line",
-          "count": 1
-        },
-        {
-          "name": "Queens Pawn Opening Krause Variation",
-          "count": 1
-        },
-        {
-          "name": "Ruy Lopez Opening Morphy Defense Modern Steinitz Siesta",
-          "count": 1
-        },
-        {
-          "name": "Queens Gambit Declined Harrwitz Main Line",
-          "count": 1
-        },
-        {
-          "name": "Vienna Game Max Lange Steinitz Main Line",
-          "count": 1
-        },
-        {
-          "name": "Queens Pawn Opening Tartakower Variation",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
           "day": 1,
@@ -1464,11 +1413,41 @@
       ],
       "overlapScore": 0.0,
       "recentForm": [
-        "W",
-        "W",
-        "W",
-        "W",
-        "W"
+        {
+          "day": 1,
+          "hour": 13,
+          "date": "20/07",
+          "opponent": "theloyalwolf",
+          "result": "W"
+        },
+        {
+          "day": 1,
+          "hour": 13,
+          "date": "20/07",
+          "opponent": "theloyalwolf",
+          "result": "W"
+        },
+        {
+          "day": 1,
+          "hour": 13,
+          "date": "20/07",
+          "opponent": "theloyalwolf",
+          "result": "W"
+        },
+        {
+          "day": 1,
+          "hour": 13,
+          "date": "20/07",
+          "opponent": "theloyalwolf",
+          "result": "W"
+        },
+        {
+          "day": 1,
+          "hour": 13,
+          "date": "20/07",
+          "opponent": "theloyalwolf",
+          "result": "W"
+        }
       ]
     },
     {
@@ -1662,40 +1641,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Sicilian Defense Open Najdorf Variation",
-          "count": 4
-        },
-        {
-          "name": "London System",
-          "count": 3
-        },
-        {
-          "name": "Queens Gambit Declined Exchange Positional",
-          "count": 3
-        },
-        {
-          "name": "Closed Sicilian Defense",
-          "count": 2
-        },
-        {
-          "name": "English Opening Anglo Indian Kings Indian",
-          "count": 2
-        },
-        {
-          "name": "Ruy Lopez Opening Morphy Defense Modern Steinitz",
-          "count": 2
-        },
-        {
-          "name": "Kings Indian Attack",
-          "count": 2
-        },
-        {
-          "name": "Kings Indian Attack Sicilian Variation",
-          "count": 2
-        }
-      ],
       "bestWindows": [
         {
           "day": 1,
@@ -1718,11 +1663,41 @@
       ],
       "overlapScore": 9.09,
       "recentForm": [
-        "W",
-        "W",
-        "L",
-        "L",
-        "W"
+        {
+          "day": 4,
+          "hour": 6,
+          "date": "30/07",
+          "opponent": "scarabee43",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 6,
+          "date": "30/07",
+          "opponent": "scarabee43",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 6,
+          "date": "30/07",
+          "opponent": "scarabee43",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 6,
+          "date": "30/07",
+          "opponent": "scarabee43",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 6,
+          "date": "30/07",
+          "opponent": "scarabee43",
+          "result": "W"
+        }
       ]
     },
     {
@@ -1916,40 +1891,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Queens Pawn Opening Torre Attack",
-          "count": 6
-        },
-        {
-          "name": "Sicilian Defense Westerinen Attack",
-          "count": 6
-        },
-        {
-          "name": "Philidor Defense Hanham Lion Variation",
-          "count": 6
-        },
-        {
-          "name": "Sicilian Defense Delayed Alapin",
-          "count": 5
-        },
-        {
-          "name": "Philidor Defense Hanham Lion",
-          "count": 5
-        },
-        {
-          "name": "Closed Sicilian Defense",
-          "count": 5
-        },
-        {
-          "name": "Queens Pawn Opening Torre Gossip Variation",
-          "count": 5
-        },
-        {
-          "name": "Four Knights Game Spanish Variation Rubinstein Henneberger Variation",
-          "count": 4
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -1972,11 +1913,41 @@
       ],
       "overlapScore": 11.35,
       "recentForm": [
-        "W",
-        "D",
-        "W",
-        "D",
-        "W"
+        {
+          "day": 4,
+          "hour": 12,
+          "date": "30/07",
+          "opponent": "Zhigalko_Sergei",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "Dr_Tyger",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "HansOnTwitch",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "BogdanDeac",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "Sina-Movahed",
+          "result": "W"
+        }
       ]
     },
     {
@@ -2114,32 +2085,6 @@
           0,
           0,
           0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           8,
           3
         ],
@@ -2168,41 +2113,33 @@
           0,
           0,
           0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
-      ],
-      "openings": [
-        {
-          "name": "Owens",
-          "count": 4
-        },
-        {
-          "name": "Queens Pawn Opening English Rat",
-          "count": 2
-        },
-        {
-          "name": "English Opening Reversed Sicilian Variation",
-          "count": 2
-        },
-        {
-          "name": "English Opening Kings English Variation",
-          "count": 1
-        },
-        {
-          "name": "Sicilian Defense Staunton Cochrane",
-          "count": 1
-        },
-        {
-          "name": "Kings Indian",
-          "count": 1
-        },
-        {
-          "name": "Kings Indian Defense Normal Smyslov",
-          "count": 1
-        },
-        {
-          "name": "Nimzowitsch Larsen Attack Modern Variation",
-          "count": 1
-        }
       ],
       "bestWindows": [
         {
@@ -2226,11 +2163,41 @@
       ],
       "overlapScore": 18.18,
       "recentForm": [
-        "L",
-        "L",
-        "W",
-        "W",
-        "L"
+        {
+          "day": 4,
+          "hour": 22,
+          "date": "09/07",
+          "opponent": "Jospem",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 22,
+          "date": "09/07",
+          "opponent": "yosephtaher",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 23,
+          "date": "09/07",
+          "opponent": "LSChess",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 23,
+          "date": "09/07",
+          "opponent": "alexrustemov",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 23,
+          "date": "09/07",
+          "opponent": "Volodar_Murzin",
+          "result": "L"
+        }
       ]
     },
     {
@@ -2424,40 +2391,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Ruy Lopez Opening Morphy Defense Modern Steinitz",
-          "count": 2
-        },
-        {
-          "name": "Queens Pawn Opening Torre Attack",
-          "count": 2
-        },
-        {
-          "name": "Sicilian Defense Nyezhmetdinov Rossolimo Attack",
-          "count": 2
-        },
-        {
-          "name": "Queens Indian Defense Fianchetto Nimzowitsch",
-          "count": 2
-        },
-        {
-          "name": "Queens Gambit Declined Exchange",
-          "count": 1
-        },
-        {
-          "name": "Philidor Defense Hanham Lion Variation",
-          "count": 1
-        },
-        {
-          "name": "Old Indian Defense Ukrainian Two Knights",
-          "count": 1
-        },
-        {
-          "name": "Kings Indian Attack Double Fianchetto",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -2480,11 +2413,41 @@
       ],
       "overlapScore": 0.0,
       "recentForm": [
-        "W",
-        "L",
-        "D",
-        "W",
-        "L"
+        {
+          "day": 4,
+          "hour": 8,
+          "date": "30/07",
+          "opponent": "vi_pranav",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 8,
+          "date": "30/07",
+          "opponent": "vi_pranav",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 8,
+          "date": "30/07",
+          "opponent": "vi_pranav",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 9,
+          "date": "30/07",
+          "opponent": "vi_pranav",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 9,
+          "date": "30/07",
+          "opponent": "vi_pranav",
+          "result": "L"
+        }
       ]
     },
     {
@@ -2678,40 +2641,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Nimzo Indian Defense Romanishin Kasparov System",
-          "count": 2
-        },
-        {
-          "name": "Sicilian Defense Open Najdorf Variation",
-          "count": 2
-        },
-        {
-          "name": "Sicilian Defense Chekhover Variation",
-          "count": 2
-        },
-        {
-          "name": "Alapin Sicilian",
-          "count": 2
-        },
-        {
-          "name": "Bogo Indian Defense Grunfeld Variation",
-          "count": 1
-        },
-        {
-          "name": "Queens Gambit Declined Exchange",
-          "count": 1
-        },
-        {
-          "name": "Queens Gambit Declined Traditional Capablanca Duras Variation",
-          "count": 1
-        },
-        {
-          "name": "English Opening Anglo Dutch",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -2734,11 +2663,41 @@
       ],
       "overlapScore": 19.64,
       "recentForm": [
-        "W",
-        "W",
-        "W",
-        "L",
-        "L"
+        {
+          "day": 1,
+          "hour": 16,
+          "date": "27/07",
+          "opponent": "Kimastuloy",
+          "result": "W"
+        },
+        {
+          "day": 1,
+          "hour": 16,
+          "date": "27/07",
+          "opponent": "Kimastuloy",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "GeneralZod",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "dr_Strange013",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "MaximusDecimIV",
+          "result": "L"
+        }
       ]
     },
     {
@@ -2876,8 +2835,8 @@
           0,
           0,
           0,
-          0,
-          0
+          14,
+          14
         ],
         [
           2,
@@ -2902,8 +2861,8 @@
           0,
           0,
           0,
-          14,
-          14
+          0,
+          0
         ],
         [
           0,
@@ -2932,40 +2891,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Caro Kann Defense Tartakower",
-          "count": 4
-        },
-        {
-          "name": "Caro Kann Defense",
-          "count": 3
-        },
-        {
-          "name": "Nimzo Indian Defense Classical",
-          "count": 3
-        },
-        {
-          "name": "Queens Gambit Declined Exchange Positional Line",
-          "count": 3
-        },
-        {
-          "name": "Kings Indian Attack",
-          "count": 3
-        },
-        {
-          "name": "Queens Pawn Opening Symmetrical Variation",
-          "count": 3
-        },
-        {
-          "name": "Semi Slav Defense Anti Meran Anti Moscow",
-          "count": 2
-        },
-        {
-          "name": "Sicilian Defense Open Najdorf Adams Attack",
-          "count": 2
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -2988,11 +2913,41 @@
       ],
       "overlapScore": 13.1,
       "recentForm": [
-        "W",
-        "W",
-        "W",
-        "W",
-        "W"
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "StasSB",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "StevenZierk",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "DenLaz",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "Oleksandr_Bortnyk",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "Suyarov1",
+          "result": "W"
+        }
       ]
     },
     {
@@ -3003,32 +2958,6 @@
       "total": 3,
       "peakHourBrt": 22,
       "dayHourBrt": [
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
         [
           0,
           0,
@@ -3184,21 +3113,37 @@
           0,
           0,
           0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
-      ],
-      "openings": [
-        {
-          "name": "Kings Pawn Opening Adams Defense",
-          "count": 2
-        },
-        {
-          "name": "Polish",
-          "count": 1
-        }
       ],
       "bestWindows": [
         {
-          "day": 3,
+          "day": 2,
           "hour": 22,
           "count": 3,
           "pct": 100.0
@@ -3206,9 +3151,27 @@
       ],
       "overlapScore": 0.0,
       "recentForm": [
-        "W",
-        "W",
-        "W"
+        {
+          "day": 2,
+          "hour": 22,
+          "date": "07/07",
+          "opponent": "rfelgaer",
+          "result": "W"
+        },
+        {
+          "day": 2,
+          "hour": 22,
+          "date": "07/07",
+          "opponent": "rfelgaer",
+          "result": "W"
+        },
+        {
+          "day": 2,
+          "hour": 22,
+          "date": "07/07",
+          "opponent": "rfelgaer",
+          "result": "W"
+        }
       ]
     },
     {
@@ -3402,40 +3365,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Scandinavian Defense Mieses Kotrc Main",
-          "count": 2
-        },
-        {
-          "name": "Anderssen Opening",
-          "count": 2
-        },
-        {
-          "name": "Slav Defense Modern Quiet Schallopp Defense",
-          "count": 1
-        },
-        {
-          "name": "Kings Indian Defense Orthodox Variation",
-          "count": 1
-        },
-        {
-          "name": "Italian Game Two Knights Modern Bishops Opening",
-          "count": 1
-        },
-        {
-          "name": "Ruy Lopez Opening Cozio Defense",
-          "count": 1
-        },
-        {
-          "name": "Four Knights Game Italian",
-          "count": 1
-        },
-        {
-          "name": "Reti Opening Sicilian",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
           "day": 6,
@@ -3458,11 +3387,41 @@
       ],
       "overlapScore": 15.38,
       "recentForm": [
-        "W",
-        "L",
-        "W",
-        "W",
-        "L"
+        {
+          "day": 6,
+          "hour": 8,
+          "date": "04/07",
+          "opponent": "vi_pranav",
+          "result": "W"
+        },
+        {
+          "day": 0,
+          "hour": 8,
+          "date": "05/07",
+          "opponent": "NikoTheodorou",
+          "result": "L"
+        },
+        {
+          "day": 0,
+          "hour": 8,
+          "date": "05/07",
+          "opponent": "NikoTheodorou",
+          "result": "W"
+        },
+        {
+          "day": 0,
+          "hour": 8,
+          "date": "05/07",
+          "opponent": "NikoTheodorou",
+          "result": "W"
+        },
+        {
+          "day": 0,
+          "hour": 8,
+          "date": "05/07",
+          "opponent": "NikoTheodorou",
+          "result": "L"
+        }
       ]
     },
     {
@@ -3656,40 +3615,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Pirc Defense",
-          "count": 3
-        },
-        {
-          "name": "Sicilian Defense McDonnell Attack",
-          "count": 2
-        },
-        {
-          "name": "Sicilian Defense Delayed Alapin",
-          "count": 1
-        },
-        {
-          "name": "English Opening Anglo Dutch",
-          "count": 1
-        },
-        {
-          "name": "Sicilian Defense Delayed Alapin Variation",
-          "count": 1
-        },
-        {
-          "name": "Reti Opening Pirc Invitation",
-          "count": 1
-        },
-        {
-          "name": "French Defense Advance Extended Bishop Swap Variation",
-          "count": 1
-        },
-        {
-          "name": "Pirc Defense Antal Defense",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
           "day": 3,
@@ -3706,11 +3631,41 @@
       ],
       "overlapScore": 0.0,
       "recentForm": [
-        "W",
-        "W",
-        "W",
-        "W",
-        "W"
+        {
+          "day": 3,
+          "hour": 7,
+          "date": "01/07",
+          "opponent": "GABUZYAN_CHESSMOOD",
+          "result": "W"
+        },
+        {
+          "day": 3,
+          "hour": 7,
+          "date": "01/07",
+          "opponent": "GABUZYAN_CHESSMOOD",
+          "result": "W"
+        },
+        {
+          "day": 3,
+          "hour": 8,
+          "date": "01/07",
+          "opponent": "GABUZYAN_CHESSMOOD",
+          "result": "W"
+        },
+        {
+          "day": 3,
+          "hour": 8,
+          "date": "01/07",
+          "opponent": "GABUZYAN_CHESSMOOD",
+          "result": "W"
+        },
+        {
+          "day": 3,
+          "hour": 8,
+          "date": "01/07",
+          "opponent": "GABUZYAN_CHESSMOOD",
+          "result": "W"
+        }
       ]
     },
     {
@@ -3904,40 +3859,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Indian Game Knights",
-          "count": 6
-        },
-        {
-          "name": "Slav Defense Modern Exchange",
-          "count": 3
-        },
-        {
-          "name": "Catalan Opening",
-          "count": 3
-        },
-        {
-          "name": "Kings Indian Defense Orthodox Variation",
-          "count": 3
-        },
-        {
-          "name": "Nimzo Indian Defense Samisch Variation",
-          "count": 3
-        },
-        {
-          "name": "Grunfeld Defense Exchange Classical",
-          "count": 2
-        },
-        {
-          "name": "Ruy Lopez Opening Morphy Defense Anti Marshall Variation",
-          "count": 2
-        },
-        {
-          "name": "London",
-          "count": 2
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -3960,11 +3881,41 @@
       ],
       "overlapScore": 18.18,
       "recentForm": [
-        "D",
-        "W",
-        "L",
-        "W",
-        "L"
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "Dolphin_2010",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "rezamahdavi2008",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "Parhamov",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "carokannlover213",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "sergoy",
+          "result": "L"
+        }
       ]
     },
     {
@@ -4158,7 +4109,6 @@
           0
         ]
       ],
-      "openings": [],
       "bestWindows": [],
       "overlapScore": 0.0,
       "recentForm": []
@@ -4298,32 +4248,6 @@
           0,
           0,
           0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           22,
           8
         ],
@@ -4352,41 +4276,33 @@
           0,
           0,
           0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
-      ],
-      "openings": [
-        {
-          "name": "Reti Opening Kings Indian",
-          "count": 8
-        },
-        {
-          "name": "Reti Opening Kings Indian Attack Symmetrical",
-          "count": 7
-        },
-        {
-          "name": "Kings Indian Attack Yugoslav",
-          "count": 7
-        },
-        {
-          "name": "Sicilian",
-          "count": 5
-        },
-        {
-          "name": "Kings Indian Attack French",
-          "count": 4
-        },
-        {
-          "name": "Caro Kann Defense Two Knights Mindeno Exchange Line",
-          "count": 3
-        },
-        {
-          "name": "Kings Indian Attack",
-          "count": 3
-        },
-        {
-          "name": "Kings Indian",
-          "count": 3
-        }
       ],
       "bestWindows": [
         {
@@ -4396,7 +4312,7 @@
           "pct": 24.0
         },
         {
-          "day": 5,
+          "day": 4,
           "hour": 22,
           "count": 22,
           "pct": 22.9
@@ -4410,11 +4326,41 @@
       ],
       "overlapScore": 12.5,
       "recentForm": [
-        "W",
-        "L",
-        "L",
-        "D",
-        "L"
+        {
+          "day": 4,
+          "hour": 22,
+          "date": "16/07",
+          "opponent": "jefferyx",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 22,
+          "date": "16/07",
+          "opponent": "Oleksandr_Bortnyk",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 22,
+          "date": "16/07",
+          "opponent": "bubeliang",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 22,
+          "date": "16/07",
+          "opponent": "NoHeThTo",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 23,
+          "date": "16/07",
+          "opponent": "ChessMasterV777",
+          "result": "L"
+        }
       ]
     },
     {
@@ -4608,40 +4554,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Bogo Indian Defense Exchange Variation",
-          "count": 2
-        },
-        {
-          "name": "Sicilian Defense Canal Attack",
-          "count": 2
-        },
-        {
-          "name": "Nimzo Indian Defense Normal",
-          "count": 1
-        },
-        {
-          "name": "English Opening Agincourt",
-          "count": 1
-        },
-        {
-          "name": "Queens Gambit Declined Exchange",
-          "count": 1
-        },
-        {
-          "name": "Old Benoni",
-          "count": 1
-        },
-        {
-          "name": "Tarrasch Defense Symmetrical Variation",
-          "count": 1
-        },
-        {
-          "name": "Ruy Lopez Opening Morphy Defense Keres Smyslov",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
           "day": 0,
@@ -4664,11 +4576,41 @@
       ],
       "overlapScore": 15.0,
       "recentForm": [
-        "W",
-        "L",
-        "W",
-        "W",
-        "W"
+        {
+          "day": 0,
+          "hour": 18,
+          "date": "26/07",
+          "opponent": "Suyarov1",
+          "result": "W"
+        },
+        {
+          "day": 0,
+          "hour": 18,
+          "date": "26/07",
+          "opponent": "Suyarov1",
+          "result": "L"
+        },
+        {
+          "day": 0,
+          "hour": 18,
+          "date": "26/07",
+          "opponent": "Suyarov1",
+          "result": "W"
+        },
+        {
+          "day": 0,
+          "hour": 18,
+          "date": "26/07",
+          "opponent": "Suyarov1",
+          "result": "W"
+        },
+        {
+          "day": 0,
+          "hour": 18,
+          "date": "26/07",
+          "opponent": "Suyarov1",
+          "result": "W"
+        }
       ]
     },
     {
@@ -4862,40 +4804,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Queens Gambit Declined Catalan",
-          "count": 71
-        },
-        {
-          "name": "Catalan Opening",
-          "count": 26
-        },
-        {
-          "name": "Kings Indian Defense Normal",
-          "count": 23
-        },
-        {
-          "name": "Sicilian Defense Four Knights",
-          "count": 18
-        },
-        {
-          "name": "Grunfeld Defense Burille Opocensky Variation",
-          "count": 17
-        },
-        {
-          "name": "Kings Indian Defense Orthodox Variation",
-          "count": 16
-        },
-        {
-          "name": "Sicilian Defense Canal",
-          "count": 15
-        },
-        {
-          "name": "Sicilian Defense Open Dragon Variation",
-          "count": 14
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -4918,11 +4826,41 @@
       ],
       "overlapScore": 18.75,
       "recentForm": [
-        "W",
-        "W",
-        "W",
-        "W",
-        "L"
+        {
+          "day": 4,
+          "hour": 12,
+          "date": "30/07",
+          "opponent": "Billy_thekid30",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "Alexander_Donchenko",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "Vaathi_Coming",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "Suyarov1",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "vi_pranav",
+          "result": "L"
+        }
       ]
     },
     {
@@ -4983,7 +4921,7 @@
           0,
           0,
           0,
-          0
+          7
         ],
         [
           0,
@@ -5009,7 +4947,7 @@
           0,
           0,
           0,
-          7
+          0
         ],
         [
           0,
@@ -5116,43 +5054,9 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Alapin Sicilian Defense",
-          "count": 2
-        },
-        {
-          "name": "Alapin Sicilian",
-          "count": 2
-        },
-        {
-          "name": "Pirc",
-          "count": 1
-        },
-        {
-          "name": "Sicilian Defense Open Classical Richter Rauzer Dragon Variation",
-          "count": 1
-        },
-        {
-          "name": "Queens Pawn Opening Zukertort",
-          "count": 1
-        },
-        {
-          "name": "Slav Defense Modern",
-          "count": 1
-        },
-        {
-          "name": "Queens Gambit Declined Baltic Defense",
-          "count": 1
-        },
-        {
-          "name": "French Defense Advance Nimzowitsch System",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
-          "day": 2,
+          "day": 1,
           "hour": 23,
           "count": 7,
           "pct": 63.6
@@ -5166,11 +5070,41 @@
       ],
       "overlapScore": 63.64,
       "recentForm": [
-        "D",
-        "W",
-        "W",
-        "W",
-        "W"
+        {
+          "day": 1,
+          "hour": 23,
+          "date": "27/07",
+          "opponent": "Philippians46",
+          "result": "D"
+        },
+        {
+          "day": 2,
+          "hour": 3,
+          "date": "28/07",
+          "opponent": "BATEK_HA_TPAKTOPE",
+          "result": "W"
+        },
+        {
+          "day": 2,
+          "hour": 3,
+          "date": "28/07",
+          "opponent": "BATEK_HA_TPAKTOPE",
+          "result": "W"
+        },
+        {
+          "day": 2,
+          "hour": 3,
+          "date": "28/07",
+          "opponent": "BATEK_HA_TPAKTOPE",
+          "result": "W"
+        },
+        {
+          "day": 2,
+          "hour": 3,
+          "date": "28/07",
+          "opponent": "BATEK_HA_TPAKTOPE",
+          "result": "W"
+        }
       ]
     },
     {
@@ -5364,40 +5298,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Queens Pawn Opening Symmetrical Variation",
-          "count": 2
-        },
-        {
-          "name": "French Defense Advance Paulsen Euwe Variation",
-          "count": 2
-        },
-        {
-          "name": "Sicilian Defense Kan Maroczy Bind Formation",
-          "count": 2
-        },
-        {
-          "name": "Nimzo Indian Defense Reshevsky",
-          "count": 1
-        },
-        {
-          "name": "Queens Gambit Declined Chigorin Defense",
-          "count": 1
-        },
-        {
-          "name": "English Opening Two Knights Variation",
-          "count": 1
-        },
-        {
-          "name": "Indian Game Knights Variation East Indian Defense",
-          "count": 1
-        },
-        {
-          "name": "Nimzo Indian Defense",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -5414,11 +5314,41 @@
       ],
       "overlapScore": 31.82,
       "recentForm": [
-        "D",
-        "W",
-        "W",
-        "W",
-        "W"
+        {
+          "day": 4,
+          "hour": 12,
+          "date": "30/07",
+          "opponent": "aa175",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 12,
+          "date": "30/07",
+          "opponent": "wqws",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "Zhigalko_Sergei",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "rezamahdavi2008",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "Achuvettan",
+          "result": "W"
+        }
       ]
     },
     {
@@ -5612,40 +5542,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "English Opening Kings English",
-          "count": 3
-        },
-        {
-          "name": "Nimzo Indian Defense Kmoch",
-          "count": 2
-        },
-        {
-          "name": "Sicilian Defense Canal",
-          "count": 2
-        },
-        {
-          "name": "Queens Pawn Opening Torre Attack",
-          "count": 2
-        },
-        {
-          "name": "Caro Kann Defense",
-          "count": 2
-        },
-        {
-          "name": "Ruy Lopez Opening Fianchetto Defense",
-          "count": 1
-        },
-        {
-          "name": "Caro Kann Defense Tartakower Variation",
-          "count": 1
-        },
-        {
-          "name": "Ruy Lopez Opening Morphy Defense Anderssen Variation",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
           "day": 5,
@@ -5668,11 +5564,41 @@
       ],
       "overlapScore": 6.35,
       "recentForm": [
-        "L",
-        "W",
-        "W",
-        "L",
-        "L"
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "vi_pranav",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "Dolphin_2010",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "BogdanDeac",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "yegchesss",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "ural58",
+          "result": "L"
+        }
       ]
     },
     {
@@ -5866,7 +5792,6 @@
           0
         ]
       ],
-      "openings": [],
       "bestWindows": [],
       "overlapScore": 0.0,
       "recentForm": []
@@ -6062,40 +5987,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Four Knights Game Gunsberg Variation",
-          "count": 2
-        },
-        {
-          "name": "Sicilian Defense Anti Qxd4 Move Order",
-          "count": 1
-        },
-        {
-          "name": "English Opening Agincourt",
-          "count": 1
-        },
-        {
-          "name": "Benoni Defense Modern Fianchetto Hastings Defense",
-          "count": 1
-        },
-        {
-          "name": "Old Indian Defense Czech Variation",
-          "count": 1
-        },
-        {
-          "name": "Alekhines Defense Exchange Variation",
-          "count": 1
-        },
-        {
-          "name": "Philidor Defense Hanham Lion Shirov",
-          "count": 1
-        },
-        {
-          "name": "Petrovs Defense Classical Variation",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -6118,11 +6009,41 @@
       ],
       "overlapScore": 11.11,
       "recentForm": [
-        "W",
-        "W",
-        "W",
-        "W",
-        "W"
+        {
+          "day": 4,
+          "hour": 5,
+          "date": "09/07",
+          "opponent": "fireheart92",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 5,
+          "date": "09/07",
+          "opponent": "fireheart92",
+          "result": "W"
+        },
+        {
+          "day": 0,
+          "hour": 8,
+          "date": "26/07",
+          "opponent": "Lunaticx",
+          "result": "W"
+        },
+        {
+          "day": 0,
+          "hour": 13,
+          "date": "26/07",
+          "opponent": "tjychess",
+          "result": "W"
+        },
+        {
+          "day": 0,
+          "hour": 14,
+          "date": "26/07",
+          "opponent": "tjychess",
+          "result": "W"
+        }
       ]
     },
     {
@@ -6316,40 +6237,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "London System",
-          "count": 4
-        },
-        {
-          "name": "Kings Indian Defense Fianchetto Karlsbad Panno Uhlmann Szabo System",
-          "count": 2
-        },
-        {
-          "name": "Kings Indian Defense Orthodox Glek Defense",
-          "count": 2
-        },
-        {
-          "name": "Queens Pawn Opening Zukertort",
-          "count": 2
-        },
-        {
-          "name": "French Defense Normal Variation",
-          "count": 2
-        },
-        {
-          "name": "Slav Defense Modern Alapin Variation Czech Bled",
-          "count": 1
-        },
-        {
-          "name": "Kings Indian Defense Orthodox Variation",
-          "count": 1
-        },
-        {
-          "name": "Queens Pawn Opening English",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
           "day": 6,
@@ -6372,11 +6259,41 @@
       ],
       "overlapScore": 8.89,
       "recentForm": [
-        "W",
-        "W",
-        "W",
-        "W",
-        "D"
+        {
+          "day": 0,
+          "hour": 11,
+          "date": "26/07",
+          "opponent": "Alen_ChessMate",
+          "result": "W"
+        },
+        {
+          "day": 0,
+          "hour": 12,
+          "date": "26/07",
+          "opponent": "AmirBagheri78",
+          "result": "W"
+        },
+        {
+          "day": 2,
+          "hour": 10,
+          "date": "28/07",
+          "opponent": "MichaelRoiz",
+          "result": "W"
+        },
+        {
+          "day": 3,
+          "hour": 10,
+          "date": "29/07",
+          "opponent": "demon64fields",
+          "result": "W"
+        },
+        {
+          "day": 3,
+          "hour": 10,
+          "date": "29/07",
+          "opponent": "Msb2",
+          "result": "D"
+        }
       ]
     },
     {
@@ -6570,40 +6487,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Indian Game Accelerated Variation",
-          "count": 4
-        },
-        {
-          "name": "Nimzowitsch Defense Declined Williams Variation",
-          "count": 3
-        },
-        {
-          "name": "Reti Opening Nimzowitsch Larsen",
-          "count": 2
-        },
-        {
-          "name": "English Opening Agincourt",
-          "count": 2
-        },
-        {
-          "name": "English Opening Four Knights Kingside Fianchetto Line",
-          "count": 2
-        },
-        {
-          "name": "Alekhines Defense Modern Variation",
-          "count": 2
-        },
-        {
-          "name": "Italian Game Knight Attack Fritz",
-          "count": 2
-        },
-        {
-          "name": "Queens Indian Defense Fianchetto Classical Variation",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
           "day": 6,
@@ -6626,11 +6509,41 @@
       ],
       "overlapScore": 7.41,
       "recentForm": [
-        "W",
-        "W",
-        "D",
-        "W",
-        "W"
+        {
+          "day": 4,
+          "hour": 7,
+          "date": "30/07",
+          "opponent": "Suyarov1",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 7,
+          "date": "30/07",
+          "opponent": "Suyarov1",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 7,
+          "date": "30/07",
+          "opponent": "Suyarov1",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 7,
+          "date": "30/07",
+          "opponent": "Suyarov1",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 7,
+          "date": "30/07",
+          "opponent": "Suyarov1",
+          "result": "W"
+        }
       ]
     },
     {
@@ -6824,40 +6737,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Italian Game Two Knights Modern Bishops Opening",
-          "count": 2
-        },
-        {
-          "name": "Sicilian Defense Taimanov Bastrikov Variation",
-          "count": 1
-        },
-        {
-          "name": "Sicilian",
-          "count": 1
-        },
-        {
-          "name": "Ruy Lopez Opening Morphy Defense Columbus",
-          "count": 1
-        },
-        {
-          "name": "Alapin Sicilian",
-          "count": 1
-        },
-        {
-          "name": "Sicilian Defense Chekhover Variation",
-          "count": 1
-        },
-        {
-          "name": "Ruy Lopez Opening Morphy Defense Exchange Bronstein Variation",
-          "count": 1
-        },
-        {
-          "name": "London System",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
           "day": 2,
@@ -6880,11 +6759,41 @@
       ],
       "overlapScore": 57.14,
       "recentForm": [
-        "W",
-        "W",
-        "W",
-        "W",
-        "W"
+        {
+          "day": 3,
+          "hour": 14,
+          "date": "08/07",
+          "opponent": "artin10862",
+          "result": "W"
+        },
+        {
+          "day": 3,
+          "hour": 14,
+          "date": "08/07",
+          "opponent": "artin10862",
+          "result": "W"
+        },
+        {
+          "day": 3,
+          "hour": 14,
+          "date": "08/07",
+          "opponent": "artin10862",
+          "result": "W"
+        },
+        {
+          "day": 3,
+          "hour": 14,
+          "date": "08/07",
+          "opponent": "GZQSH07",
+          "result": "W"
+        },
+        {
+          "day": 3,
+          "hour": 14,
+          "date": "08/07",
+          "opponent": "GZQSH07",
+          "result": "W"
+        }
       ]
     },
     {
@@ -7022,8 +6931,8 @@
           0,
           0,
           0,
-          0,
-          0
+          8,
+          3
         ],
         [
           0,
@@ -7048,8 +6957,8 @@
           3,
           0,
           0,
-          8,
-          3
+          0,
+          0
         ],
         [
           0,
@@ -7078,40 +6987,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Queens Gambit Declined Exchange Positional Line",
-          "count": 6
-        },
-        {
-          "name": "Queens Gambit Declined Tartakower Defense",
-          "count": 5
-        },
-        {
-          "name": "Sicilian Defense Open Accelerated Dragon Modern",
-          "count": 5
-        },
-        {
-          "name": "Queens Gambit Declined Modern Variation",
-          "count": 4
-        },
-        {
-          "name": "Queens Gambit Declined Ragozin Alekhine Variation",
-          "count": 4
-        },
-        {
-          "name": "Pirc",
-          "count": 3
-        },
-        {
-          "name": "Alapin Sicilian Defense Barmen Defense",
-          "count": 3
-        },
-        {
-          "name": "Queens Gambit Declined Ragozin",
-          "count": 3
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -7134,11 +7009,41 @@
       ],
       "overlapScore": 13.16,
       "recentForm": [
-        "L",
-        "W",
-        "L",
-        "L",
-        "W"
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "LiemLe",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "rasmussvane",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "Suyarov1",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "GMKrikor",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "NelsonLinda",
+          "result": "W"
+        }
       ]
     },
     {
@@ -7173,7 +7078,7 @@
           2,
           0,
           0,
-          1
+          0
         ],
         [
           10,
@@ -7225,7 +7130,7 @@
           0,
           0,
           0,
-          0
+          1
         ],
         [
           5,
@@ -7251,7 +7156,7 @@
           0,
           0,
           0,
-          1
+          0
         ],
         [
           0,
@@ -7329,42 +7234,8 @@
           0,
           0,
           0,
-          0
+          1
         ]
-      ],
-      "openings": [
-        {
-          "name": "Kings Indian Defense Orthodox Glek Defense",
-          "count": 6
-        },
-        {
-          "name": "Kings Indian Defense Orthodox Variation",
-          "count": 4
-        },
-        {
-          "name": "Ruy Lopez Opening Morphy Defense Columbus",
-          "count": 4
-        },
-        {
-          "name": "French Defense Classical Steinitz Boleslavsky Variation",
-          "count": 3
-        },
-        {
-          "name": "Sicilian Defense Canal Attack",
-          "count": 3
-        },
-        {
-          "name": "Queens Gambit Declined Catalan",
-          "count": 3
-        },
-        {
-          "name": "Kings Pawn Opening Kings Knight Konstantinopolsky Variation",
-          "count": 3
-        },
-        {
-          "name": "Giuoco Piano",
-          "count": 3
-        }
       ],
       "bestWindows": [
         {
@@ -7388,11 +7259,41 @@
       ],
       "overlapScore": 13.59,
       "recentForm": [
-        "W",
-        "L",
-        "W",
-        "D",
-        "W"
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "rychessmaster1",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "carokannlover213",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "Igor_Lysyj",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "Blackmind96",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "Andrei_Skvortsov",
+          "result": "W"
+        }
       ]
     },
     {
@@ -7530,32 +7431,6 @@
           0,
           0,
           0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           15,
           7
         ],
@@ -7584,41 +7459,33 @@
           0,
           0,
           0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
-      ],
-      "openings": [
-        {
-          "name": "Sicilian",
-          "count": 5
-        },
-        {
-          "name": "Ruy Lopez Opening Morphy Defense Delayed Exchange Variation",
-          "count": 4
-        },
-        {
-          "name": "French Defense Knight Variation Two Knights Variation",
-          "count": 4
-        },
-        {
-          "name": "Sicilian Defense",
-          "count": 4
-        },
-        {
-          "name": "Sicilian Defense French",
-          "count": 3
-        },
-        {
-          "name": "Ruy Lopez Opening Berlin Defense",
-          "count": 2
-        },
-        {
-          "name": "Alapin Sicilian Defense Barmen Defense",
-          "count": 2
-        },
-        {
-          "name": "Sicilian Defense Open Najdorf Opocensky Traditional Line",
-          "count": 1
-        }
       ],
       "bestWindows": [
         {
@@ -7628,7 +7495,7 @@
           "pct": 31.8
         },
         {
-          "day": 5,
+          "day": 4,
           "hour": 22,
           "count": 15,
           "pct": 22.7
@@ -7642,11 +7509,41 @@
       ],
       "overlapScore": 18.18,
       "recentForm": [
-        "L",
-        "D",
-        "D",
-        "W",
-        "W"
+        {
+          "day": 4,
+          "hour": 22,
+          "date": "23/07",
+          "opponent": "Fedoseev-Vladimir",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 22,
+          "date": "23/07",
+          "opponent": "yosephtaher",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 23,
+          "date": "23/07",
+          "opponent": "ChristopherYoo",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 23,
+          "date": "23/07",
+          "opponent": "bocah_sakit",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 23,
+          "date": "23/07",
+          "opponent": "rezamahdavi2008",
+          "result": "W"
+        }
       ]
     },
     {
@@ -7840,7 +7737,6 @@
           0
         ]
       ],
-      "openings": [],
       "bestWindows": [],
       "overlapScore": 0.0,
       "recentForm": []
@@ -7875,9 +7771,9 @@
           7,
           12,
           2,
-          5,
-          6,
-          0
+          11,
+          1,
+          6
         ],
         [
           0,
@@ -7901,8 +7797,8 @@
           2,
           0,
           1,
-          11,
-          1,
+          0,
+          6,
           6
         ],
         [
@@ -7928,8 +7824,8 @@
           0,
           0,
           0,
-          6,
-          6
+          0,
+          5
         ],
         [
           2,
@@ -7955,7 +7851,7 @@
           0,
           0,
           0,
-          5
+          2
         ],
         [
           1,
@@ -7980,8 +7876,8 @@
           0,
           0,
           0,
-          0,
-          2
+          7,
+          0
         ],
         [
           0,
@@ -8006,7 +7902,7 @@
           0,
           0,
           0,
-          7,
+          8,
           0
         ],
         [
@@ -8031,44 +7927,10 @@
           0,
           2,
           7,
-          0,
-          8,
+          5,
+          6,
           0
         ]
-      ],
-      "openings": [
-        {
-          "name": "Ruy Lopez Opening Berlin Rio Gambit",
-          "count": 12
-        },
-        {
-          "name": "Ruy Lopez Opening Berlin Defense",
-          "count": 8
-        },
-        {
-          "name": "Caro Kann Defense Exchange Variation",
-          "count": 8
-        },
-        {
-          "name": "Italian Game Two Knights Modern Bishops Opening",
-          "count": 7
-        },
-        {
-          "name": "Kings Indian Attack Yugoslav",
-          "count": 6
-        },
-        {
-          "name": "Queens Gambit Accepted Classical Main Line",
-          "count": 5
-        },
-        {
-          "name": "Queens Gambit Declined Ragozin Defense",
-          "count": 5
-        },
-        {
-          "name": "Giuoco Piano",
-          "count": 5
-        }
       ],
       "bestWindows": [
         {
@@ -8092,11 +7954,41 @@
       ],
       "overlapScore": 28.03,
       "recentForm": [
-        "W",
-        "L",
-        "W",
-        "W",
-        "W"
+        {
+          "day": 3,
+          "hour": 23,
+          "date": "29/07",
+          "opponent": "xeulmong",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 11,
+          "date": "30/07",
+          "opponent": "GABUZYAN_CHESSMOOD",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 11,
+          "date": "30/07",
+          "opponent": "GABUZYAN_CHESSMOOD",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 11,
+          "date": "30/07",
+          "opponent": "demon64fields",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 11,
+          "date": "30/07",
+          "opponent": "Kn1ga_Bratan",
+          "result": "W"
+        }
       ]
     },
     {
@@ -8290,40 +8182,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Kings Indian Defense Fianchetto Debrecen Classical Main",
-          "count": 13
-        },
-        {
-          "name": "Queens Gambit Declined Catalan",
-          "count": 11
-        },
-        {
-          "name": "Sicilian Defense Paulsen Basman Defense",
-          "count": 10
-        },
-        {
-          "name": "Kings Indian Defense Fianchetto Debrecen Classical Main Line",
-          "count": 8
-        },
-        {
-          "name": "Indian Game East Indian Przepiorka",
-          "count": 8
-        },
-        {
-          "name": "Indian Game Knights",
-          "count": 7
-        },
-        {
-          "name": "Kings Indian Attack",
-          "count": 7
-        },
-        {
-          "name": "Neo Grunfeld Defense Classical Original Ultra Delayed Exchange",
-          "count": 6
-        }
-      ],
       "bestWindows": [
         {
           "day": 3,
@@ -8346,11 +8204,41 @@
       ],
       "overlapScore": 1.46,
       "recentForm": [
-        "W",
-        "W",
-        "W",
-        "W",
-        "W"
+        {
+          "day": 4,
+          "hour": 8,
+          "date": "23/07",
+          "opponent": "Prime-Fisher1",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 8,
+          "date": "23/07",
+          "opponent": "Lucerne82",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 8,
+          "date": "23/07",
+          "opponent": "Lucerne82",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 8,
+          "date": "23/07",
+          "opponent": "ChaunceyGardiner64",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 9,
+          "date": "23/07",
+          "opponent": "snowlord",
+          "result": "W"
+        }
       ]
     },
     {
@@ -8544,7 +8432,6 @@
           0
         ]
       ],
-      "openings": [],
       "bestWindows": [],
       "overlapScore": 0.0,
       "recentForm": []
@@ -8740,40 +8627,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "French Defense Exchange Monte Carlo",
-          "count": 2
-        },
-        {
-          "name": "Alapin Sicilian",
-          "count": 2
-        },
-        {
-          "name": "Sicilian",
-          "count": 1
-        },
-        {
-          "name": "English Opening Agincourt",
-          "count": 1
-        },
-        {
-          "name": "Queens Gambit Declined Semi Tarrasch Main Line Pillsbury",
-          "count": 1
-        },
-        {
-          "name": "French Defense Steiner Variation",
-          "count": 1
-        },
-        {
-          "name": "Closed Sicilian Defense",
-          "count": 1
-        },
-        {
-          "name": "Pirc Defense Classical Variation",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
           "day": 1,
@@ -8796,11 +8649,41 @@
       ],
       "overlapScore": 21.43,
       "recentForm": [
-        "W",
-        "W",
-        "D",
-        "W",
-        "W"
+        {
+          "day": 1,
+          "hour": 14,
+          "date": "20/07",
+          "opponent": "tarunngautamm",
+          "result": "W"
+        },
+        {
+          "day": 1,
+          "hour": 14,
+          "date": "20/07",
+          "opponent": "tarunngautamm",
+          "result": "W"
+        },
+        {
+          "day": 2,
+          "hour": 8,
+          "date": "28/07",
+          "opponent": "Aarruusshhii",
+          "result": "D"
+        },
+        {
+          "day": 2,
+          "hour": 8,
+          "date": "28/07",
+          "opponent": "Aarruusshhii",
+          "result": "W"
+        },
+        {
+          "day": 2,
+          "hour": 9,
+          "date": "28/07",
+          "opponent": "snowlord",
+          "result": "W"
+        }
       ]
     },
     {
@@ -8994,40 +8877,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Queens Gambit Declined Ragozin",
-          "count": 21
-        },
-        {
-          "name": "French Defense Classical Steinitz Boleslavsky Variation",
-          "count": 11
-        },
-        {
-          "name": "Queens Gambit Declined Exchange Positional Line",
-          "count": 10
-        },
-        {
-          "name": "Nimzo Indian Defense Normal",
-          "count": 9
-        },
-        {
-          "name": "French Defense Exchange Variation",
-          "count": 6
-        },
-        {
-          "name": "Queens Gambit Declined Charousek",
-          "count": 5
-        },
-        {
-          "name": "Nimzo Indian Defense",
-          "count": 5
-        },
-        {
-          "name": "Queens Gambit Declined Exchange",
-          "count": 5
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -9050,11 +8899,41 @@
       ],
       "overlapScore": 22.55,
       "recentForm": [
-        "W",
-        "W",
-        "L",
-        "D",
-        "L"
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "GMKrikor",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "rasmussvane",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "sergoy",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "Nitzan_Steinberg",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "carokannlover213",
+          "result": "L"
+        }
       ]
     },
     {
@@ -9139,9 +9018,9 @@
           8,
           5,
           3,
+          4,
           0,
-          0,
-          0
+          2
         ],
         [
           2,
@@ -9165,9 +9044,9 @@
           0,
           3,
           0,
-          4,
           0,
-          2
+          0,
+          0
         ],
         [
           0,
@@ -9248,40 +9127,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "English Opening Fianchetto Ultra Symmetrical Line",
-          "count": 5
-        },
-        {
-          "name": "Indian Game Knights Variation East Indian",
-          "count": 2
-        },
-        {
-          "name": "Caro Kann Defense Fantasy Variation",
-          "count": 2
-        },
-        {
-          "name": "Anderssen Opening",
-          "count": 2
-        },
-        {
-          "name": "Kings Indian Defense Normal Variation",
-          "count": 1
-        },
-        {
-          "name": "Alapin Sicilian",
-          "count": 1
-        },
-        {
-          "name": "Sicilian Defense French Variation",
-          "count": 1
-        },
-        {
-          "name": "Sicilian Defense Staunton Cochrane",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
           "day": 2,
@@ -9304,11 +9149,41 @@
       ],
       "overlapScore": 100.0,
       "recentForm": [
-        "L",
-        "D",
-        "W",
-        "L",
-        "L"
+        {
+          "day": 1,
+          "hour": 16,
+          "date": "27/07",
+          "opponent": "MagnusCarlsen",
+          "result": "L"
+        },
+        {
+          "day": 1,
+          "hour": 16,
+          "date": "27/07",
+          "opponent": "MagnusCarlsen",
+          "result": "D"
+        },
+        {
+          "day": 1,
+          "hour": 16,
+          "date": "27/07",
+          "opponent": "MagnusCarlsen",
+          "result": "W"
+        },
+        {
+          "day": 1,
+          "hour": 16,
+          "date": "27/07",
+          "opponent": "MagnusCarlsen",
+          "result": "L"
+        },
+        {
+          "day": 1,
+          "hour": 17,
+          "date": "27/07",
+          "opponent": "MagnusCarlsen",
+          "result": "L"
+        }
       ]
     },
     {
@@ -9446,32 +9321,6 @@
           0,
           0,
           0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           24,
           9
         ],
@@ -9500,41 +9349,33 @@
           0,
           0,
           0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
-      ],
-      "openings": [
-        {
-          "name": "French Defense Exchange",
-          "count": 10
-        },
-        {
-          "name": "Trompowsky",
-          "count": 9
-        },
-        {
-          "name": "Trompowsky Attack",
-          "count": 9
-        },
-        {
-          "name": "Queens Pawn Opening Levitsky Attack",
-          "count": 7
-        },
-        {
-          "name": "Queens Pawn Opening Keres Defense",
-          "count": 5
-        },
-        {
-          "name": "French Defense Tarrasch Morozevich",
-          "count": 5
-        },
-        {
-          "name": "French Defense Classical Steinitz",
-          "count": 4
-        },
-        {
-          "name": "Caro Kann",
-          "count": 4
-        }
       ],
       "bestWindows": [
         {
@@ -9550,7 +9391,7 @@
           "pct": 19.0
         },
         {
-          "day": 5,
+          "day": 4,
           "hour": 22,
           "count": 24,
           "pct": 13.8
@@ -9558,11 +9399,41 @@
       ],
       "overlapScore": 29.31,
       "recentForm": [
-        "W",
-        "L",
-        "W",
-        "D",
-        "W"
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "Oleksandr_Bortnyk",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "Suyarov1",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "Nitzan_Steinberg",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "StasSB",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "carokannlover213",
+          "result": "W"
+        }
       ]
     },
     {
@@ -9596,8 +9467,8 @@
           1,
           0,
           7,
-          0,
-          0
+          1,
+          4
         ],
         [
           11,
@@ -9621,9 +9492,9 @@
           0,
           0,
           23,
+          10,
           7,
-          1,
-          4
+          10
         ],
         [
           38,
@@ -9647,9 +9518,9 @@
           23,
           1,
           0,
-          10,
-          7,
-          10
+          0,
+          0,
+          0
         ],
         [
           0,
@@ -9673,8 +9544,8 @@
           1,
           1,
           0,
-          0,
-          0,
+          6,
+          1,
           0
         ],
         [
@@ -9699,9 +9570,9 @@
           11,
           0,
           0,
-          6,
-          1,
-          0
+          14,
+          22,
+          11
         ],
         [
           5,
@@ -9725,9 +9596,9 @@
           2,
           3,
           1,
-          14,
-          22,
-          11
+          12,
+          4,
+          47
         ],
         [
           19,
@@ -9751,48 +9622,14 @@
           0,
           0,
           3,
-          12,
-          4,
-          47
+          7,
+          0,
+          0
         ]
-      ],
-      "openings": [
-        {
-          "name": "Undefined",
-          "count": 23
-        },
-        {
-          "name": "Kings Pawn Opening",
-          "count": 18
-        },
-        {
-          "name": "Nimzowitsch Defense",
-          "count": 13
-        },
-        {
-          "name": "Queens Pawn Opening Chigorin Variation",
-          "count": 8
-        },
-        {
-          "name": "English Opening Anglo Indian Kings Indian",
-          "count": 7
-        },
-        {
-          "name": "Queens Pawn Opening",
-          "count": 7
-        },
-        {
-          "name": "Indian Game",
-          "count": 6
-        },
-        {
-          "name": "Alekhines Defense",
-          "count": 6
-        }
       ],
       "bestWindows": [
         {
-          "day": 6,
+          "day": 5,
           "hour": 23,
           "count": 47,
           "pct": 10.2
@@ -9812,11 +9649,41 @@
       ],
       "overlapScore": 25.43,
       "recentForm": [
-        "W",
-        "D",
-        "W",
-        "W",
-        "W"
+        {
+          "day": 4,
+          "hour": 0,
+          "date": "30/07",
+          "opponent": "BlueJayBro",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 1,
+          "date": "30/07",
+          "opponent": "BlueJayBro",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 1,
+          "date": "30/07",
+          "opponent": "BlueJayBro",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 1,
+          "date": "30/07",
+          "opponent": "BlueJayBro",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 1,
+          "date": "30/07",
+          "opponent": "BlueJayBro",
+          "result": "W"
+        }
       ]
     },
     {
@@ -10010,7 +9877,6 @@
           0
         ]
       ],
-      "openings": [],
       "bestWindows": [],
       "overlapScore": 0.0,
       "recentForm": []
@@ -10150,8 +10016,8 @@
           0,
           0,
           0,
-          0,
-          0
+          8,
+          3
         ],
         [
           0,
@@ -10176,8 +10042,8 @@
           0,
           0,
           0,
-          8,
-          3
+          0,
+          0
         ],
         [
           0,
@@ -10206,40 +10072,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Indian Game East Indian Przepiorka Variation",
-          "count": 4
-        },
-        {
-          "name": "Reti Opening Nimzowitsch Larsen Attack",
-          "count": 4
-        },
-        {
-          "name": "Slav Defense Modern Triangle",
-          "count": 3
-        },
-        {
-          "name": "Sicilian Defense Nyezhmetdinov Rossolimo Attack",
-          "count": 2
-        },
-        {
-          "name": "Queens Pawn Opening Krause Variation",
-          "count": 2
-        },
-        {
-          "name": "Semi Slav Defense Anti Meran Anti Moscow",
-          "count": 2
-        },
-        {
-          "name": "Indian Game Knights",
-          "count": 2
-        },
-        {
-          "name": "Queens Indian Defense Kasparov Variation Petrosian Variation",
-          "count": 2
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -10262,11 +10094,41 @@
       ],
       "overlapScore": 31.2,
       "recentForm": [
-        "W",
-        "W",
-        "L",
-        "W",
-        "L"
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "Attacker_2006",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "Blackmind96",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "sergoy",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "yegchesss",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "Dolphin_2010",
+          "result": "L"
+        }
       ]
     },
     {
@@ -10404,32 +10266,6 @@
           0,
           0,
           0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           22,
           7
         ],
@@ -10458,41 +10294,33 @@
           0,
           0,
           0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
-      ],
-      "openings": [
-        {
-          "name": "English Opening Fianchetto Ultra Symmetrical Line",
-          "count": 8
-        },
-        {
-          "name": "English Opening Neo Catalan Defense",
-          "count": 6
-        },
-        {
-          "name": "Catalan Opening Closed",
-          "count": 4
-        },
-        {
-          "name": "English Opening Fianchetto Ultra Symmetrical",
-          "count": 3
-        },
-        {
-          "name": "Sicilian Defense Kan Knight Variation",
-          "count": 3
-        },
-        {
-          "name": "Queens Pawn Opening",
-          "count": 3
-        },
-        {
-          "name": "English Opening Kings English",
-          "count": 3
-        },
-        {
-          "name": "English Opening Symmetrical",
-          "count": 2
-        }
       ],
       "bestWindows": [
         {
@@ -10502,7 +10330,7 @@
           "pct": 24.5
         },
         {
-          "day": 5,
+          "day": 4,
           "hour": 22,
           "count": 22,
           "pct": 23.4
@@ -10516,11 +10344,41 @@
       ],
       "overlapScore": 10.64,
       "recentForm": [
-        "W",
-        "W",
-        "W",
-        "L",
-        "L"
+        {
+          "day": 4,
+          "hour": 12,
+          "date": "30/07",
+          "opponent": "baki83",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 12,
+          "date": "30/07",
+          "opponent": "wqws",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 12,
+          "date": "30/07",
+          "opponent": "mitrabhaa",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "HansOnTwitch",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 13,
+          "date": "30/07",
+          "opponent": "rezamahdavi2008",
+          "result": "L"
+        }
       ]
     },
     {
@@ -10658,32 +10516,6 @@
           0,
           0,
           0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           22,
           10
         ],
@@ -10712,45 +10544,37 @@
           0,
           0,
           0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
-      ],
-      "openings": [
-        {
-          "name": "Kings Pawn Opening Leonardis Variation",
-          "count": 6
-        },
-        {
-          "name": "Sicilian Defense",
-          "count": 4
-        },
-        {
-          "name": "Caro Kann Defense",
-          "count": 3
-        },
-        {
-          "name": "Sicilian Defense Open Najdorf Variation",
-          "count": 3
-        },
-        {
-          "name": "Queens Pawn Opening Chigorin",
-          "count": 2
-        },
-        {
-          "name": "Kings Indian Defense Petrosian Variation Stein Defense",
-          "count": 2
-        },
-        {
-          "name": "Torre Attack Classical Defense Nimzowitsch Variation",
-          "count": 1
-        },
-        {
-          "name": "Indian Game London System",
-          "count": 1
-        }
       ],
       "bestWindows": [
         {
-          "day": 5,
+          "day": 4,
           "hour": 22,
           "count": 22,
           "pct": 28.9
@@ -10770,11 +10594,41 @@
       ],
       "overlapScore": 9.21,
       "recentForm": [
-        "D",
-        "W",
-        "L",
-        "L",
-        "L"
+        {
+          "day": 4,
+          "hour": 22,
+          "date": "23/07",
+          "opponent": "ChristopherYoo",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 22,
+          "date": "23/07",
+          "opponent": "bocah_sakit",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 23,
+          "date": "23/07",
+          "opponent": "jefferyx",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 23,
+          "date": "23/07",
+          "opponent": "Little_Skib",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 23,
+          "date": "23/07",
+          "opponent": "XLittleJimmyX",
+          "result": "L"
+        }
       ]
     },
     {
@@ -10968,40 +10822,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "French Defense Exchange",
-          "count": 6
-        },
-        {
-          "name": "French Defense Winawer Advance",
-          "count": 6
-        },
-        {
-          "name": "Queens Gambit Declined Catalan",
-          "count": 5
-        },
-        {
-          "name": "Catalan Opening Closed",
-          "count": 5
-        },
-        {
-          "name": "Queens Gambit Declined Neo Orthodox Anti Tartakower Variation",
-          "count": 4
-        },
-        {
-          "name": "Queens Pawn Opening Symmetrical Variation",
-          "count": 4
-        },
-        {
-          "name": "Nimzo Indian Defense Romanishin Kasparov System",
-          "count": 4
-        },
-        {
-          "name": "Indian Game Knights Variation East Indian",
-          "count": 4
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -11024,11 +10844,41 @@
       ],
       "overlapScore": 26.02,
       "recentForm": [
-        "W",
-        "L",
-        "L",
-        "W",
-        "W"
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "carokannlover213",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "Dolphin_2010",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "Oleksandr_Bortnyk",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "serhanberat_ozdemir",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "GMKrikor",
+          "result": "W"
+        }
       ]
     },
     {
@@ -11222,40 +11072,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Trompowsky",
-          "count": 8
-        },
-        {
-          "name": "Kings Indian Attack Keres Variation",
-          "count": 5
-        },
-        {
-          "name": "English Opening Caro Kann Defensive",
-          "count": 4
-        },
-        {
-          "name": "Caro Kann Defense Classical",
-          "count": 4
-        },
-        {
-          "name": "Trompowsky Attack",
-          "count": 4
-        },
-        {
-          "name": "Queens Gambit Declined Austrian",
-          "count": 3
-        },
-        {
-          "name": "Queens Pawn Opening Levitsky Attack",
-          "count": 3
-        },
-        {
-          "name": "Queens Pawn Opening",
-          "count": 3
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -11278,11 +11094,41 @@
       ],
       "overlapScore": 16.67,
       "recentForm": [
-        "D",
-        "W",
-        "L",
-        "L",
-        "W"
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "DenLaz",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "BogdanDeac",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "LiemLe",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "sergoy",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "Fedoseev-Vladimir",
+          "result": "W"
+        }
       ]
     },
     {
@@ -11476,40 +11322,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Ruy Lopez Opening Morphy Defense Delayed Exchange Variation",
-          "count": 5
-        },
-        {
-          "name": "Queens Pawn Opening Chigorin Variation",
-          "count": 4
-        },
-        {
-          "name": "Kings Indian Defense Fianchetto Yugoslav Rare Advance Line",
-          "count": 3
-        },
-        {
-          "name": "Sicilian Defense Delayed Alapin Variation",
-          "count": 3
-        },
-        {
-          "name": "Modern Defense with 1 e4",
-          "count": 3
-        },
-        {
-          "name": "Queens Pawn Opening Chigorin",
-          "count": 2
-        },
-        {
-          "name": "Indian Game",
-          "count": 2
-        },
-        {
-          "name": "Queens Pawn Opening Zukertort Variation",
-          "count": 2
-        }
-      ],
       "bestWindows": [
         {
           "day": 0,
@@ -11532,11 +11344,41 @@
       ],
       "overlapScore": 5.26,
       "recentForm": [
-        "W",
-        "W",
-        "W",
-        "W",
-        "L"
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "AlmasRakhmatullaev",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 17,
+          "date": "30/07",
+          "opponent": "MITerryble",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "mishanick",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "LiemLe",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 18,
+          "date": "30/07",
+          "opponent": "Parhamov",
+          "result": "L"
+        }
       ]
     },
     {
@@ -11730,40 +11572,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Sicilian Defense French",
-          "count": 3
-        },
-        {
-          "name": "Closed Sicilian Defense",
-          "count": 3
-        },
-        {
-          "name": "Sicilian Defense Four Knights Variation",
-          "count": 2
-        },
-        {
-          "name": "Four Knights Game Spanish Variation Rubinstein Countergambit",
-          "count": 2
-        },
-        {
-          "name": "Pirc Defense",
-          "count": 2
-        },
-        {
-          "name": "French Defense Classical Steinitz",
-          "count": 2
-        },
-        {
-          "name": "Queens Gambit Declined Catalan Opening",
-          "count": 1
-        },
-        {
-          "name": "Closed Sicilian Defense Fianchetto",
-          "count": 1
-        }
-      ],
       "bestWindows": [
         {
           "day": 1,
@@ -11786,11 +11594,41 @@
       ],
       "overlapScore": 19.61,
       "recentForm": [
-        "D",
-        "D",
-        "L",
-        "L",
-        "L"
+        {
+          "day": 4,
+          "hour": 10,
+          "date": "30/07",
+          "opponent": "FaustinoOro",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 10,
+          "date": "30/07",
+          "opponent": "ilovepitza",
+          "result": "D"
+        },
+        {
+          "day": 4,
+          "hour": 10,
+          "date": "30/07",
+          "opponent": "ilovepitza",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 15,
+          "date": "30/07",
+          "opponent": "Hikaru",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 15,
+          "date": "30/07",
+          "opponent": "Hikaru",
+          "result": "L"
+        }
       ]
     },
     {
@@ -11901,7 +11739,7 @@
           3,
           0,
           10,
-          0,
+          2,
           0,
           0
         ],
@@ -11927,8 +11765,8 @@
           7,
           18,
           6,
-          2,
-          0,
+          13,
+          1,
           0
         ],
         [
@@ -11953,8 +11791,8 @@
           0,
           0,
           0,
-          13,
-          1,
+          0,
+          0,
           0
         ],
         [
@@ -11984,40 +11822,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Queens Gambit Declined Catalan",
-          "count": 8
-        },
-        {
-          "name": "Kings Indian Defense Normal",
-          "count": 5
-        },
-        {
-          "name": "Sicilian Defense Canal Attack",
-          "count": 5
-        },
-        {
-          "name": "Sicilian Defense Canal",
-          "count": 4
-        },
-        {
-          "name": "Scandinavian Defense Mieses Kotrc Gubinsky Melts Defense",
-          "count": 3
-        },
-        {
-          "name": "Reti Opening Nimzo Larsen Variation",
-          "count": 3
-        },
-        {
-          "name": "Kings Indian Defense Orthodox Variation",
-          "count": 3
-        },
-        {
-          "name": "Indian Game Knights Variation East Indian",
-          "count": 3
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -12026,7 +11830,7 @@
           "pct": 10.3
         },
         {
-          "day": 5,
+          "day": 4,
           "hour": 21,
           "count": 13,
           "pct": 7.4
@@ -12040,11 +11844,41 @@
       ],
       "overlapScore": 12.0,
       "recentForm": [
-        "L",
-        "W",
-        "W",
-        "W",
-        "W"
+        {
+          "day": 3,
+          "hour": 12,
+          "date": "29/07",
+          "opponent": "Achuvettan",
+          "result": "L"
+        },
+        {
+          "day": 3,
+          "hour": 12,
+          "date": "29/07",
+          "opponent": "Achuvettan",
+          "result": "W"
+        },
+        {
+          "day": 3,
+          "hour": 18,
+          "date": "29/07",
+          "opponent": "TheBrainCrusher",
+          "result": "W"
+        },
+        {
+          "day": 3,
+          "hour": 18,
+          "date": "29/07",
+          "opponent": "TheBrainCrusher",
+          "result": "W"
+        },
+        {
+          "day": 3,
+          "hour": 18,
+          "date": "29/07",
+          "opponent": "TheBrainCrusher",
+          "result": "W"
+        }
       ]
     },
     {
@@ -12238,40 +12072,6 @@
           0
         ]
       ],
-      "openings": [
-        {
-          "name": "Sicilian Defense Four Knights",
-          "count": 20
-        },
-        {
-          "name": "Sicilian Defense Four Knights Variation",
-          "count": 18
-        },
-        {
-          "name": "Catalan Opening",
-          "count": 15
-        },
-        {
-          "name": "Queens Gambit Declined Catalan",
-          "count": 14
-        },
-        {
-          "name": "Sicilian Defense French",
-          "count": 11
-        },
-        {
-          "name": "Sicilian Defense Westerinen Attack",
-          "count": 9
-        },
-        {
-          "name": "Grunfeld Defense Burille Opocensky Variation",
-          "count": 9
-        },
-        {
-          "name": "Queens Gambit Declined Catalan Opening",
-          "count": 8
-        }
-      ],
       "bestWindows": [
         {
           "day": 4,
@@ -12294,11 +12094,41 @@
       ],
       "overlapScore": 17.26,
       "recentForm": [
-        "L",
-        "L",
-        "W",
-        "W",
-        "W"
+        {
+          "day": 4,
+          "hour": 11,
+          "date": "30/07",
+          "opponent": "ilovepitza",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 11,
+          "date": "30/07",
+          "opponent": "ilovepitza",
+          "result": "L"
+        },
+        {
+          "day": 4,
+          "hour": 11,
+          "date": "30/07",
+          "opponent": "ilovepitza",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 11,
+          "date": "30/07",
+          "opponent": "ilovepitza",
+          "result": "W"
+        },
+        {
+          "day": 4,
+          "hour": 11,
+          "date": "30/07",
+          "opponent": "Floatingdream1",
+          "result": "W"
+        }
       ]
     }
   ],
@@ -12351,9 +12181,9 @@
       63,
       49,
       15,
-      22,
-      16,
-      3
+      18,
+      3,
+      13
     ],
     [
       21,
@@ -12377,9 +12207,9 @@
       9,
       15,
       31,
-      18,
-      3,
-      13
+      11,
+      19,
+      33
     ],
     [
       52,
@@ -12404,8 +12234,8 @@
       23,
       18,
       11,
-      19,
-      33
+      11,
+      8
     ],
     [
       16,
@@ -12429,9 +12259,9 @@
       35,
       62,
       24,
-      11,
-      11,
-      8
+      10,
+      8,
+      19
     ],
     [
       5,
@@ -12455,9 +12285,9 @@
       175,
       24,
       9,
-      10,
-      8,
-      19
+      28,
+      176,
+      83
     ],
     [
       9,
@@ -12481,9 +12311,9 @@
       27,
       11,
       5,
-      28,
-      176,
-      83
+      12,
+      12,
+      53
     ],
     [
       19,
@@ -12507,76 +12337,10 @@
       24,
       22,
       29,
-      12,
-      12,
-      53
+      22,
+      16,
+      3
     ]
-  ],
-  "openingsOverall": [
-    {
-      "name": "Queens Gambit Declined Catalan",
-      "count": 136
-    },
-    {
-      "name": "Catalan Opening",
-      "count": 60
-    },
-    {
-      "name": "Undefined",
-      "count": 47
-    },
-    {
-      "name": "Indian Game Knights",
-      "count": 45
-    },
-    {
-      "name": "Alapin Sicilian",
-      "count": 45
-    },
-    {
-      "name": "Queens Pawn Opening Chigorin Variation",
-      "count": 45
-    },
-    {
-      "name": "Kings Indian Defense Normal",
-      "count": 42
-    },
-    {
-      "name": "Sicilian Defense Four Knights",
-      "count": 41
-    },
-    {
-      "name": "Kings Indian Attack Yugoslav",
-      "count": 40
-    },
-    {
-      "name": "Kings Indian Defense Orthodox Variation",
-      "count": 38
-    },
-    {
-      "name": "London System",
-      "count": 37
-    },
-    {
-      "name": "English Opening Anglo Indian Kings Indian",
-      "count": 36
-    },
-    {
-      "name": "English Opening Agincourt",
-      "count": 36
-    },
-    {
-      "name": "Caro Kann Defense",
-      "count": 33
-    },
-    {
-      "name": "Queens Gambit Declined Ragozin",
-      "count": 33
-    },
-    {
-      "name": "English Opening Caro Kann Defensive",
-      "count": 33
-    }
   ],
   "targetPlayer": {
     "username": "LPSupi",
@@ -12632,7 +12396,7 @@
         0,
         0,
         0,
-        0,
+        2,
         0
       ],
       [
@@ -12658,8 +12422,8 @@
         0,
         0,
         0,
-        2,
-        0
+        0,
+        2
       ],
       [
         2,
@@ -12683,9 +12447,9 @@
         15,
         6,
         4,
+        4,
         0,
-        0,
-        2
+        5
       ],
       [
         5,
@@ -12709,9 +12473,9 @@
         0,
         3,
         0,
-        4,
-        0,
-        5
+        2,
+        5,
+        0
       ],
       [
         0,
@@ -12735,8 +12499,8 @@
         0,
         0,
         0,
-        2,
-        5,
+        0,
+        0,
         0
       ],
       [
@@ -12813,46 +12577,42 @@
         "pct": 5.6
       }
     ],
-    "openings": [
-      {
-        "name": "English Opening Fianchetto Ultra Symmetrical Line",
-        "count": 6
-      },
-      {
-        "name": "Reti Opening Nimzowitsch Larsen Attack",
-        "count": 6
-      },
-      {
-        "name": "Caro Kann Defense Advance Short Variation with 4",
-        "count": 5
-      },
-      {
-        "name": "Caro Kann Defense Fantasy Variation",
-        "count": 4
-      },
-      {
-        "name": "Caro Kann Defense Tartakower",
-        "count": 3
-      },
-      {
-        "name": "Reti Opening Nimzowitsch Larsen",
-        "count": 3
-      },
-      {
-        "name": "Sicilian Defense Open Variation",
-        "count": 3
-      },
-      {
-        "name": "Modern Defense with 1 e4",
-        "count": 3
-      }
-    ],
     "recentForm": [
-      "L",
-      "D",
-      "W",
-      "L",
-      "L"
+      {
+        "day": 1,
+        "hour": 16,
+        "date": "27/07",
+        "opponent": "MagnusCarlsen",
+        "result": "L"
+      },
+      {
+        "day": 1,
+        "hour": 16,
+        "date": "27/07",
+        "opponent": "MagnusCarlsen",
+        "result": "D"
+      },
+      {
+        "day": 1,
+        "hour": 16,
+        "date": "27/07",
+        "opponent": "MagnusCarlsen",
+        "result": "W"
+      },
+      {
+        "day": 1,
+        "hour": 16,
+        "date": "27/07",
+        "opponent": "MagnusCarlsen",
+        "result": "L"
+      },
+      {
+        "day": 1,
+        "hour": 17,
+        "date": "27/07",
+        "opponent": "MagnusCarlsen",
+        "result": "L"
+      }
     ]
   }
 }
