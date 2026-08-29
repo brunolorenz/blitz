@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-28T18:06:29.773570+00:00",
+  "generatedAt": "2026-08-29T12:09:25.783530+00:00",
   "playerCount": 50,
   "monthsBack": 1,
-  "totalGames": 5401,
+  "totalGames": 5503,
   "skipped": 10,
   "players": [
     {
@@ -10,8 +10,8 @@
       "rank": 1,
       "rating": 3426,
       "countryCode": "US",
-      "total": 720,
-      "peakHourBrt": 23,
+      "total": 803,
+      "peakHourBrt": 21,
       "dayHourBrt": [
         [
           0,
@@ -163,9 +163,9 @@
           1,
           0,
           0,
-          0,
-          0,
-          0,
+          22,
+          26,
+          35,
           0,
           0
         ],
@@ -201,57 +201,57 @@
           "day": 2,
           "hour": 23,
           "count": 45,
-          "pct": 6.2
+          "pct": 5.6
         },
         {
           "day": 3,
           "hour": 17,
           "count": 35,
-          "pct": 4.9
+          "pct": 4.4
         },
         {
-          "day": 1,
-          "hour": 23,
-          "count": 33,
-          "pct": 4.6
+          "day": 5,
+          "hour": 21,
+          "count": 35,
+          "pct": 4.4
         }
       ],
-      "overlapScore": 77.36,
+      "overlapScore": 79.7,
       "recentForm": [
         {
-          "day": 4,
-          "hour": 19,
-          "date": "27/08",
-          "opponent": "mehatbug",
+          "day": 5,
+          "hour": 21,
+          "date": "28/08",
+          "opponent": "lucasmito",
           "result": "L"
         },
         {
-          "day": 4,
-          "hour": 19,
-          "date": "27/08",
-          "opponent": "SokMate",
+          "day": 5,
+          "hour": 21,
+          "date": "28/08",
+          "opponent": "Crazy_Eight",
+          "result": "L"
+        },
+        {
+          "day": 5,
+          "hour": 21,
+          "date": "28/08",
+          "opponent": "Crazy_Eight",
           "result": "W"
         },
         {
-          "day": 4,
-          "hour": 19,
-          "date": "27/08",
-          "opponent": "mehatbug",
+          "day": 5,
+          "hour": 21,
+          "date": "28/08",
+          "opponent": "Crazy_Eight",
           "result": "W"
         },
         {
-          "day": 4,
-          "hour": 19,
-          "date": "27/08",
-          "opponent": "ArchdukeShrimp",
-          "result": "L"
-        },
-        {
-          "day": 4,
-          "hour": 19,
-          "date": "27/08",
-          "opponent": "mehatbug",
-          "result": "L"
+          "day": 5,
+          "hour": 21,
+          "date": "28/08",
+          "opponent": "Crazy_Eight",
+          "result": "W"
         }
       ]
     },
@@ -6501,8 +6501,258 @@
       "recentForm": []
     },
     {
-      "username": "legendisback1",
+      "username": "MichaelRoiz",
       "rank": 29,
+      "rating": 3219,
+      "countryCode": "IL",
+      "total": 652,
+      "peakHourBrt": 16,
+      "dayHourBrt": [
+        [
+          0,
+          0,
+          4,
+          0,
+          0,
+          2,
+          1,
+          8,
+          9,
+          18,
+          8,
+          6,
+          10,
+          5,
+          6,
+          21,
+          9,
+          11,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          5,
+          7,
+          9,
+          2,
+          3,
+          8,
+          4,
+          4,
+          12,
+          4,
+          11,
+          5,
+          9,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          4,
+          0,
+          0,
+          2,
+          11,
+          11,
+          7,
+          9,
+          3,
+          4,
+          8,
+          3,
+          7,
+          26,
+          10,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          3,
+          0,
+          0,
+          6,
+          6,
+          0,
+          2,
+          4,
+          9,
+          5,
+          23,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          5,
+          3,
+          3,
+          1,
+          6,
+          5,
+          1,
+          3,
+          5,
+          0,
+          0,
+          7,
+          1,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          4,
+          7,
+          4,
+          1,
+          8,
+          6,
+          1,
+          5,
+          6,
+          3,
+          7,
+          0,
+          11,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          1,
+          1,
+          12,
+          7,
+          25,
+          6,
+          9,
+          12,
+          1,
+          4,
+          11,
+          12,
+          19,
+          13,
+          9,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "bestWindows": [
+        {
+          "day": 2,
+          "hour": 16,
+          "count": 26,
+          "pct": 4.0
+        },
+        {
+          "day": 6,
+          "hour": 8,
+          "count": 25,
+          "pct": 3.8
+        },
+        {
+          "day": 3,
+          "hour": 17,
+          "count": 23,
+          "pct": 3.5
+        }
+      ],
+      "overlapScore": 46.17,
+      "recentForm": [
+        {
+          "day": 5,
+          "hour": 6,
+          "date": "28/08",
+          "opponent": "VazgenKarakanyan11",
+          "result": "L"
+        },
+        {
+          "day": 5,
+          "hour": 6,
+          "date": "28/08",
+          "opponent": "tjychess",
+          "result": "W"
+        },
+        {
+          "day": 5,
+          "hour": 17,
+          "date": "28/08",
+          "opponent": "Blitz_Expert23",
+          "result": "W"
+        },
+        {
+          "day": 5,
+          "hour": 17,
+          "date": "28/08",
+          "opponent": "Blitz_Expert23",
+          "result": "W"
+        },
+        {
+          "day": 5,
+          "hour": 17,
+          "date": "28/08",
+          "opponent": "Blitz_Expert23",
+          "result": "W"
+        }
+      ]
+    },
+    {
+      "username": "legendisback1",
+      "rank": 30,
       "rating": 3219,
       "countryCode": "TR",
       "total": 27,
@@ -6752,7 +7002,7 @@
     },
     {
       "username": "TRadjabov",
-      "rank": 30,
+      "rank": 31,
       "rating": 3218,
       "countryCode": "AZ",
       "total": 20,
@@ -7002,7 +7252,7 @@
     },
     {
       "username": "ChristopherYoo",
-      "rank": 31,
+      "rank": 32,
       "rating": 3216,
       "countryCode": "TV",
       "total": 349,
@@ -7252,7 +7502,7 @@
     },
     {
       "username": "ChessWarrior7197",
-      "rank": 32,
+      "rank": 33,
       "rating": 3214,
       "countryCode": "UZ",
       "total": 50,
@@ -7502,7 +7752,7 @@
     },
     {
       "username": "Javokhir_Sindarov05",
-      "rank": 33,
+      "rank": 34,
       "rating": 3210,
       "countryCode": "UZ",
       "total": 0,
@@ -7697,7 +7947,7 @@
     },
     {
       "username": "Grischuk",
-      "rank": 34,
+      "rank": 35,
       "rating": 3207,
       "countryCode": "RU",
       "total": 11,
@@ -7941,7 +8191,7 @@
     },
     {
       "username": "chess_master_8820",
-      "rank": 35,
+      "rank": 36,
       "rating": 3205,
       "countryCode": "IR",
       "total": 175,
@@ -8191,10 +8441,10 @@
     },
     {
       "username": "rednova1729",
-      "rank": 36,
+      "rank": 37,
       "rating": 3205,
       "countryCode": "US",
-      "total": 158,
+      "total": 159,
       "peakHourBrt": 18,
       "dayHourBrt": [
         [
@@ -8349,7 +8599,7 @@
           0,
           0,
           2,
-          0,
+          1,
           0,
           0
         ],
@@ -8385,13 +8635,13 @@
           "day": 1,
           "hour": 18,
           "count": 47,
-          "pct": 29.7
+          "pct": 29.6
         },
         {
           "day": 1,
           "hour": 19,
           "count": 33,
-          "pct": 20.9
+          "pct": 20.8
         },
         {
           "day": 6,
@@ -8400,15 +8650,8 @@
           "pct": 6.3
         }
       ],
-      "overlapScore": 87.34,
+      "overlapScore": 87.42,
       "recentForm": [
-        {
-          "day": 4,
-          "hour": 22,
-          "date": "27/08",
-          "opponent": "The_Lazy_Player",
-          "result": "L"
-        },
         {
           "day": 5,
           "hour": 10,
@@ -8436,12 +8679,19 @@
           "date": "28/08",
           "opponent": "W1nlovee7",
           "result": "D"
+        },
+        {
+          "day": 5,
+          "hour": 21,
+          "date": "28/08",
+          "opponent": "HulkingBreakfast",
+          "result": "L"
         }
       ]
     },
     {
       "username": "DenLaz",
-      "rank": 37,
+      "rank": 38,
       "rating": 3204,
       "countryCode": "BY",
       "total": 54,
@@ -8691,7 +8941,7 @@
     },
     {
       "username": "ManuDavid2910",
-      "rank": 38,
+      "rank": 39,
       "rating": 3203,
       "countryCode": "IN",
       "total": 2,
@@ -8908,7 +9158,7 @@
     },
     {
       "username": "Fedoseev-Vladimir",
-      "rank": 39,
+      "rank": 40,
       "rating": 3203,
       "countryCode": "SI",
       "total": 67,
@@ -9158,7 +9408,7 @@
     },
     {
       "username": "IMaster_01",
-      "rank": 40,
+      "rank": 41,
       "rating": 3202,
       "countryCode": "TR",
       "total": 136,
@@ -9408,7 +9658,7 @@
     },
     {
       "username": "bubeliang",
-      "rank": 41,
+      "rank": 42,
       "rating": 3202,
       "countryCode": "NO",
       "total": 318,
@@ -9658,7 +9908,7 @@
     },
     {
       "username": "Arseniy_Nesterov",
-      "rank": 42,
+      "rank": 43,
       "rating": 3202,
       "countryCode": "RU",
       "total": 33,
@@ -9902,256 +10152,6 @@
           "hour": 16,
           "date": "22/08",
           "opponent": "SwindlingJokerAV",
-          "result": "W"
-        }
-      ]
-    },
-    {
-      "username": "MichaelRoiz",
-      "rank": 43,
-      "rating": 3202,
-      "countryCode": "IL",
-      "total": 649,
-      "peakHourBrt": 16,
-      "dayHourBrt": [
-        [
-          0,
-          0,
-          4,
-          0,
-          0,
-          2,
-          1,
-          8,
-          9,
-          18,
-          8,
-          6,
-          10,
-          5,
-          6,
-          21,
-          9,
-          11,
-          3,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          2,
-          5,
-          7,
-          9,
-          2,
-          3,
-          8,
-          4,
-          4,
-          12,
-          4,
-          11,
-          5,
-          9,
-          7,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          1,
-          4,
-          0,
-          0,
-          2,
-          11,
-          11,
-          7,
-          9,
-          3,
-          4,
-          8,
-          3,
-          7,
-          26,
-          10,
-          4,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          1,
-          3,
-          0,
-          0,
-          6,
-          6,
-          0,
-          2,
-          4,
-          9,
-          5,
-          23,
-          4,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          5,
-          3,
-          3,
-          1,
-          6,
-          5,
-          1,
-          3,
-          5,
-          0,
-          0,
-          7,
-          1,
-          0,
-          7,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0,
-          4,
-          7,
-          4,
-          1,
-          8,
-          6,
-          1,
-          5,
-          6,
-          3,
-          7,
-          0,
-          11,
-          5,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          5,
-          1,
-          1,
-          12,
-          7,
-          25,
-          6,
-          9,
-          12,
-          1,
-          4,
-          11,
-          12,
-          19,
-          13,
-          9,
-          1,
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "bestWindows": [
-        {
-          "day": 2,
-          "hour": 16,
-          "count": 26,
-          "pct": 4.0
-        },
-        {
-          "day": 6,
-          "hour": 8,
-          "count": 25,
-          "pct": 3.9
-        },
-        {
-          "day": 3,
-          "hour": 17,
-          "count": 23,
-          "pct": 3.5
-        }
-      ],
-      "overlapScore": 45.92,
-      "recentForm": [
-        {
-          "day": 4,
-          "hour": 16,
-          "date": "27/08",
-          "opponent": "EddieMarsalla",
-          "result": "W"
-        },
-        {
-          "day": 5,
-          "hour": 4,
-          "date": "28/08",
-          "opponent": "Caesar",
-          "result": "W"
-        },
-        {
-          "day": 5,
-          "hour": 6,
-          "date": "28/08",
-          "opponent": "Ga_R",
-          "result": "L"
-        },
-        {
-          "day": 5,
-          "hour": 6,
-          "date": "28/08",
-          "opponent": "VazgenKarakanyan11",
-          "result": "L"
-        },
-        {
-          "day": 5,
-          "hour": 6,
-          "date": "28/08",
-          "opponent": "tjychess",
           "result": "W"
         }
       ]
@@ -10411,8 +10411,8 @@
       "rank": 45,
       "rating": 3200,
       "countryCode": "CN",
-      "total": 122,
-      "peakHourBrt": 3,
+      "total": 137,
+      "peakHourBrt": 22,
       "dayHourBrt": [
         [
           0,
@@ -10566,8 +10566,8 @@
           0,
           0,
           0,
-          0,
-          0,
+          5,
+          10,
           0
         ],
         [
@@ -10602,54 +10602,54 @@
           "day": 4,
           "hour": 22,
           "count": 23,
-          "pct": 18.9
+          "pct": 16.8
         },
         {
           "day": 5,
           "hour": 3,
           "count": 23,
-          "pct": 18.9
+          "pct": 16.8
         },
         {
           "day": 0,
           "hour": 8,
           "count": 10,
-          "pct": 8.2
+          "pct": 7.3
         }
       ],
-      "overlapScore": 50.0,
+      "overlapScore": 48.18,
       "recentForm": [
         {
           "day": 5,
-          "hour": 4,
-          "date": "28/08",
-          "opponent": "chesniu",
-          "result": "L"
-        },
-        {
-          "day": 5,
-          "hour": 4,
-          "date": "28/08",
-          "opponent": "chesniu",
-          "result": "L"
-        },
-        {
-          "day": 5,
-          "hour": 4,
-          "date": "28/08",
-          "opponent": "chesniu",
-          "result": "L"
-        },
-        {
-          "day": 5,
-          "hour": 4,
+          "hour": 22,
           "date": "28/08",
           "opponent": "chesniu",
           "result": "W"
         },
         {
           "day": 5,
-          "hour": 4,
+          "hour": 22,
+          "date": "28/08",
+          "opponent": "chesniu",
+          "result": "W"
+        },
+        {
+          "day": 5,
+          "hour": 22,
+          "date": "28/08",
+          "opponent": "chesniu",
+          "result": "W"
+        },
+        {
+          "day": 5,
+          "hour": 22,
+          "date": "28/08",
+          "opponent": "chesniu",
+          "result": "W"
+        },
+        {
+          "day": 5,
+          "hour": 22,
           "date": "28/08",
           "opponent": "chesniu",
           "result": "W"
@@ -11870,12 +11870,12 @@
     227,
     223,
     227,
-    456,
+    459,
     460,
-    204,
-    110,
-    106,
-    283,
+    226,
+    136,
+    147,
+    293,
     238
   ],
   "dayHourBrt": [
@@ -12027,12 +12027,12 @@
       26,
       9,
       17,
-      14,
+      17,
       0,
-      1,
-      2,
-      0,
-      0,
+      23,
+      28,
+      41,
+      10,
       4
     ],
     [
@@ -12065,10 +12065,10 @@
   "targetPlayer": {
     "username": "LPSupi",
     "monthsBack": 3,
-    "total": 647,
+    "total": 648,
     "hoursBrt": [
       35,
-      42,
+      43,
       30,
       19,
       11,
@@ -12251,7 +12251,7 @@
       ],
       [
         3,
-        1,
+        2,
         1,
         2,
         0,
@@ -12300,13 +12300,6 @@
     "recentForm": [
       {
         "day": 4,
-        "hour": 18,
-        "date": "27/08",
-        "opponent": "KhalilMousavi98",
-        "result": "L"
-      },
-      {
-        "day": 4,
         "hour": 19,
         "date": "27/08",
         "opponent": "carokannlover213",
@@ -12332,6 +12325,13 @@
         "date": "27/08",
         "opponent": "Fever_Code",
         "result": "L"
+      },
+      {
+        "day": 6,
+        "hour": 1,
+        "date": "29/08",
+        "opponent": "SparkToFlame",
+        "result": "D"
       }
     ]
   }
